@@ -1,0 +1,39 @@
+
+:host {
+  --card-border-color: #74777f;
+  --card-background-color: white;
+}
+
+.container {
+  border: 1px solid var(--card-border-color);
+  background-color: var(--card-background-color);
+  padding: 1%;
+  margin: 1%;
+  border-radius: 12px;
+  width: 75%;
+}
+
+.header-container{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin-bottom: 0%;
+}
+
+.header-container h2{
+  padding-inline: 1%;
+  margin-block: 0.5%;
+  font-size: 2vw;
+}
+
+.body-container{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 0%;
+}
+
+.body-container h3{
+  margin-block: 1%;
+}
