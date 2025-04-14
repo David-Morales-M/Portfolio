@@ -1,3 +1,6 @@
+//*{
+//  border: 1px solid red;
+//}
 
 :host {
   --card-border-color: #74777f;
@@ -5,12 +8,19 @@
 }
 
 .container {
-  border: 1px solid var(--card-border-color);
-  background-color: var(--card-background-color);
   padding: 1%;
   margin: 1%;
   border-radius: 12px;
   width: 75%;
+}
+
+.distribution{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .header-container{
@@ -37,3 +47,48 @@
 .body-container h3{
   margin-block: 1%;
 }
+
+
+
+
+
+.flip-container {
+  width: 120px;
+  height: 120px;
+  perspective: 1000px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.flipper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.front, .back {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 50%;
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+
+
+
