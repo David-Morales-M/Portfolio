@@ -1,6 +1,6 @@
-//*{
-//  border: 1px solid red;
-//}
+*{
+  border: 1px solid red;
+}
 
 :host {
   --card-border-color: #74777f;
@@ -17,10 +17,7 @@
 .distribution{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
   justify-content: space-around;
-  align-items: center;
 }
 
 .header-container{
@@ -53,9 +50,9 @@
 
 
 .flip-container {
-  width: 120px;
-  height: 120px;
-  perspective: 1000px;
+  width: 15vw;
+  height: 15vw;
+  perspective: 1000vw;
   border-radius: 50%;
   overflow: hidden;
 }
