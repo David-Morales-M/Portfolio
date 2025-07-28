@@ -1,7 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
-:root{
-  background-color: dimgrey;
+
+* {
+  border: 1px solid red;
+}
+
+/* Modo Claro */
+:root {
+  --bg: #F2F2F2;
+  --bg-card: #FFFFFF;
+  --text: #4A4A4A;
+  --text-secondary: #777777;
+  --title: #1F3A5F;
+  --accent: #C9AD6A;
+  --hover: #5A7684;
   font-family: 'Open Sans', Arial, sans-serif;
+}
+
+/* Modo Oscuro */
+.dark-mode {
+  --bg: #121F2F;
+  --bg-card: #1F2E3D;
+  --text: #DADADA;
+  --text-secondary: #A8A8A8;
+  --title: #FFFFFF;
+  --accent: #D3B978;
+  --hover: #3D5A73;
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.card {
+  background-color: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--hover);
+}
+
+h1, h2, h3 {
+  color: var(--title);
+}
+
+button {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+button:hover {
+  background-color: var(--hover);
 }
 
 html {

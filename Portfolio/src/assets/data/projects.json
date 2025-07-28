@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "Sistema de Gestión de Reparaciones",
+    "client": "Chasquis Compu Store",
+    "description": "Plataforma web de gestión de taller de reparaciones tecnológicas",
+    "technologies": ["React", "JavaScript", "Firebase", "CSS", "HTML"],
+    "photos": ["portfolio-1.jpg", "portfolio-2.jpg", ""],
+    "link": "https://github.com/tu-usuario/portfolio",
+    "roles": ["Diseñador UI", "Desarrollador Frontend", "Administrador de BD Firebase"],
+    "details": "Diseñé y desarrollé un sistema completo para administrar servicios de reparación, clientes y empleados, optimizando operaciones para una tienda de tecnología local. Enfoque en una interfaz intuitiva (UI/UX) y manejo eficiente de datos."
+  },
+  {
+    "id": 2,
+    "title": "Plataforma de Rehabilitación Terapéutica (PAR)",
+    "client": "UDLA, EPN, PUCE",
+    "description": "Plataforma educativa para rehabilitación de enfermedades respiratorias",
+    "technologies": ["React", "JavaScript", "CSS", "HTML"],
+    "photos": ["portfolio-1.jpg", "portfolio-2.jpg", ""],
+    "link": "https://github.com/tu-usuario/portfolio",
+    "roles": ["Diseñador UI", "Tester QA"],
+    "details": "Colaboré con universidades en el diseño de una herramienta interactiva que ayuda a pacientes en su recuperación mediante ejercicios terapéuticos guiados."
+  },
+  {
+    "id": 3,
+    "title": "Ludominga",
+    "client": "UDLA, EPN, PUCE",
+    "description": "Plataforma de juegos serios para entrenamiento cognitivo y emocional",
+    "technologies": ["React", "JavaScript", "CSS", "HTML"],
+    "photos": ["portfolio-1.jpg", "portfolio-2.jpg", ""],
+    "link": "https://github.com/tu-usuario/portfolio",
+    "roles": ["Tester QA"],
+    "details": "Evalué soluciones gamificadas para mejorar habilidades sociales y cognitivas de usuarios mediante aprendizaje lúdico."
+  },
+  {
+    "id": 4,
+    "title": "Concesionario de Autos",
+    "client": "Proyecto Personal",
+    "description": "Sistema fullstack para gestión de inventario y ventas",
+    "technologies": ["Angular", "JavaScript", "CSS", "HTML"],
+    "photos": ["portfolio-1.jpg", "portfolio-2.jpg", ""],
+    "link": "https://github.com/tu-usuario/portfolio",
+    "roles": ["Desarrollador Fullstack", "Tester QA"],
+    "details": "Desarrollé una plataforma CRUD para administrar listados de autos, filtros de búsqueda y operaciones de concesionario."
+  },
+  {
+    "id": 5,
+    "title": "Agentes Inteligentes",
+    "client": "Proyecto Personal",
+    "description": "Sistema de mantenimiento de piscinas con IA",
+    "technologies": ["Java"],
+    "photos": ["portfolio-1.jpg", "portfolio-2.jpg", ""],
+    "link": "https://github.com/tu-usuario/portfolio",
+    "roles": ["Desarrollador"],
+    "details": "Implementé un agente autónomo para monitorear y regular temperatura de piscinas usando algoritmos heurísticos."
+  },
+  {
+    "id": 6,
+    "title": "Estimación de Peso y Altura",
+    "client": "Proyecto Personal",
+    "description": "Análisis de imágenes con CNN para métricas corporales",
+    "technologies": ["Python", "TensorFlow", "OpenCV"],
+    "photos": ["portfolio-1.jpg", "portfolio-2.jpg", ""],
+    "link": "https://github.com/tu-usuario/portfolio",
+    "roles": ["Desarrollador de IA"],
+    "details": "Entrené una red neuronal convolucional (CNN) para predecir atributos físicos a partir de imágenes."
+  },
+  {
+    "id": 7,
+    "title": "Connect 4",
+    "client": "Proyecto Personal",
+    "description": "Juego en línea basado en microservicios",
+    "technologies": ["Angular", "JavaScript", "Node.js"],
+    "photos": ["portfolio-1.jpg", "portfolio-2.jpg", ""],
+    "link": "https://github.com/tu-usuario/portfolio",
+    "roles": ["Desarrollador Fullstack"],
+    "details": "Recreé el juego clásico con salas multijugador y competencia en tiempo real."
+  },
+  {
+    "id": 8,
+    "title": "Serious Games Vexilología",
+    "client": "Proyecto Personal",
+    "description": "Juego en Unity para aprender banderas del mundo",
+    "technologies": ["C#", "Unity"],
+    "photos": ["portfolio-1.jpg", "portfolio-2.jpg", ""],
+    "link": "https://github.com/tu-usuario/portfolio",
+    "roles": ["Desarrollador de Videojuegos"],
+    "details": "Diseñé un juego educativo para reconocimiento de banderas mediante desafíos interactivos."
+  }
+]
