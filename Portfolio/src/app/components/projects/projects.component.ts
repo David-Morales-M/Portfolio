@@ -5,7 +5,6 @@ interface Project {
   title: string;
   client: string;
   description: string;
-  // ... otras propiedades
 }
 
 @Component({

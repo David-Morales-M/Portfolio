@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Certificado Python",
+    "issuer": "Python Institute",
+    "year": 2023,
+    "description": "Certificación en fundamentos de Python y programación orientada a objetos.",
+    "verificationLink": "https://verify.python.org/cert/12345",
+    "pdfLink": "assets/certificates/python-certificate.pdf",
+    "icon": "fa-brands fa-python"
+  },
+  {
+    "id": 2,
+    "name": "Certificado SERCOP",
+    "issuer": "SERCOP Ecuador",
+    "year": 2022,
+    "description": "Capacitación en procesos de contratación pública según normativa ecuatoriana.",
+    "verificationLink": "https://sercop.gob.ec/verificacion/67890",
+    "pdfLink": "assets/certificates/sercop-certificate.pdf",
+    "icon": "fa-solid fa-file-contract"
+  },
+  {
+    "id": 3,
+    "name": "Certificado Google",
+    "issuer": "Google Cloud",
+    "year": 2024,
+    "description": "Google Cloud Associate Engineer: despliegue de aplicaciones en la nube.",
+    "verificationLink": "https://www.credential.net/abc123",
+    "pdfLink": "assets/certificates/google-cloud-certificate.pdf",
+    "icon": "fa-brands fa-google"
+  },
+  {
+    "id": 4,
+    "name": "Certificado Videojuegos",
+    "issuer": "Udemy",
+    "year": 2021,
+    "description": "Desarrollo de videojuegos con Unity y C# para principiantes.",
+    "verificationLink": "https://www.udemy.com/certificate/UC-XYZ789/",
+    "pdfLink": "assets/certificates/unity-certificate.pdf",
+    "icon": "fa-solid fa-gamepad"
+  }
+]

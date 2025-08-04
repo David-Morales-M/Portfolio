@@ -32,10 +32,9 @@
   <label class="title-section">Certificates</label>
   <div class="middle">
     <div></div>
-    <app-certificates class="certificates-container"></app-certificates>
-    <app-certificates class="certificates-container"></app-certificates>
-    <app-certificates class="certificates-container"></app-certificates>
-    <app-certificates class="certificates-container"></app-certificates>
+      @for (certificate of certificates; track certificate.id) {
+        <app-certificates [certificate]="certificate" class="certificates-container"></app-certificates>
+      }
     <div></div>
   </div>
 </section>

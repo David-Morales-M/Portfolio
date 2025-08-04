@@ -1,13 +1,13 @@
 <div class="container">
 
   <header class="header-container">
-    <h4>Certificate Title</h4>
+    <h4>{{ certificate.name }}</h4>
     <h4>-</h4>
-    <h4>Entity</h4>
+    <h4>{{ certificate.issuer }}</h4>
   </header>
 
   <body class="body-container">
-  <label>Description</label>
+  <label>{{ certificate.description }}</label>
 
   <div>
     PDF
