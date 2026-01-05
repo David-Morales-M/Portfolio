@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "title": "A Serious Game Development for Vexillology Learning Using iPlus Methodology",
+    "resume": "Applied the iPlus methodology to design and evaluate an educational serious game for Vexillology, targeting elementary and high school students. The project successfully integrated educational objectives with engaging gameplay, reinforced by usability evaluation results that rated the game between good and excellent, with high acceptance in serious objectives (86%) and multimedia components (82%). The study demonstrates how structured design methodologies can balance learning outcomes and player engagement.",
+    "keywords": "Design methodology, Software, Serious games, Usability, Task analysis, Information systems",
+    "doi": "https://doi.org/10.1109/ici2st57350.2022.00028",
+    "year": "2022"
+  },
+  {
+    "id": 2,
+    "title": "User Centered Design of a Digital Platform for Therapeutic Education and Respiratory Rehabilitation in Patients with Post-COVID-19",
+    "resume": "Designed an accessible telerehabilitation platform for respiratory self-rehabilitation using a user-centered design (UCD) approach. The platform delivers age-adaptive therapeutic education exercises for post-COVID and respiratory patients through remote sessions. Developed under the iPlus methodology, integrating participatory design and agile practices, the project demonstrates how ICT-driven solutions can support physical recovery, social reintegration, and improved quality of life in digital healthcare environments.",
+    "keywords": "Education, User-centered Design, COVID-19, Telerehabilitation",
+    "doi": "http://doi.org/10.54941/ahfe1004010",
+    "year": "2023"
+  },
+  {
+    "id": 3,
+    "title": "Telerehabilitation Platforms in times of COVID-19: Usability Evaluation",
+    "resume": "Conducted a usability evaluation of three telerehabilitation (TR) web platforms for post-COVID physical and cognitive rehabilitation using CSUQ and SUS usability frameworks. The study identified key usability issues affecting learnability, efficiency, error prevention, and user satisfaction, providing actionable design recommendations to improve user-centered TR platforms. Results support the adoption of accessible, usable web technologies to enhance patient autonomy, professional decision-making, and quality of life in telehealth contexts.",
+    "keywords": "Telerehabilitation, Usability, Information and Communication Technologies, SUS, Human-Computer Interaction",
+    "doi": "https://doi.org/10.54941/ahfe1004050",
+    "year": "2023"
+  },
+  {
+    "id": 4,
+    "title": "A Digital Platform for Respiratory Rehabilitation in Patients with post-COVID19: Design and Usability Evaluation",
+    "resume": "Designed and developed a user-centered, progressive web application (PWA) for respiratory therapeutic education and self-rehabilitation. The platform supports multiple user roles—including patients, medical specialists, students, and administrators—and delivers secure, responsive, and accessible rehabilitation workflows. Built through expert-driven requirements analysis and validated via usability testing using the CSUQ framework, the solution improves remote rehabilitation experiences while supporting clinical training and patient progress monitoring.",
+    "keywords": "Telerehabilitation, Usability evaluation, SARS-COV-2, Telemedicine, e-rehabilitation, COVID-19, CSUQ",
+    "doi": "https://doi.org/10.54941/ahfe1004289",
+    "year": "2023"
+  },
+  {
+    "id": 5,
+    "title": "An Accessible Serious Game-Based Platform for Process Learning of People with Intellectual Disabilities\n",
+    "resume": "Contributed to the design and development of LudoMinga, an inclusive learning platform based on serious games for people with intellectual disabilities. Developed using the iPlus methodology and an iterative, user-centered approach, the platform integrates accessibility features, interactive gameplay, and personalized support. Preliminary user testing demonstrated positive results in engagement, learning outcomes, and user satisfaction, highlighting the platform’s potential to enhance inclusive education and cognitive development.",
+    "keywords": "Serious games, Cognitive abilities, Education, LudoMinga, Disability, Accessibility, Usability",
+    "doi": "https://doi.org/10.3390/app13137748",
+    "year": "2023"
+  },
+  {
+    "id": 6,
+    "title": "PAR: Towards a reference architecture for accessible platforms in respiratory therapies.",
+    "resume": "Contributed to the design of the Accessible Platform for Respiratory Therapies (PAR) using the iPlus methodology, integrating usability and accessibility principles under WCAG 2.1 standards. The platform delivers therapeutic education for respiratory recovery while supporting the training of healthcare professionals. Validated through CSUQ-based usability evaluation, the solution enhances accessibility, user experience, sustainability, and equitable access to digital healthcare, aligning with SDGs 3, 4, and 10.",
+    "keywords": "Telerehabilitation, Accessible, Respiratory rehabilitation, Therapeutic education, Sustainability, COVID-19, CSUQ",
+    "doi": "https://doi.org/10.3390/app14020840",
+    "year": "2024"
+  },
+  {
+    "id": 7,
+    "title": "Serious Games, Serious Impact: Enhancing Ethical Education Through Interactive Learning",
+    "resume": "Evaluation of a serious game to promote ethical principles using the SCRUM framework and the iPlus methodology, integrating pedagogical objectives, gameplay mechanics, and narrative design. The game was validated through a SUS-based usability evaluation, achieving a 78.51% usability score (rated as good), demonstrating the effectiveness of gamification as a tool for ethical education and user engagement.",
+    "keywords": "Ethics, Video games, Education, Organizations, Telecommunications, Serious games",
+    "doi": "https://doi.org/10.1109/CITS61189.2024.10608026",
+    "year": "2024"
+  },
+  {
+    "id": 8,
+    "title": "PictoAndes: A Customizable Communication Board for Inclusive Education and Multicultural Accessibility",
+    "resume": "Evaluation of PictoAndes, a customizable communication board designed to support children with speech and language difficulties. Built with a user-centered and gamified approach, the platform enables culturally adaptive and personalized pictograms to foster autonomous communication and emotional engagement. Implemented using agile methodologies and evaluated under WCAG 2.1 accessibility standards, the solution effectively reduces communication barriers, promotes active participation, and supports inclusive education in alignment with SDGs 4 and 10.",
+    "keywords": "Language disability, iPlus methodology, SCRUM, Pictograms, Inclusive education, Sustainable Development Goals (SDGs), Universal Design for Learning (UDL)",
+    "doi": "https://doi.org/10.3390/su17030956",
+    "year": "2025"
+  },
+  {
+    "id": 9,
+    "title": "Transformando la Oftalmología: Plataforma Ágil y Accesible para Diagnóstico Cromático",
+    "resume": "Evaluation of SIONDAL, a digital health information platform designed to assess and detect ophthalmological impairments, including color vision deficiency and visual acuity. Built using the Scrum agile framework in close collaboration with clinical professionals, the platform prioritizes usability and accessibility. Usability evaluation using the System Usability Scale (SUS) achieved a 95.71% acceptance rate, while accessibility assessment based on WCAG 2.1 guidelines using the WAVE tool reported 97.13% compliance. The results demonstrate an effective, user-centered, and accessible solution that optimizes the administration, execution, and monitoring of ophthalmological assessments.",
+    "keywords": "Ophthalmology, E-Health, Usability, Accesibility",
+    "doi": "https://doi.org/10.17013/risti.57.19-38",
+    "year": "2025"
+  },
+  {
+    "id": 10,
+    "title": "Evaluation of Online Health Services in Ecuador: A Comprehensive Analysis of Hospital Websites",
+    "resume": "Contributed to a large-scale evaluation of 159 hospital websites in Ecuador using the Hospital Online Service Index (HOSPI) framework. The study assessed technology features, content quality, online services, and community interaction, identifying critical gaps in patient care, online appointment systems, administrative processes, and user engagement. The findings provide actionable insights to improve digital healthcare platforms and support the standardization of hospital website evaluation methodologies across different regions.",
+    "keywords": "Public Health, Global health Policy, Sustainability, Assessment, Website, Evaluation",
+    "doi": "https://doi.org/10.1002/isd2.70033",
+    "year": "2025"
+  },
+  {
+    "id": 11,
+    "title": "Rethinking Usability in Serious Games: Designing an Instrument That Evaluates What Really Matters in Learning Contexts",
+    "resume": "Developed SGU, a standardized usability evaluation questionnaire specifically designed for serious games, addressing the limitations of traditional usability tools in educational game contexts. The instrument was created through a systematic literature review (SLR) and applied to multiple educational serious game case studies. SGU evaluates key dimensions such as gameplay mechanics, interface design, narrative engagement, and gamification, enabling the identification of recurring usability issues and context-specific design challenges. The results demonstrate the questionnaire’s clarity, relevance, and strong diagnostic value for improving user experience in educational game design.",
+    "keywords": "Serious Games, Usability evaluation, Human–computer Interaction, User experience, Educational games",
+    "doi": "https://doi.org/10.3390/app151810084",
+    "year": "2025"
+  },
+  {
+    "id": 12,
+    "title": "Gamified Rehabilitation: Enhancing Pediatric Physical Therapy Through a Motion-Capture Serious Game",
+    "resume": "Evaluated a Serious Game for pediatric lower-limb rehabilitation using motion-capture technology, targeting children with cerebral palsy undergoing treadmill therapy. Developed through user-centered and agile methodologies (iPlus and Scrum), the game integrates therapist-guided exercises, personalized challenges, and progress tracking to enhance motivation and treatment adherence. The solution addresses mobility and attention-related challenges by transforming repetitive exercises into engaging interactive sessions. Functional tests reported a 96.77% success rate, while usability evaluation achieved an 84.55% SUS score, confirming a positive user experience.",
+    "keywords": "Serious games, iPlus, Gamification, Physical rehabilitation, Usability",
+    "doi": "https://doi.org/10.1007/978-3-031-98890-5_43",
+    "year": "2026"
+  },
+  {
+    "id": 13,
+    "title": "Andean Culture in Play: Preserving Intangible Heritage through a Gamified Application",
+    "resume": "Evaluated an educational serious game aimed at preserving and disseminating the intangible cultural heritage of indigenous agricultural communities in Ecuador. The game immerses players in experiential narratives involving traditions, festivities, cuisine, myths, language, and community-based crop management through an agro-festive calendar. Its design integrates the iPlus methodology, Peasantization methodology to capture the indigenous worldview, and SCRUM for agile development. A usability evaluation tailored for serious games yielded a 75.61% usability score, confirming the game’s effectiveness as a digital tool for cultural education, user engagement, and heritage preservation.",
+    "keywords": "Web-based learning, Serious games, Culture preservation, User-experience, Inclusive technologies, Usability evaluation",
+    "doi": "https://doi.org/10.1007/978-3-031-98890-5_5",
+    "year": "2026"
+  }
+]
