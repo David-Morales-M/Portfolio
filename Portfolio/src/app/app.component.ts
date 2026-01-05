@@ -7,10 +7,11 @@ import {NavbarComponent} from './components/navbar/navbar.component';
 import {ApplicationConfig} from '@angular/core';
 import {provideHttpClient} from '@angular/common/http';
 import {DataService} from './services/data.service';
+import {PublicationsComponent} from './components/publications/publications.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ProjectsComponent, CardComponent, CertificatesComponent, NavbarComponent],
+  imports: [RouterOutlet, ProjectsComponent, CardComponent, CertificatesComponent, NavbarComponent, PublicationsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -21,6 +22,8 @@ export class AppComponent {
 
   certificates: any[] = [];
 
+  publications: any[] = [];
+
   constructor(private dataService: DataService) {
   }
 
@@ -30,6 +33,9 @@ export class AppComponent {
     });
     this.dataService.getCertificates().subscribe((data: any) => {
       this.certificates = data;
+    });
+    this.dataService.getPublications().subscribe((data: any) => {
+      this.publications = data;
     });
 
   }

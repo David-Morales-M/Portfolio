@@ -42,7 +42,9 @@
 <section id="publications">
   <label class="title-section">Publications</label>
   <div class="middle">
-
+    @for (publication of publications; track publication.id) {
+      <app-publications [publication]="publication" class="card-container"></app-publications>
+    }
   </div>
 </section>
 
