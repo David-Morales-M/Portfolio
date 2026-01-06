@@ -32,20 +32,19 @@
   <label class="title-section">Certificates</label>
   <div class="middle">
     <div></div>
-      @for (certificate of certificates; track certificate.id) {
-        <app-certificates [certificate]="certificate" class="certificates-container"></app-certificates>
-      }
+    @for (certificate of certificates; track certificate.id) {
+      <app-certificates [certificate]="certificate" class="certificates-container"></app-certificates>
+    }
     <div></div>
   </div>
 </section>
 
 <section id="publications">
   <label class="title-section">Publications</label>
-  <div class="middle">
-    @for (publication of publications; track publication.id) {
-      <app-publications [publication]="publication" class="card-container"></app-publications>
-    }
-  </div>
+  @for (publication of publications; track publication.id) {
+    <app-publications [publication]="publication" class="card-container"></app-publications>
+  }
+
 </section>
 
 <section>
