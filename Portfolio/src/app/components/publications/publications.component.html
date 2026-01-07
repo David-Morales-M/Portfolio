@@ -1,14 +1,13 @@
 <div class="container">
 
-  <header class="header-container">
-    <h2>{{ publication.title }}</h2>
-    <h2>-</h2>
-    <h2>{{ publication.year }}</h2>
+  <header class="header-container publication-title">
+    <label>{{ publication.title }}</label>
+    <!--<label class="year">({{ publication.year }})</label>-->
   </header>
 
   <body class="body-container">
-  <label class="justify-text">{{ publication.resume }}</label>
-  <a href="{{ publication.doi }}">Read more...</a>
+  <label >{{ publication.resume }}</label>
+  <a class="link" href="{{ publication.doi }}">Read more...</a>
 
   </body>
 
