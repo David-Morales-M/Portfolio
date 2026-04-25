@@ -1,0 +1,213 @@
+@import 'styles/variables';
+
+// ============================================================
+// 1. TIPOGRAFÍA
+// ============================================================
+
+$font-heading   : 'Sora', sans-serif;
+$font-body      : 'Lato', sans-serif;
+
+// Escala tipográfica (mobile-first, en rem)
+$text-xs        : 0.75rem;    // 12px — etiquetas, badges
+$text-sm        : 0.875rem;   // 14px — texto secundario, captions
+$text-base      : 1rem;       // 16px — cuerpo principal
+$text-lg        : 1.125rem;   // 18px — subtítulos, lead text
+$text-xl        : 1.25rem;    // 20px — títulos de sección pequeños
+$text-2xl       : 1.5rem;     // 24px — títulos de sección
+$text-3xl       : 1.875rem;   // 30px — títulos secundarios hero
+$text-4xl       : 2.25rem;    // 36px — nombre en hero (mobile)
+$text-5xl       : 3rem;       // 48px — nombre en hero (desktop)
+
+// Pesos
+$font-light     : 300;
+$font-regular   : 400;
+$font-medium    : 500;        // Lato no tiene 500 real, usa 400
+$font-semibold  : 600;
+$font-bold      : 700;
+
+// Interlineado
+$leading-tight  : 1.2;
+$leading-snug   : 1.4;
+$leading-normal : 1.6;
+$leading-relaxed: 1.75;
+
+
+// ============================================================
+// 2. PALETA DE COLORES — MODO OSCURO (base)
+// ============================================================
+
+// Fondos
+$color-bg-primary   : #0A0F1E;   // Fondo principal (más profundo)
+$color-bg-secondary : #111827;   // Superficie de cards y secciones
+$color-bg-tertiary  : #1F2937;   // Hover states, bordes internos
+$color-bg-elevated  : #1A2235;   // Cards elevadas, modals
+
+// Acento principal — Amber
+$color-amber-primary   : #F59E0B;  // CTA, highlights, links activos
+$color-amber-secondary : #FCD34D;  // Hover del acento, textos destacados
+$color-amber-muted     : #92400E;  // Versión oscura para fondos de badge
+$color-amber-subtle    : rgba(245, 158, 11, 0.12); // Fondos translúcidos
+
+// Texto
+$color-text-primary    : #F9FAFB;  // Títulos, texto principal
+$color-text-secondary  : #9CA3AF;  // Descripciones, subtítulos
+$color-text-tertiary   : #6B7280;  // Placeholders, texto deshabilitado
+$color-text-accent     : #FCD34D;  // Texto con color (links, highlights)
+
+// Bordes
+$color-border-default  : #1F2937;  // Borde estándar de cards
+$color-border-subtle   : #374151;  // Borde en hover
+$color-border-accent   : #F59E0B;  // Borde destacado (selected, focus)
+
+// Estados semánticos
+$color-success   : #10B981;
+$color-warning   : #FBBF24;
+$color-error     : #EF4444;
+$color-info      : #60A5FA;
+
+// Sombras
+$shadow-sm       : 0 1px 3px rgba(0, 0, 0, 0.4);
+$shadow-md       : 0 4px 12px rgba(0, 0, 0, 0.5);
+$shadow-lg       : 0 8px 24px rgba(0, 0, 0, 0.6);
+$shadow-amber    : 0 0 20px rgba(245, 158, 11, 0.15); // Glow sutil en cards hover
+
+
+// ============================================================
+// 3. PALETA — MODO CLARO (light theme override)
+// ============================================================
+
+$light-bg-primary   : #FAFAFA;
+$light-bg-secondary : #F3F4F6;
+$light-bg-tertiary  : #E5E7EB;
+$light-bg-elevated  : #FFFFFF;
+
+$light-text-primary    : #111827;
+$light-text-secondary  : #4B5563;
+$light-text-tertiary   : #9CA3AF;
+$light-text-accent     : #B45309;  // Amber más oscuro para legibilidad en claro
+
+$light-border-default  : #E5E7EB;
+$light-border-subtle   : #D1D5DB;
+$light-border-accent   : #F59E0B;
+
+$light-shadow-sm     : 0 1px 3px rgba(0, 0, 0, 0.08);
+$light-shadow-md     : 0 4px 12px rgba(0, 0, 0, 0.1);
+$light-shadow-amber  : 0 0 20px rgba(245, 158, 11, 0.1);
+
+
+// ============================================================
+// 4. ESPACIADO — Escala de 4px
+// ============================================================
+
+$space-1  : 0.25rem;   //  4px
+$space-2  : 0.5rem;    //  8px
+$space-3  : 0.75rem;   // 12px
+$space-4  : 1rem;      // 16px
+$space-5  : 1.25rem;   // 20px
+$space-6  : 1.5rem;    // 24px
+$space-8  : 2rem;      // 32px
+$space-10 : 2.5rem;    // 40px
+$space-12 : 3rem;      // 48px
+$space-16 : 4rem;      // 64px
+$space-20 : 5rem;      // 80px
+$space-24 : 6rem;      // 96px
+
+
+// ============================================================
+// 5. BORDER RADIUS
+// ============================================================
+
+$radius-sm   : 4px;
+$radius-md   : 8px;
+$radius-lg   : 12px;
+$radius-xl   : 16px;
+$radius-2xl  : 24px;
+$radius-full : 9999px;  // Pills, avatares
+
+
+// ============================================================
+// 6. BREAKPOINTS (mobile-first)
+// ============================================================
+
+$bp-sm   : 640px;    // Teléfonos grandes
+$bp-md   : 768px;    // Tablets
+$bp-lg   : 1024px;   // Laptops
+$bp-xl   : 1280px;   // Desktops
+$bp-2xl  : 1536px;   // Pantallas grandes
+
+// Mixins de media queries
+@mixin sm  { @media (min-width: $bp-sm)  { @content; } }
+@mixin md  { @media (min-width: $bp-md)  { @content; } }
+@mixin lg  { @media (min-width: $bp-lg)  { @content; } }
+@mixin xl  { @media (min-width: $bp-xl)  { @content; } }
+@mixin 2xl { @media (min-width: $bp-2xl) { @content; } }
+
+
+// ============================================================
+// 7. TRANSICIONES
+// ============================================================
+
+$transition-fast    : 150ms ease;
+$transition-normal  : 250ms ease;
+$transition-slow    : 400ms ease;
+$transition-theme   : background-color 300ms ease, color 300ms ease, border-color 300ms ease;
+
+
+// ============================================================
+// 8. Z-INDEX
+// ============================================================
+
+$z-base     : 0;
+$z-above    : 10;
+$z-dropdown : 100;
+$z-sticky   : 200;
+$z-navbar   : 300;
+$z-modal    : 400;
+$z-toast    : 500;
+
+
+// ============================================================
+// 9. CSS CUSTOM PROPERTIES (para dark/light theme toggle en JS)
+// Colocar en styles.scss dentro de :root y [data-theme="light"]
+// ============================================================
+
+// Copiar este bloque a styles.scss:
+//
+// :root {
+//   --color-bg-primary      : #{$color-bg-primary};
+//   --color-bg-secondary    : #{$color-bg-secondary};
+//   --color-bg-tertiary     : #{$color-bg-tertiary};
+//   --color-bg-elevated     : #{$color-bg-elevated};
+//   --color-amber-primary   : #{$color-amber-primary};
+//   --color-amber-secondary : #{$color-amber-secondary};
+//   --color-amber-subtle    : #{$color-amber-subtle};
+//   --color-text-primary    : #{$color-text-primary};
+//   --color-text-secondary  : #{$color-text-secondary};
+//   --color-text-tertiary   : #{$color-text-tertiary};
+//   --color-text-accent     : #{$color-text-accent};
+//   --color-border-default  : #{$color-border-default};
+//   --color-border-subtle   : #{$color-border-subtle};
+//   --color-border-accent   : #{$color-border-accent};
+//   --shadow-sm             : #{$shadow-sm};
+//   --shadow-md             : #{$shadow-md};
+//   --shadow-amber          : #{$shadow-amber};
+//   --font-heading          : #{$font-heading};
+//   --font-body             : #{$font-body};
+// }
+//
+// [data-theme="light"] {
+//   --color-bg-primary      : #{$light-bg-primary};
+//   --color-bg-secondary    : #{$light-bg-secondary};
+//   --color-bg-tertiary     : #{$light-bg-tertiary};
+//   --color-bg-elevated     : #{$light-bg-elevated};
+//   --color-text-primary    : #{$light-text-primary};
+//   --color-text-secondary  : #{$light-text-secondary};
+//   --color-text-tertiary   : #{$light-text-tertiary};
+//   --color-text-accent     : #{$light-text-accent};
+//   --color-border-default  : #{$light-border-default};
+//   --color-border-subtle   : #{$light-border-subtle};
+//   --color-border-accent   : #{$light-border-accent};
+//   --shadow-sm             : #{$light-shadow-sm};
+//   --shadow-md             : #{$light-shadow-md};
+//   --shadow-amber          : #{$light-shadow-amber};
+// }
