@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "degree": "Bachelor of Software Engineering",
+    "institution": "Escuela Politécnica Nacional",
+    "location": "Quito, Ecuador",
+    "startDate": "2018-09",
+    "endDate": "2023-06",
+    "current": false,
+    "distinction": "Graduated as Best Student of the Class",
+    "description": "Active participation in CEDIA research projects and co-authorship of scientific articles on educational and inclusive technologies."
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Spanish",
+    "level": "native",
+    "levelLabel": "Native",
+    "native": true
+  },
+  {
+    "id": 2,
+    "name": "English",
+    "level": "B2",
+    "levelLabel": "Upper Intermediate — Professional Working Proficiency",
+    "native": false
+  }
+]

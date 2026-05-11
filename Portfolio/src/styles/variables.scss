@@ -140,7 +140,7 @@ $bp-2xl  : 1536px;   // Pantallas grandes
 @mixin md  { @media (min-width: $bp-md)  { @content; } }
 @mixin lg  { @media (min-width: $bp-lg)  { @content; } }
 @mixin xl  { @media (min-width: $bp-xl)  { @content; } }
-@mixin 2xl { @media (min-width: $bp-2xl) { @content; } }
+@mixin xxl { @media (min-width: $bp-2xl) { @content; } }
 
 
 // ============================================================

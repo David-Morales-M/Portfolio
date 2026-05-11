@@ -1,8 +1,67 @@
-<nav class="navbar">
-  <ul>
-    <li><a href="#presentation">Presentation</a></li>
-    <li><a href="#aboutme">About me</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-  </ul>
+<nav class="navbar" [class.scrolled]="isScrolled()">
+  <div class="navbar__container">
+
+    <!-- Logo -->
+<!--    <button class="navbar__logo" (click)="scrollTo('hero')">-->
+<!--      DM <span class="navbar__logo-dot">.</span>-->
+<!--    </button>-->
+
+    <!-- Links desktop -->
+    <ul class="navbar__links">
+      @for (link of navLinks; track link.target) {
+        <li>
+          <button
+            class="navbar__link"
+            [class.active]="activeSection() === link.target"
+            (click)="scrollTo(link.target)">
+            {{ link.label }}
+          </button>
+        </li>
+      }
+    </ul>
+
+    <!-- Acciones desktop -->
+    <div class="navbar__actions">
+      <a
+        href="assets/cv/david-morales-cv.pdf"
+        download
+        class="navbar__cv-btn">
+        Download CV
+      </a>
+    </div>
+
+    <!-- Menú Móvil Recortado -->
+    <button
+      class="navbar__hamburger"
+      [class.open]="isMobileOpen()"
+      (click)="toggleMobile()"
+      aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <!-- Menú Móvil Ampliado -->
+  <div class="navbar__mobile" [class.open]="isMobileOpen()">
+    <ul class="navbar__mobile-links">
+      @for (link of navLinks; track link.target) {
+        <li>
+          <button
+            class="navbar__mobile-link"
+            [class.active]="activeSection() === link.target"
+            (click)="scrollTo(link.target)">
+            {{ link.label }}
+          </button>
+        </li>
+      }
+    </ul>
+    <a
+      href="assets/cv/david-morales-cv.pdf"
+      download
+      class="navbar__cv-btn navbar__cv-btn--mobile">
+      Download CV
+    </a>
+  </div>
 </nav>

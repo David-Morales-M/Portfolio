@@ -1,0 +1,95 @@
+<section id="hero" class="hero">
+
+  <div class="hero__bg-grid" aria-hidden="true"></div>
+
+  <div class="hero__container">
+
+    <!-- Descripción -->
+    <div class="hero__content">
+
+      <span class="hero__badge">
+        Available for opportunities
+      </span>
+
+      <h1 class="hero__name">
+        David <span class="hero__name-accent">Morales</span>
+      </h1>
+
+      <div class="hero__role">
+        <span class="hero__role-text">{{ displayedRole() }}</span>
+        <span class="hero__cursor" aria-hidden="true">|</span>
+      </div>
+
+      <p class="hero__description">
+        Frontend developer and UX researcher bridging the gap between
+        <strong>clean engineering</strong> and <strong>meaningful user experience</strong>.
+        Backed by 13 peer-reviewed publications on usability, accessibility
+        and serious games.
+      </p>
+
+      <!-- Estadísticas -->
+      <div class="hero__stats">
+        @for (stat of stats; track stat.label) {
+          <div class="hero__stat">
+            <span class="hero__stat-value">{{ stat.value }}</span>
+            <span class="hero__stat-label">{{ stat.label }}</span>
+          </div>
+        }
+      </div>
+
+      <!-- Call to action -->
+      <div class="hero__actions">
+        <button class="btn btn--primary" (click)="scrollToProjects()">
+          View Projects
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+        <button class="btn btn--outline" (click)="scrollToContact()">
+          Get in Touch
+        </button>
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="hero__social">
+        @for (link of socialLinks; track link.label) {
+          <a
+            [href]="link.url"
+            [attr.aria-label]="link.label"
+            class="hero__social-link"
+            target="_blank"
+            rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path [attr.d]="link.icon"/>
+            </svg>
+          </a>
+        }
+      </div>
+
+    </div>
+
+    <!-- Columna derecha: foto -->
+    <div class="hero__photo-wrapper">
+      <div class="hero__photo-ring" aria-hidden="true"></div>
+      <div class="hero__photo">
+        <!-- Fotografía -->
+        <img
+          src="assets/images/profile-placeholder.jpg"
+          alt="David Morales — Frontend Developer & UX Researcher"
+          loading="eager"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="hero__photo-placeholder">
+          <span>DM</span>
+        </div>
+      </div>
+      <div class="hero__photo-glow" aria-hidden="true"></div>
+    </div>
+
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="hero__scroll-line"></div>
+  </div>
+
+</section>

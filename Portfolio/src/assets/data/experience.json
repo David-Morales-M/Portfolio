@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "role": "Frontend Developer (Freelance)",
+    "company": "Chasquis Compu Store",
+    "location": "Quito, Ecuador",
+    "startDate": "2023-01",
+    "endDate": null,
+    "current": true,
+    "type": "freelance",
+    "description": [
+      "Designed and developed a full service management system, automating manual registration and reducing processing times.",
+      "Built responsive user interfaces with React and Bootstrap, improving user experience and reducing interaction errors.",
+      "Implemented automated testing with Selenium, increasing QA coverage and ensuring production stability.",
+      "Managed Firebase NoSQL database, handling client data, employee records and repair workflows."
+    ]
+  },
+  {
+    "id": 2,
+    "role": "Research Engineer & UX Researcher",
+    "company": "Escuela Politécnica Nacional",
+    "location": "Quito, Ecuador",
+    "startDate": "2023-10",
+    "endDate": null,
+    "current": true,
+    "type": "research",
+    "description": [
+      "Designed and evaluated accessible, user-centered web applications including serious games and telerehabilitation platforms.",
+      "Conducted usability evaluations using SUS and CSUQ frameworks, delivering actionable UX improvement recommendations.",
+      "Co-authored 13 peer-reviewed publications in indexed journals (Q1–Q3) on serious games, usability, and inclusive technologies.",
+      "Collaborated with multidisciplinary teams across UDLA, EPN, and PUCE on CEDIA-funded research projects."
+    ]
+  },
+  {
+    "id": 3,
+    "role": "Logistics & Social Media Coordinator",
+    "company": "Escuela Politécnica Nacional",
+    "location": "Quito, Ecuador",
+    "startDate": "2023-10",
+    "endDate": null,
+    "current": true,
+    "type": "volunteer",
+    "description": [
+      "Led a multidisciplinary team in planning and digital outreach for the Digital Inclusion and Future Programmers initiatives.",
+      "Established strategic partnerships with high-impact organizations, improving program visibility and sustainability.",
+      "Planned and executed educational activities that strengthened digital competencies across beneficiary communities."
+    ]
+  }
+]
