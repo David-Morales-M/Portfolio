@@ -1,45 +1,45 @@
-@import '../../../styles/variables';
+@use '../../../styles/variables' as v;
 
 .navbar {
   position  : fixed;
   top       : 0;
   left      : 0;
   right     : 0;
-  z-index   : $z-navbar;
-  padding   : $space-4 0;
-  transition: $transition-theme, padding $transition-normal, box-shadow $transition-normal;
+  z-index   : v.$z-navbar;
+  padding   : v.$space-4 0;
+  transition: v.$transition-theme, padding v.$transition-normal, box-shadow v.$transition-normal;
 
   &.scrolled {
-    padding   : $space-3 0;
+    padding   : v.$space-3 0;
     background: rgba(10, 15, 30, 0.92);
     backdrop-filter: blur(12px);
-    box-shadow: 0 1px 0 $color-border-default;
+    box-shadow: 0 1px 0 v.$color-border-default;
   }
 
   &__container {
     max-width: 1200px;
     margin   : 0 auto;
-    padding  : 0 $space-6;
+    padding  : 0 v.$space-6;
     display  : flex;
     align-items: center;
-    gap      : $space-8;
+    gap      : v.$space-8;
   }
 
   &__logo {
-    font-family: $font-heading;
-    font-size  : $text-xl;
-    font-weight: $font-semibold;
-    color      : $color-text-primary;
+    font-family: v.$font-heading;
+    font-size  : v.$text-xl;
+    font-weight: v.$font-semibold;
+    color      : v.$color-text-primary;
     background : none;
     border     : none;
     cursor     : pointer;
     padding    : 0;
-    transition : color $transition-fast;
+    transition : color v.$transition-fast;
     flex-shrink: 0;
 
-    &:hover { color: $color-amber-primary; }
+    &:hover { color: v.$color-amber-primary; }
 
-    &-dot { color: $color-amber-primary; }
+    &-dot { color: v.$color-amber-primary; }
   }
 
   &__links {
@@ -47,24 +47,24 @@
     list-style : none;
     margin     : 0;
     padding    : 0;
-    gap        : $space-1;
+    gap        : v.$space-1;
     flex       : 1;
     justify-content: center;
 
-    @media (max-width: $bp-lg) { display: none; }
+    @media (max-width: v.$bp-lg) { display: none; }
   }
 
   &__link {
-    font-family: $font-body;
-    font-size  : $text-sm;
-    font-weight: $font-regular;
-    color      : $color-text-secondary;
+    font-family: v.$font-body;
+    font-size  : v.$text-sm;
+    font-weight: v.$font-regular;
+    color      : v.$color-text-secondary;
     background : none;
     border     : none;
     cursor     : pointer;
-    padding    : $space-2 $space-3;
-    border-radius: $radius-md;
-    transition : color $transition-fast, background $transition-fast;
+    padding    : v.$space-2 v.$space-3;
+    border-radius: v.$radius-md;
+    transition : color v.$transition-fast, background v.$transition-fast;
     position   : relative;
 
     &::after {
@@ -75,18 +75,18 @@
       transform : translateX(-50%);
       width     : 0;
       height    : 2px;
-      background: $color-amber-primary;
-      border-radius: $radius-full;
-      transition: width $transition-normal;
+      background: v.$color-amber-primary;
+      border-radius: v.$radius-full;
+      transition: width v.$transition-normal;
     }
 
     &:hover {
-      color     : $color-text-primary;
-      background: $color-bg-tertiary;
+      color     : v.$color-text-primary;
+      background: v.$color-bg-tertiary;
     }
 
     &.active {
-      color: $color-amber-secondary;
+      color: v.$color-amber-secondary;
 
       &::after { width: 60%; }
     }
@@ -95,33 +95,33 @@
   &__actions {
     display    : flex;
     align-items: center;
-    gap        : $space-3;
+    gap        : v.$space-3;
     flex-shrink: 0;
 
-    @media (max-width: $bp-lg) { display: none; }
+    @media (max-width: v.$bp-lg) { display: none; }
   }
 
   &__cv-btn {
-    font-family  : $font-body;
-    font-size    : $text-sm;
-    font-weight  : $font-bold;
-    color        : $color-amber-primary;
-    border       : 1px solid $color-amber-primary;
-    border-radius: $radius-md;
-    padding      : $space-2 $space-4;
+    font-family  : v.$font-body;
+    font-size    : v.$text-sm;
+    font-weight  : v.$font-bold;
+    color        : v.$color-amber-primary;
+    border       : 1px solid v.$color-amber-primary;
+    border-radius: v.$radius-md;
+    padding      : v.$space-2 v.$space-4;
     text-decoration: none;
-    transition   : background $transition-fast, color $transition-fast;
+    transition   : background v.$transition-fast, color v.$transition-fast;
     white-space  : nowrap;
 
     &:hover {
-      background: $color-amber-primary;
-      color     : $color-bg-primary;
+      background: v.$color-amber-primary;
+      color     : v.$color-bg-primary;
     }
 
     &--mobile {
       display   : block;
       text-align: center;
-      margin    : $space-4 $space-6;
+      margin    : v.$space-4 v.$space-6;
     }
   }
 
@@ -133,18 +133,18 @@
     background    : none;
     border        : none;
     cursor        : pointer;
-    padding       : $space-2;
+    padding       : v.$space-2;
     margin-left   : auto;
 
-    @media (max-width: $bp-lg) { display: flex; }
+    @media (max-width: v.$bp-lg) { display: flex; }
 
     span {
       display      : block;
       width        : 22px;
       height       : 2px;
-      background   : $color-text-secondary;
-      border-radius: $radius-full;
-      transition   : transform $transition-normal, opacity $transition-normal;
+      background   : v.$color-text-secondary;
+      border-radius: v.$radius-full;
+      transition   : transform v.$transition-normal, opacity v.$transition-normal;
     }
 
     &.open {
@@ -160,39 +160,39 @@
     flex-direction : column;
     background     : rgba(10, 15, 30, 0.97);
     backdrop-filter: blur(12px);
-    border-top     : 1px solid $color-border-default;
+    border-top     : 1px solid v.$color-border-default;
     max-height     : 0;
     overflow       : hidden;
-    transition     : max-height $transition-slow;
+    transition     : max-height v.$transition-slow;
 
-    @media (max-width: $bp-lg) { display: flex; }
+    @media (max-width: v.$bp-lg) { display: flex; }
 
     &.open { max-height: 500px; }
   }
 
   &__mobile-links {
     list-style: none;
-    margin    : $space-4 0 0;
-    padding   : 0 $space-6;
+    margin    : v.$space-4 0 0;
+    padding   : 0 v.$space-6;
     display   : flex;
     flex-direction: column;
-    gap       : $space-1;
+    gap       : v.$space-1;
   }
 
   &__mobile-link {
-    font-family: $font-body;
-    font-size  : $text-base;
-    color      : $color-text-secondary;
+    font-family: v.$font-body;
+    font-size  : v.$text-base;
+    color      : v.$color-text-secondary;
     background : none;
     border     : none;
     cursor     : pointer;
-    padding    : $space-3 0;
+    padding    : v.$space-3 0;
     text-align : left;
     width      : 100%;
-    border-bottom: 1px solid $color-border-default;
-    transition : color $transition-fast;
+    border-bottom: 1px solid v.$color-border-default;
+    transition : color v.$transition-fast;
 
     &:hover,
-    &.active { color: $color-amber-secondary; }
+    &.active { color: v.$color-amber-secondary; }
   }
 }

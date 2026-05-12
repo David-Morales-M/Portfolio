@@ -1,8 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
-* {
-  border: 1px solid red;
+@use 'styles/variables' as *;
+
+:root {
+  //* {
+  //  border: 1px solid red;
+  //}
 }
+
 
 /* Modo Claro */
 :root {
@@ -54,4 +59,42 @@ button:hover {
 
 html {
   scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin    : 0;
+  padding   : 0;
+}
+
+html, body {
+  margin    : 0;
+  padding   : 0;
+  min-height: 100%;
+  background: #0A0F1E; // $color-bg-primary
+  color     : #F9FAFB; // $color-text-primary
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.section-tag {
+  display       : inline-block;
+  font-family   : 'Lato', sans-serif;
+  font-size     : 0.75rem;
+  font-weight   : 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color         : #F59E0B;
+  margin-bottom : 0.75rem;
+}
+
+.section-title {
+  font-family: 'Sora', sans-serif;
+  font-size  : 1.875rem;
+  font-weight: 700;
+  color      : #F9FAFB;
+  margin     : 0;
+
+  .accent { color: #F59E0B; }
 }

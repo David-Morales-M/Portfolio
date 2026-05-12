@@ -1,0 +1,101 @@
+<section id="about" class="about">
+  <div class="about__container">
+
+    <!-- Encabezado de sección -->
+    <div class="about__header">
+      <span class="section-tag">About me</span>
+      <h2 class="section-title">
+        The person behind <span class="accent">the code</span>
+      </h2>
+    </div>
+
+    <div class="about__grid">
+
+      <!-- Columna izquierda: texto -->
+      <div class="about__content">
+
+        <p class="about__lead">
+          I build software that genuinely solves problems —
+          technology that feels <strong>natural to use</strong>,
+          regardless of who's using it.
+        </p>
+
+        <p class="about__body">
+          My path has been anything but conventional. While most developers
+          build portfolios of side projects, I spent three years embedded in
+          academic research — co-authoring <strong>13 peer-reviewed publications</strong>
+          on usability, accessibility, and serious games alongside teams from
+          EPN, UDLA, and PUCE.
+        </p>
+
+        <p class="about__body">
+          Two projects define what I care about most:
+          <strong>Ludominga</strong>, a serious game platform for people with
+          intellectual disabilities, and <strong>PAR</strong>, a telerehabilitation
+          tool for respiratory therapy patients — both free, open-access, and
+          built to reach the people who need them most.
+          That's the kind of work I want to keep doing.
+        </p>
+
+        <p class="about__body">
+          I'm detail-oriented by nature and by training. I don't consider
+          something finished until it meets the need it was built for —
+          not just technically, but from the user's perspective.
+          I follow through, I verify, and I don't ship errors if I can help it.
+        </p>
+
+        <!-- Datos destacados -->
+        <div class="about__highlights">
+          <div class="about__highlight">
+            <span class="about__highlight-value">EPN</span>
+            <span class="about__highlight-label">Best Graduate · 2023</span>
+          </div>
+          <div class="about__highlight">
+            <span class="about__highlight-value">CEDIA</span>
+            <span class="about__highlight-label">Research Projects</span>
+          </div>
+          <div class="about__highlight">
+            <span class="about__highlight-value">Q1–Q3</span>
+            <span class="about__highlight-label">Indexed Publications</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Columna derecha: valores -->
+      <div class="about__values">
+        <p class="about__values-intro">What drives my work</p>
+
+        @for (value of values; track value.title) {
+          <div class="about__value-card">
+            <div class="about__value-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" [attr.d]="value.icon"/>
+              </svg>
+            </div>
+            <div class="about__value-text">
+              <h4 class="about__value-title">{{ value.title }}</h4>
+              <p class="about__value-desc">{{ value.desc }}</p>
+            </div>
+          </div>
+        }
+
+        <!-- CTA secundario -->
+        <a
+          href="assets/cv/david-morales-cv.pdf"
+          download
+          class="about__cv-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+          </svg>
+          Download full CV
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
