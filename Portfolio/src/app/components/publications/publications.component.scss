@@ -1,58 +1,261 @@
-:host {
-  --card-border-color: #74777f;
-  --card-background-color: white;
+// ============================================================
+// PUBLICATIONS STYLES
+// src/app/components/publications/publications.component.scss
+// ============================================================
+@use '../../../styles/variables' as v;
+
+.publications {
+  background: v.$color-bg-secondary;
+  padding   : v.$space-24 0;
+
+  &__container {
+    max-width: 1000px;
+    margin   : 0 auto;
+    padding  : 0 v.$space-6;
+  }
+
+  &__header {
+    text-align   : center;
+    margin-bottom: v.$space-10;
+  }
+
+  &__subtitle {
+    font-family: v.$font-body;
+    font-size  : v.$text-base;
+    color      : v.$color-text-secondary;
+    margin     : v.$space-4 auto 0;
+    max-width  : 500px;
+    line-height: v.$leading-relaxed;
+  }
+
+  // ── Filtros ───────────────────────────────────────────────
+  &__filters {
+    display        : flex;
+    gap            : v.$space-2;
+    flex-wrap      : wrap;
+    justify-content: center;
+    margin-bottom  : v.$space-8;
+  }
+
+  &__filter-btn {
+    font-family  : v.$font-body;
+    font-size    : v.$text-xs;
+    font-weight  : v.$font-bold;
+    color        : v.$color-text-secondary;
+    background   : transparent;
+    border       : 1px solid v.$color-border-default;
+    border-radius: v.$radius-full;
+    padding      : v.$space-2 v.$space-4;
+    cursor       : pointer;
+    transition   : all v.$transition-fast;
+
+    &:hover {
+      color       : v.$color-text-primary;
+      border-color: v.$color-border-subtle;
+    }
+
+    &.active {
+      background  : v.$color-amber-primary;
+      color       : v.$color-bg-primary;
+      border-color: v.$color-amber-primary;
+    }
+  }
+
+  &__count {
+    font-family  : v.$font-body;
+    font-size    : v.$text-sm;
+    color        : v.$color-text-tertiary;
+    text-align   : center;
+    margin-bottom: v.$space-6;
+  }
+
+  // ── Lista ─────────────────────────────────────────────────
+  &__list {
+    display       : flex;
+    flex-direction: column;
+    gap           : v.$space-3;
+  }
+
+  &__empty {
+    text-align : center;
+    color      : v.$color-text-tertiary;
+    font-family: v.$font-body;
+    font-size  : v.$text-sm;
+    padding    : v.$space-12 0;
+  }
 }
 
-.container {
-  border: 1px solid var(--card-border-color);
-  background-color: var(--card-background-color);
-  padding: 1%;
-  margin: 1%;
-  border-radius: 12px;
-  width: 75%;
+// ── Publication Card ──────────────────────────────────────────
+.pub-card {
+  background   : v.$color-bg-elevated;
+  border       : 1px solid v.$color-border-default;
+  border-radius: v.$radius-lg;
+  overflow     : hidden;
+  transition   : border-color v.$transition-normal;
+
+  &:hover,
+  &.expanded {
+    border-color: v.$color-border-accent;
+  }
+
+  &__main {
+    display    : flex;
+    align-items: flex-start;
+    gap        : v.$space-5;
+    padding    : v.$space-5 v.$space-6;
+    cursor     : pointer;
+
+    @media (max-width: v.$bp-sm) {
+      flex-direction: column;
+      gap: v.$space-3;
+    }
+  }
+
+  // Columna izquierda — año + quartile
+  &__left {
+    flex-shrink: 0;
+    min-width  : 60px;
+  }
+
+  &__year-wrap {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    gap           : v.$space-2;
+  }
+
+  &__year {
+    font-family: v.$font-heading;
+    font-size  : v.$text-sm;
+    font-weight: v.$font-semibold;
+    color      : v.$color-text-tertiary;
+  }
+
+  &__quartile {
+    font-size    : v.$text-xs;
+    font-weight  : v.$font-bold;
+    padding      : 2px 6px;
+    border-radius: v.$radius-sm;
+
+    &.quartile--q1 {
+      background: rgba(16, 185, 129, 0.15);
+      color     : #10B981;
+    }
+    &.quartile--q2 {
+      background: v.$color-amber-subtle;
+      color     : v.$color-amber-secondary;
+    }
+    &.quartile--q3 {
+      background: rgba(96, 165, 250, 0.12);
+      color     : v.$color-info;
+    }
+    &.quartile--q4 {
+      background: rgba(148, 163, 184, 0.1);
+      color     : v.$color-text-tertiary;
+    }
+  }
+
+  // Columna central — título + journal + keywords
+  &__center {
+    flex      : 1;
+    min-width : 0;
+    display   : flex;
+    flex-direction: column;
+    gap       : v.$space-2;
+  }
+
+  &__title {
+    font-family: v.$font-heading;
+    font-size  : v.$text-base;
+    font-weight: v.$font-semibold;
+    color      : v.$color-text-primary;
+    margin     : 0;
+    line-height: v.$leading-snug;
+  }
+
+  &__journal {
+    font-family: v.$font-body;
+    font-size  : v.$text-sm;
+    color      : v.$color-amber-primary;
+    margin     : 0;
+    font-style : italic;
+  }
+
+  &__keywords {
+    display : flex;
+    flex-wrap: wrap;
+    gap     : v.$space-2;
+  }
+
+  &__keyword {
+    font-family  : v.$font-body;
+    font-size    : 10px;
+    color        : v.$color-text-tertiary;
+    background   : v.$color-bg-tertiary;
+    padding      : 2px v.$space-2;
+    border-radius: v.$radius-full;
+  }
+
+  // Columna derecha — toggle
+  &__right {
+    flex-shrink: 0;
+  }
+
+  &__toggle {
+    background   : none;
+    border       : none;
+    cursor       : pointer;
+    color        : v.$color-text-tertiary;
+    padding      : v.$space-1;
+    display      : flex;
+    align-items  : center;
+    transition   : color v.$transition-fast;
+
+    svg { transition: transform v.$transition-normal; }
+
+    &:hover { color: v.$color-amber-primary; }
+  }
+
+  // Detalle expandido
+  &__detail {
+    padding: 0 v.$space-6 v.$space-5 calc(v.$space-6 + 60px + v.$space-5);
+    animation  : fadeIn .2s ease;
+
+    @media (max-width: v.$bp-sm) {
+      padding-left: v.$space-6;
+    }
+  }
+
+  &__resume {
+    font-family: v.$font-body;
+    font-size  : v.$text-sm;
+    color      : v.$color-text-secondary;
+    line-height: v.$leading-relaxed;
+    margin     : 0 0 v.$space-4;
+  }
+
+  &__actions {
+    display    : flex;
+    gap        : v.$space-4;
+    align-items: center;
+  }
+
+  &__doi-link {
+    display    : inline-flex;
+    align-items: center;
+    gap        : v.$space-2;
+    font-family: v.$font-body;
+    font-size  : v.$text-sm;
+    font-weight: v.$font-bold;
+    color      : v.$color-amber-primary;
+    text-decoration: none;
+    transition : color v.$transition-fast;
+
+    &:hover { color: v.$color-amber-secondary; }
+  }
 }
 
-.header-container {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  flex-direction: column;
-}
-
-.publication-title {
-  padding-inline: 1%;
-  margin-block: 0.5%;
-  font-size: 1.75vw;
-  font-weight: bold;
-  text-align: justify;
-  color: var(--title);
-}
-
-.body-container {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  flex-direction: column;
-  text-align: justify;
-  padding-bottom: 0.25vw;
-  font-size: 1.25vw;
-  background-color: var(--card-background-color);
-}
-
-.year{
-  padding-top: 0.25vw;
-  font-size: 1.5vw;
-  font-weight: bold;
-}
-
-.body-container h3 {
-  margin-block: 1%;
-}
-
-.link {
-  text-decoration: none;
-}
-
-.link:hover {
-  text-decoration: underline;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
 }

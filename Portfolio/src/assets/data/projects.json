@@ -1,90 +1,186 @@
 [
   {
     "id": 1,
-    "title": "Sistema de Gestión de Reparaciones",
+    "title": "Service Management System",
     "client": "Chasquis Compu Store",
-    "description": "Plataforma web de gestión de taller de reparaciones tecnológicas",
-    "technologies": ["React", "JavaScript", "Firebase", "CSS", "HTML"],
-    "photos": ["portfolio-1.jpg", "portfolio-2.jpg", ""],
-    "link": "https://github.com/tu-usuario/portfolio",
-    "roles": ["Diseñador UI", "Desarrollador Frontend", "Administrador de BD Firebase"],
-    "details": "Diseñé y desarrollé un sistema completo para administrar servicios de reparación, clientes y empleados, optimizando operaciones para una tienda de tecnología local. Enfoque en una interfaz intuitiva (UI/UX) y manejo eficiente de datos."
+    "description": "Full-stack web platform for managing tech repair services, clients and employees.",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "Firebase",
+      "CSS",
+      "HTML"
+    ],
+    "photos": [],
+    "link": "https://github.com/tu-usuario/chasquis",
+    "demoUrl": "",
+    "paperDoi": "",
+    "roles": [
+      "UI Designer",
+      "Frontend Developer",
+      "Firebase Administrator"
+    ],
+    "details": "Designed and developed a complete system to manage repair services, automate manual registration, and reduce processing times. Built with a focus on intuitive UI/UX and efficient real-time data handling via Firebase.",
+    "state": "deployed",
+    "tier": 1,
+    "featured": true
   },
   {
     "id": 2,
-    "title": "Plataforma de Rehabilitación Terapéutica (PAR)",
-    "client": "UDLA, EPN, PUCE",
-    "description": "Plataforma educativa para rehabilitación de enfermedades respiratorias",
-    "technologies": ["React", "JavaScript", "CSS", "HTML"],
-    "photos": ["portfolio-1.jpg", "portfolio-2.jpg", ""],
-    "link": "https://github.com/tu-usuario/portfolio",
-    "roles": ["Diseñador UI", "Tester QA"],
-    "details": "Colaboré con universidades en el diseño de una herramienta interactiva que ayuda a pacientes en su recuperación mediante ejercicios terapéuticos guiados."
+    "title": "PAR — Respiratory Rehabilitation Platform",
+    "client": "UDLA · EPN · PUCE",
+    "description": "Accessible web platform for respiratory therapeutic education and self-rehabilitation for post-COVID patients.",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "photos": [],
+    "link": "https://github.com/tu-usuario/par",
+    "demoUrl": "",
+    "paperDoi": "https://doi.org/10.3390/app14020840",
+    "roles": [
+      "UI Designer",
+      "QA Tester"
+    ],
+    "details": "Collaborated with three universities on a user-centered PWA for respiratory rehabilitation. Designed accessible interfaces following WCAG 2.1, validated through CSUQ usability evaluations. Backed by 4 peer-reviewed publications.",
+    "state": "deployed",
+    "tier": 1,
+    "featured": true
   },
   {
     "id": 3,
-    "title": "Ludominga",
-    "client": "UDLA, EPN, PUCE",
-    "description": "Plataforma de juegos serios para entrenamiento cognitivo y emocional",
-    "technologies": ["React", "JavaScript", "CSS", "HTML"],
-    "photos": ["portfolio-1.jpg", "portfolio-2.jpg", ""],
-    "link": "https://github.com/tu-usuario/portfolio",
-    "roles": ["Tester QA"],
-    "details": "Evalué soluciones gamificadas para mejorar habilidades sociales y cognitivas de usuarios mediante aprendizaje lúdico."
+    "title": "Ludominga — Inclusive Learning Platform",
+    "client": "UDLA · EPN · PUCE",
+    "description": "Serious game platform for cognitive and emotional development in people with intellectual disabilities.",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "photos": [],
+    "link": "https://github.com/tu-usuario/ludominga",
+    "demoUrl": "",
+    "paperDoi": "https://doi.org/10.3390/app13137748",
+    "roles": [
+      "UI Designer",
+      "QA Tester"
+    ],
+    "details": "Contributed to the design and evaluation of an inclusive learning platform using the iPlus methodology and iterative user-centered design. Validated through usability testing with target users, demonstrating positive outcomes in engagement and learning.",
+    "state": "deployed",
+    "tier": 1,
+    "featured": true
   },
   {
     "id": 4,
-    "title": "Concesionario de Autos",
-    "client": "Proyecto Personal",
-    "description": "Sistema fullstack para gestión de inventario y ventas",
-    "technologies": ["Angular", "JavaScript", "CSS", "HTML"],
-    "photos": ["portfolio-1.jpg", "portfolio-2.jpg", ""],
-    "link": "https://github.com/tu-usuario/portfolio",
-    "roles": ["Desarrollador Fullstack", "Tester QA"],
-    "details": "Desarrollé una plataforma CRUD para administrar listados de autos, filtros de búsqueda y operaciones de concesionario."
+    "title": "Connect 4 — Multiplayer Game",
+    "client": "Personal Project",
+    "description": "Classic Connect 4 game with real-time multiplayer rooms built on a microservices architecture.",
+    "technologies": [
+      "Angular",
+      "JavaScript",
+      "Node.js"
+    ],
+    "photos": [],
+    "link": "https://github.com/tu-usuario/connect4",
+    "demoUrl": "",
+    "paperDoi": "",
+    "roles": [
+      "Fullstack Developer",
+      "QA Tester"
+    ],
+    "details": "Recreated the classic board game with real-time multiplayer support using WebSockets and a microservices architecture. Demonstrates competency in Angular, Node.js and real-time communication patterns.",
+    "state": "repository",
+    "tier": 2,
+    "featured": false
   },
   {
     "id": 5,
-    "title": "Agentes Inteligentes",
-    "client": "Proyecto Personal",
-    "description": "Sistema de mantenimiento de piscinas con IA",
-    "technologies": ["Java"],
-    "photos": ["portfolio-1.jpg", "portfolio-2.jpg", ""],
-    "link": "https://github.com/tu-usuario/portfolio",
-    "roles": ["Desarrollador"],
-    "details": "Implementé un agente autónomo para monitorear y regular temperatura de piscinas usando algoritmos heurísticos."
+    "title": "Body Metrics Estimation with CNN",
+    "client": "Personal Project",
+    "description": "Computer vision system that estimates height and weight from images using convolutional neural networks.",
+    "technologies": [
+      "Python",
+      "TensorFlow",
+      "OpenCV"
+    ],
+    "photos": [],
+    "link": "https://github.com/tu-usuario/cnn-body-metrics",
+    "demoUrl": "",
+    "paperDoi": "",
+    "roles": [
+      "AI Developer"
+    ],
+    "details": "Trained a CNN model to predict physical attributes from images. Demonstrates applied machine learning skills including model training, image preprocessing with OpenCV, and performance evaluation.",
+    "state": "repository",
+    "tier": 2,
+    "featured": false
   },
   {
     "id": 6,
-    "title": "Estimación de Peso y Altura",
-    "client": "Proyecto Personal",
-    "description": "Análisis de imágenes con CNN para métricas corporales",
-    "technologies": ["Python", "TensorFlow", "OpenCV"],
-    "photos": ["portfolio-1.jpg", "portfolio-2.jpg", ""],
-    "link": "https://github.com/tu-usuario/portfolio",
-    "roles": ["Desarrollador de IA"],
-    "details": "Entrené una red neuronal convolucional (CNN) para predecir atributos físicos a partir de imágenes."
+    "title": "Intelligent Pool Maintenance Agent",
+    "client": "Personal Project",
+    "description": "Autonomous agent for pool temperature monitoring and regulation using heuristic algorithms.",
+    "technologies": [
+      "Java"
+    ],
+    "photos": [],
+    "link": "https://github.com/tu-usuario/intelligent-agent",
+    "demoUrl": "",
+    "paperDoi": "",
+    "roles": [
+      "Developer"
+    ],
+    "details": "Implemented an autonomous agent that monitors and regulates pool temperature using heuristic decision-making algorithms. Explores AI agent design patterns and autonomous system behavior.",
+    "state": "repository",
+    "tier": 3,
+    "featured": false
   },
   {
     "id": 7,
-    "title": "Connect 4",
-    "client": "Proyecto Personal",
-    "description": "Juego en línea basado en microservicios",
-    "technologies": ["Angular", "JavaScript", "Node.js"],
-    "photos": ["portfolio-1.jpg", "portfolio-2.jpg", ""],
-    "link": "https://github.com/tu-usuario/portfolio",
-    "roles": ["Desarrollador Fullstack"],
-    "details": "Recreé el juego clásico con salas multijugador y competencia en tiempo real."
+    "title": "Car Dealership Management System",
+    "client": "Personal Project",
+    "description": "Fullstack CRUD platform for managing vehicle inventory, listings and dealership operations.",
+    "technologies": [
+      "Angular",
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "photos": [],
+    "link": "https://github.com/tu-usuario/dealership",
+    "demoUrl": "",
+    "paperDoi": "",
+    "roles": [
+      "Fullstack Developer",
+      "QA Tester"
+    ],
+    "details": "Built a complete CRUD application with search filters, inventory management and REST API integration. Developed to practice Angular architecture and API consumption patterns.",
+    "state": "repository",
+    "tier": 3,
+    "featured": false
   },
   {
     "id": 8,
-    "title": "Serious Games Vexilología",
-    "client": "Proyecto Personal",
-    "description": "Juego en Unity para aprender banderas del mundo",
-    "technologies": ["C#", "Unity"],
-    "photos": ["portfolio-1.jpg", "portfolio-2.jpg", ""],
-    "link": "https://github.com/tu-usuario/portfolio",
-    "roles": ["Desarrollador de Videojuegos"],
-    "details": "Diseñé un juego educativo para reconocimiento de banderas mediante desafíos interactivos."
+    "title": "Vexillology Serious Game",
+    "client": "Personal Project",
+    "description": "Educational Unity game for learning world flags through interactive challenges.",
+    "technologies": [
+      "C#",
+      "Unity"
+    ],
+    "photos": [],
+    "link": "https://github.com/tu-usuario/vexillology-game",
+    "demoUrl": "",
+    "paperDoi": "https://doi.org/10.1109/ici2st57350.2022.00028",
+    "roles": [
+      "Game Developer"
+    ],
+    "details": "Designed and developed an educational serious game for flag recognition using the iPlus methodology. Evaluated through usability testing with results rated between good and excellent. Backed by a peer-reviewed publication.",
+    "state": "repository",
+    "tier": 3,
+    "featured": false
   }
 ]
