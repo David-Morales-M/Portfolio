@@ -1,37 +1,370 @@
-:host {
-  --card-border-color: #74777f;
-  --card-background-color: white;
+@use '../../../styles/variables' as v;
+
+.skills-section {
+  background: v.$color-bg-primary;
+  padding   : v.$space-24 0;
+
+  &__container {
+    max-width: 1200px;
+    margin   : 0 auto;
+    padding  : 0 v.$space-6;
+  }
+
+  &__header {
+    text-align   : center;
+    margin-bottom: v.$space-12;
+  }
+
+  &__subtitle {
+    font-family: v.$font-body;
+    font-size  : v.$text-base;
+    color      : v.$color-text-secondary;
+    margin     : v.$space-4 auto 0;
+    max-width  : 480px;
+    line-height: v.$leading-relaxed;
+  }
 }
 
-.container {
-  border: 1px solid var(--card-border-color);
-  background-color: var(--card-background-color);
-  padding: 1%;
-  margin: 1%;
-  border-radius: 12px;
-  width: 75%;
+// ── Skills Grid ───────────────────────────────────────────────
+.skills-grid {
+  display              : grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap                  : v.$space-6;
+  margin-bottom        : v.$space-20;
+
+  @media (max-width: v.$bp-lg) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: v.$bp-sm) { grid-template-columns: 1fr; }
 }
 
-.header-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-bottom: 0%;
+.skill-category {
+  background   : v.$color-bg-secondary;
+  border       : 1px solid v.$color-border-default;
+  border-radius: v.$radius-lg;
+  padding      : v.$space-5 v.$space-6;
+
+  &__title {
+    font-family  : v.$font-heading;
+    font-size    : v.$text-sm;
+    font-weight  : v.$font-semibold;
+    color        : v.$color-amber-primary;
+    margin       : 0 0 v.$space-5;
+    padding-bottom: v.$space-3;
+    border-bottom: 1px solid v.$color-border-default;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
 }
 
-.header-container h4 {
-  padding-inline: 1%;
-  margin-block: 0.5%;
-  font-size: 1.25vw;
-}
-
-.body-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+.skill-list {
+  display       : flex;
   flex-direction: column;
-  margin-inline: 0%;
-  background-color: var(--card-background-color);
+  gap           : v.$space-4;
+}
+
+.skill-item {
+  display       : flex;
+  flex-direction: column;
+  gap           : v.$space-2;
+
+  &__header {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+  }
+
+  &__name {
+    font-family: v.$font-body;
+    font-size  : v.$text-sm;
+    color      : v.$color-text-primary;
+    display    : flex;
+    align-items: center;
+    gap        : v.$space-2;
+  }
+
+  &__learning {
+    font-size    : 9px;
+    font-weight  : v.$font-bold;
+    color        : v.$color-amber-primary;
+    background   : v.$color-amber-subtle;
+    padding      : 1px 6px;
+    border-radius: v.$radius-full;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__level {
+    font-family: v.$font-body;
+    font-size  : v.$text-xs;
+    color      : v.$color-text-tertiary;
+  }
+
+  &__bar {
+    height       : 3px;
+    background   : v.$color-bg-tertiary;
+    border-radius: v.$radius-full;
+    overflow     : hidden;
+  }
+
+  &__fill {
+    height       : 100%;
+    border-radius: v.$radius-full;
+    transition   : width 1s ease;
+
+    &.fill--expert     { background: v.$color-amber-primary; }
+    &.fill--proficient { background: v.$color-amber-secondary; opacity: .7; }
+    &.fill--familiar   { background: v.$color-text-tertiary; }
+  }
+}
+
+// ── Certifications ────────────────────────────────────────────
+.certs-section {
+  &__header {
+    text-align   : center;
+    margin-bottom: v.$space-10;
+  }
+}
+
+.certs-grid {
+  display              : grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap                  : v.$space-5;
+  margin-bottom        : v.$space-6;
+
+  @media (max-width: v.$bp-lg) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: v.$bp-sm) { grid-template-columns: 1fr; }
+
+  &--secondary {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: v.$space-5;
+    animation : fadeIn .3s ease;
+
+    @media (max-width: v.$bp-lg) { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: v.$bp-sm) { grid-template-columns: 1fr; }
+  }
+}
+
+.cert-card {
+  display       : flex;
+  flex-direction: column;
+  gap           : v.$space-3;
+  padding       : v.$space-5;
+  background    : v.$color-bg-secondary;
+  border        : 1px solid v.$color-border-default;
+  border-radius : v.$radius-lg;
+  transition    : border-color v.$transition-normal, box-shadow v.$transition-normal;
+
+  &:hover {
+    border-color: v.$color-border-accent;
+    box-shadow  : v.$shadow-amber;
+  }
+
+  &--secondary {
+    background: v.$color-bg-primary;
+    padding   : v.$space-4;
+  }
+
+  &__top {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    gap            : v.$space-3;
+  }
+
+  &__icon {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    width          : 36px;
+    height         : 36px;
+    background     : v.$color-amber-subtle;
+    border-radius  : v.$radius-md;
+    color          : v.$color-amber-primary;
+    flex-shrink    : 0;
+  }
+
+  &__meta {
+    display       : flex;
+    flex-direction: column;
+    gap           : 2px;
+    flex          : 1;
+    min-width     : 0;
+  }
+
+  &__issuer {
+    font-family  : v.$font-body;
+    font-size    : v.$text-xs;
+    font-weight  : v.$font-bold;
+    color        : v.$color-text-secondary;
+    white-space  : nowrap;
+    overflow     : hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__year {
+    font-family: v.$font-body;
+    font-size  : v.$text-xs;
+    color      : v.$color-text-tertiary;
+  }
+
+  &__title {
+    font-family: v.$font-heading;
+    font-size  : v.$text-sm;
+    font-weight: v.$font-semibold;
+    color      : v.$color-text-primary;
+    margin     : 0;
+    line-height: v.$leading-snug;
+  }
+
+  &__desc {
+    font-family: v.$font-body;
+    font-size  : v.$text-xs;
+    color      : v.$color-text-tertiary;
+    line-height: v.$leading-normal;
+    margin     : 0;
+    flex       : 1;
+  }
+
+  &__links {
+    display    : flex;
+    gap        : v.$space-3;
+    padding-top: v.$space-2;
+    border-top : 1px solid v.$color-border-default;
+    margin-top : auto;
+  }
+
+  &__link {
+    display    : inline-flex;
+    align-items: center;
+    gap        : v.$space-1;
+    font-family: v.$font-body;
+    font-size  : v.$text-xs;
+    font-weight: v.$font-bold;
+    text-decoration: none;
+    transition : color v.$transition-fast;
+
+    &--verify {
+      color: v.$color-amber-primary;
+      &:hover { color: v.$color-amber-secondary; }
+    }
+    &--pdf {
+      color: v.$color-text-tertiary;
+      &:hover { color: v.$color-text-primary; }
+    }
+  }
+}
+
+.certs-toggle-wrap {
+  display        : flex;
+  justify-content: center;
+  margin-bottom  : v.$space-4;
+}
+
+.certs-toggle-btn {
+  display    : inline-flex;
+  align-items: center;
+  gap        : v.$space-2;
+  font-family: v.$font-body;
+  font-size  : v.$text-sm;
+  color      : v.$color-text-secondary;
+  background : none;
+  border     : 1px solid v.$color-border-default;
+  border-radius: v.$radius-full;
+  padding    : v.$space-2 v.$space-5;
+  cursor     : pointer;
+  transition : color v.$transition-fast, border-color v.$transition-fast;
+
+  &:hover {
+    color       : v.$color-amber-primary;
+    border-color: v.$color-amber-primary;
+  }
+}
+
+// ── Conference Presentations ──────────────────────────────────
+.conferences {
+  margin-top   : v.$space-16;
+  padding-top  : v.$space-12;
+  border-top   : 1px solid v.$color-border-default;
+
+  &__header {
+    margin-bottom: v.$space-8;
+  }
+
+  &__title {
+    font-family: v.$font-heading;
+    font-size  : v.$text-xl;
+    font-weight: v.$font-semibold;
+    color      : v.$color-text-primary;
+    margin     : v.$space-2 0 0;
+  }
+
+  &__list {
+    display       : flex;
+    flex-direction: column;
+    gap           : v.$space-3;
+  }
+}
+
+.conf-item {
+  display     : grid;
+  grid-template-columns: 100px 1fr auto;
+  gap         : v.$space-5;
+  align-items : center;
+  padding     : v.$space-4 v.$space-5;
+  background  : v.$color-bg-secondary;
+  border      : 1px solid v.$color-border-default;
+  border-radius: v.$radius-md;
+  transition  : border-color v.$transition-fast;
+
+  &:hover { border-color: v.$color-border-subtle; }
+
+  @media (max-width: v.$bp-md) {
+    grid-template-columns: 1fr;
+    gap: v.$space-2;
+  }
+
+  &__left {
+    display       : flex;
+    flex-direction: column;
+    gap           : v.$space-1;
+  }
+
+  &__event {
+    font-family: v.$font-heading;
+    font-size  : v.$text-sm;
+    font-weight: v.$font-semibold;
+    color      : v.$color-amber-primary;
+  }
+
+  &__year {
+    font-family: v.$font-body;
+    font-size  : v.$text-xs;
+    color      : v.$color-text-tertiary;
+  }
+
+  &__paper {
+    font-family: v.$font-body;
+    font-size  : v.$text-sm;
+    color      : v.$color-text-secondary;
+    line-height: v.$leading-normal;
+    margin     : 0;
+  }
+
+  &__link {
+    font-family    : v.$font-body;
+    font-size      : v.$text-xs;
+    font-weight    : v.$font-bold;
+    color          : v.$color-text-tertiary;
+    text-decoration: none;
+    white-space    : nowrap;
+    transition     : color v.$transition-fast;
+
+    &:hover { color: v.$color-amber-primary; }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 

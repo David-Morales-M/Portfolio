@@ -6,5 +6,6 @@ export interface Certificate {
   description: string;
   fileUrl?   : string;
   verifyUrl? : string;
-  badge?     : string;
+  tier       : 1 | 2;
+  category   : string;
 }

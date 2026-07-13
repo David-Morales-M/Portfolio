@@ -1,136 +1,101 @@
 [
   {
     "id": 1,
-    "name": "Python Basics",
-    "issuer": "University of Michigan",
-    "year": 2020,
-    "description": "Certificación en fundamentos de Python.",
-    "verificationLink": "https://www.coursera.org/verify/MAJVSVRYMJXZ",
-    "pdfLink": "assets/certificates/python-basics-certificate.pdf",
-    "icon": "fa-brands fa-python"
+    "title": "Google Cloud Associate Engineer",
+    "issuer": "Google Cloud",
+    "year": "2024",
+    "description": "Cloud application deployment and infrastructure management on Google Cloud Platform.",
+    "verifyUrl": "https://www.credential.net/abc123",
+    "fileUrl": "assets/certificates/google-cloud-certificate.pdf",
+    "tier": 1,
+    "category": "cloud"
   },
   {
     "id": 2,
-    "name": "Certificado SERCOP",
-    "issuer": "SERCOP Ecuador",
-    "year": 2022,
-    "description": "Capacitación en procesos de contratación pública según normativa ecuatoriana.",
-    "verificationLink": "https://sercop.gob.ec/verificacion/67890",
-    "pdfLink": "assets/certificates/sercop-certificate.pdf",
-    "icon": "fa-solid fa-file-contract"
+    "title": "Legacy Responsive Web Design",
+    "issuer": "freeCodeCamp",
+    "year": "2024",
+    "description": "Responsive web design principles, CSS flexbox, grid and accessibility fundamentals.",
+    "verifyUrl": "https://freecodecamp.org/certification/david-morales-m/responsive-web-design",
+    "fileUrl": "assets/certificates/responsive-certificate.pdf",
+    "tier": 1,
+    "category": "frontend"
   },
   {
     "id": 3,
-    "name": "Certificado Google",
-    "issuer": "Google Cloud",
-    "year": 2024,
-    "description": "Google Cloud Associate Engineer: despliegue de aplicaciones en la nube.",
-    "verificationLink": "https://www.credential.net/abc123",
-    "pdfLink": "assets/certificates/google-cloud-certificate.pdf",
-    "icon": "fa-brands fa-google"
+    "title": "Python Basics",
+    "issuer": "University of Michigan — Coursera",
+    "year": "2020",
+    "description": "Python fundamentals and object-oriented programming principles.",
+    "verifyUrl": "https://www.coursera.org/verify/MAJVSVRYMJXZ",
+    "fileUrl": "assets/certificates/python-basics-certificate.pdf",
+    "tier": 1,
+    "category": "python"
   },
   {
     "id": 4,
-    "name": "Certificado Videojuegos",
-    "issuer": "Udemy",
-    "year": 2021,
-    "description": "Desarrollo de videojuegos con Unity y C# para principiantes.",
-    "verificationLink": "https://www.udemy.com/certificate/UC-XYZ789/",
-    "pdfLink": "assets/certificates/unity-certificate.pdf",
-    "icon": "fa-solid fa-gamepad"
+    "title": "Python Functions, Files and Dictionaries",
+    "issuer": "University of Michigan — Coursera",
+    "year": "2020",
+    "description": "Advanced Python patterns including functions, file I/O and dictionary structures.",
+    "verifyUrl": "https://www.coursera.org/verify/P4WZ6ZWUW8DZ",
+    "fileUrl": "assets/certificates/python-functions-certificate.pdf",
+    "tier": 1,
+    "category": "python"
   },
   {
     "id": 5,
-    "name": "Certificado Capacitador en Simulador de Cooperativa Politécnica",
-    "issuer": "Ludolab",
-    "year": 2025,
-    "description": "Capacitador de Simulador de Cooperativa de Ahorro y Crédito para usuarios nuevos.",
-    "verificationLink": "",
-    "pdfLink": "assets/certificates/coacp-certificate.pdf",
-    "icon": ""
+    "title": "Data Collection and Processing with Python",
+    "issuer": "University of Michigan — Coursera",
+    "year": "2021",
+    "description": "Data processing, storage and API consumption using Python.",
+    "verifyUrl": "https://www.coursera.org/verify/VLA2L85VJGME",
+    "fileUrl": "assets/certificates/python-processing-certificate.pdf",
+    "tier": 1,
+    "category": "python"
   },
   {
     "id": 6,
-    "name": "Desarrollo de Apps Móviles",
+    "title": "Unity & C# Game Development",
+    "issuer": "Udemy",
+    "year": "2021",
+    "description": "Game development fundamentals with Unity engine and C# programming.",
+    "verifyUrl": "https://www.udemy.com/certificate/UC-XYZ789/",
+    "fileUrl": "assets/certificates/unity-certificate.pdf",
+    "tier": 1,
+    "category": "other"
+  },
+  {
+    "id": 7,
+    "title": "Capacitador en Simulador de Cooperativa Politécnica",
+    "issuer": "Ludolab",
+    "year": "2025",
+    "description": "Certified trainer for the Credit Union Simulator platform for new users.",
+    "verifyUrl": "",
+    "fileUrl": "assets/certificates/coacp-certificate.pdf",
+    "tier": 2,
+    "category": "other"
+  },
+  {
+    "id": 8,
+    "title": "Desarrollo de Apps Móviles",
     "issuer": "Google Activate",
-    "year": 2021,
-    "description": "Google Activate desarrollo de aplicaciones móviles.",
-    "verificationLink": "",
-    "pdfLink": "assets/certificates/google-mobile-certificate.pdf",
-    "icon": "fa-brands fa-google"
-  },{
-  "id": 7,
-  "name": "Python Functions, Files and Dictionaries",
-  "issuer": "University of Michigan",
-  "year": 2020,
-  "description": "Certificación en manejo de funciones, archivos y diccionarios con Python.",
-  "verificationLink": "https://www.coursera.org/verify/P4WZ6ZWUW8DZ",
-  "pdfLink": "assets/certificates/python-functions-certificate.pdf",
-  "icon": "fa-brands fa-python"
-},{
-  "id": 8,
-  "name": "Data Collection and Processing with Python",
-  "issuer": "University of Michigan",
-  "year": 2021,
-  "description": "Certificación de Procesamiento y Almacenamiento de Datos con Python.",
-  "verificationLink": "https://www.coursera.org/verify/VLA2L85VJGME",
-  "pdfLink": "assets/certificates/python-processing-certificate.pdf",
-  "icon": "fa-brands fa-python"
-}
-,{
-  "id": 9,
-  "name": "Data Science with Python",
-  "issuer": "Simplilearn",
-  "year": 2022,
-  "description": "Certificación de Data Science con Python.",
-  "verificationLink": "",
-  "pdfLink": "assets/certificates/python-data-certificate.pdf",
-  "icon": "fa-brands fa-python"
-}
-,{
-  "id": 10,
-  "name": "Paper Presentation: Innovations in Adaptive Technology for Motor Disabilities: A Review of Trends, Optimal Design Strategies, and Their Impact on Accessibility",
-  "issuer": "ICI2ST - EPN",
-  "year": 2025,
-  "description": "Certificación de presentación de artículo en conferencia ICI2ST 2025.",
-  "verificationLink": "",
-  "pdfLink": "assets/certificates/ici2st-2025.pdf",
-  "icon": "fa-brands fa-python"
-},{
-  "id": 11,
-  "name": "Paper Presentation: A Serious Game Development for Vexillology Learning Using iPlus Methodology",
-  "issuer": "ICI2ST - EPN",
-  "year": 2023,
-  "description": "Certificación de presentación de artículo en conferencia ICI2ST 2023.",
-  "verificationLink": "",
-  "pdfLink": "assets/certificates/ici2st-2023.pdf",
-  "icon": "fa-brands fa-python"
-},{
-  "id": 12,
-  "name": "Paper Presentation: GAMIFIED REHABILITATION: ENHANCING PEDIATRIC PHYSICAL THERAPY THROUGH A MOTION-CAPTURE SERIOUS GAME",
-  "issuer": "CSEI - UTA",
-  "year": 2024,
-  "description": "Certificación de presentación de artículo en conferencia CSEI 2024.",
-  "verificationLink": "",
-  "pdfLink": "assets/certificates/csei-motion-2024.pdf",
-  "icon": "fa-brands fa-python"
-},{
-  "id": 13,
-  "name": "Paper Presentation: ANDEAN CULTURE IN PLAY: PRESERVING INTANGIBLE HERITAGE THROUGH A GAMIFIED APPLICATIO",
-  "issuer": "CSEI - UTA",
-  "year": 2024,
-  "description": "Certificación de presentación de artículo en conferencia CSEI 2024.",
-  "verificationLink": "",
-  "pdfLink": "assets/certificates/csei-andean-2024.pdf",
-  "icon": "fa-brands fa-python"
-},{
-  "id": 14,
-  "name": "Legacy Responsive Web Design V8",
-  "issuer": "FreeCodeCamp",
-  "year": 2024,
-  "description": "Certificación de Diseño de Sitios Web Responsive.",
-  "verificationLink": "https://freecodecamp.org/certification/david-morales-m/responsive-web-design",
-  "pdfLink": "assets/certificates/responsive-certificate.pdf",
-  "icon": "fa-brands fa-python"
-}
+    "year": "2021",
+    "description": "Mobile application development fundamentals through Google Activate program.",
+    "verifyUrl": "",
+    "fileUrl": "assets/certificates/google-mobile-certificate.pdf",
+    "tier": 2,
+    "category": "other"
+  },
+  {
+    "id": 9,
+    "title": "Data Science with Python",
+    "issuer": "Simplilearn",
+    "year": "2022",
+    "description": "Data science workflows, analysis and visualization using Python.",
+    "verifyUrl": "",
+    "fileUrl": "assets/certificates/python-data-certificate.pdf",
+    "tier": 2,
+    "category": "python"
+  }
 ]
