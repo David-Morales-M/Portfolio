@@ -1,0 +1,241 @@
+@use '../../../styles/variables' as v;
+
+.exp-edu {
+  background: v.$color-bg-secondary;
+  padding   : v.$space-24 0;
+
+  &__container {
+    max-width: 1200px;
+    margin   : 0 auto;
+    padding  : 0 v.$space-6;
+  }
+
+  &__grid {
+    display              : grid;
+    grid-template-columns: 1fr 1fr;
+    gap                  : v.$space-16;
+
+    @media (max-width: v.$bp-lg) {
+      grid-template-columns: 1fr;
+      gap: v.$space-12;
+    }
+  }
+
+  &__column { display: flex; flex-direction: column; }
+
+  &__col-header { margin-bottom: v.$space-10; }
+}
+
+// ── Timeline ──────────────────────────────────────────────────
+.timeline {
+  display       : flex;
+  flex-direction: column;
+  gap           : 0;
+
+  &__item {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap    : v.$space-5;
+    padding-bottom: v.$space-8;
+
+    &:last-child { padding-bottom: 0; }
+    &:last-child .timeline__line { display: none; }
+  }
+
+  &__marker {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    padding-top   : 4px;
+  }
+
+  &__dot {
+    width        : 12px;
+    height       : 12px;
+    border-radius: v.$radius-full;
+    background   : v.$color-bg-tertiary;
+    border       : 2px solid v.$color-border-subtle;
+    flex-shrink  : 0;
+    transition   : border-color v.$transition-normal;
+
+    &.dot--current {
+      background  : v.$color-amber-primary;
+      border-color: v.$color-amber-primary;
+      box-shadow  : 0 0 0 3px v.$color-amber-subtle;
+    }
+  }
+
+  &__line {
+    width     : 1px;
+    flex      : 1;
+    background: v.$color-border-default;
+    margin-top: v.$space-2;
+  }
+
+  &__content {
+    display       : flex;
+    flex-direction: column;
+    gap           : v.$space-3;
+    padding-bottom: v.$space-2;
+  }
+
+  &__header {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : flex-start;
+    gap            : v.$space-3;
+    flex-wrap      : wrap;
+  }
+
+  &__title-wrap {
+    display    : flex;
+    align-items: center;
+    gap        : v.$space-2;
+    flex-wrap  : wrap;
+  }
+
+  &__role {
+    font-family: v.$font-heading;
+    font-size  : v.$text-base;
+    font-weight: v.$font-semibold;
+    color      : v.$color-text-primary;
+    margin     : 0;
+  }
+
+  &__type {
+    font-size    : v.$text-xs;
+    font-weight  : v.$font-bold;
+    padding      : 2px v.$space-2;
+    border-radius: v.$radius-full;
+
+    &.type--fulltime  { background: rgba(16,185,129,.12); color: #10B981; }
+    &.type--freelance { background: v.$color-amber-subtle; color: v.$color-amber-secondary; }
+    &.type--research  { background: rgba(96,165,250,.12);  color: v.$color-info; }
+    &.type--volunteer { background: rgba(167,139,250,.12); color: #A78BFA; }
+  }
+
+  &__dates {
+    font-family: v.$font-body;
+    font-size  : v.$text-xs;
+    color      : v.$color-text-tertiary;
+    white-space: nowrap;
+  }
+
+  &__company {
+    display    : flex;
+    align-items: center;
+    gap        : v.$space-2;
+    font-family: v.$font-body;
+    font-size  : v.$text-sm;
+    color      : v.$color-amber-primary;
+    margin     : 0;
+  }
+
+  &__bullets {
+    list-style    : none;
+    padding       : 0;
+    margin        : 0;
+    display       : flex;
+    flex-direction: column;
+    gap           : v.$space-2;
+  }
+
+  &__bullet {
+    font-family: v.$font-body;
+    font-size  : v.$text-sm;
+    color      : v.$color-text-secondary;
+    line-height: v.$leading-normal;
+    padding-left: v.$space-4;
+    position   : relative;
+
+    &::before {
+      content   : '—';
+      position  : absolute;
+      left      : 0;
+      color     : v.$color-text-tertiary;
+    }
+  }
+
+  &__desc {
+    font-family: v.$font-body;
+    font-size  : v.$text-sm;
+    color      : v.$color-text-secondary;
+    line-height: v.$leading-relaxed;
+    margin     : 0;
+  }
+}
+
+// ── Education distinction ─────────────────────────────────────
+.edu__distinction {
+  display    : inline-flex;
+  align-items: center;
+  gap        : v.$space-2;
+  font-family: v.$font-body;
+  font-size  : v.$text-xs;
+  font-weight: v.$font-bold;
+  color      : v.$color-amber-secondary;
+  background : v.$color-amber-subtle;
+  padding    : v.$space-2 v.$space-3;
+  border-radius: v.$radius-md;
+  width      : fit-content;
+}
+
+// ── Languages ─────────────────────────────────────────────────
+.languages {
+  margin-top : v.$space-10;
+  padding-top: v.$space-8;
+  border-top : 1px solid v.$color-border-default;
+
+  &__title {
+    font-family  : v.$font-heading;
+    font-size    : v.$text-sm;
+    font-weight  : v.$font-semibold;
+    color        : v.$color-amber-primary;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin       : 0 0 v.$space-5;
+  }
+
+  &__list {
+    display       : flex;
+    flex-direction: column;
+    gap           : v.$space-4;
+  }
+}
+
+.lang-item {
+  display       : flex;
+  flex-direction: column;
+  gap           : v.$space-2;
+
+  &__info {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+  }
+
+  &__name {
+    font-family: v.$font-body;
+    font-size  : v.$text-sm;
+    color      : v.$color-text-primary;
+  }
+
+  &__level {
+    font-family: v.$font-body;
+    font-size  : v.$text-xs;
+    color      : v.$color-text-tertiary;
+  }
+
+  &__bar {
+    height       : 3px;
+    background   : v.$color-bg-tertiary;
+    border-radius: v.$radius-full;
+    overflow     : hidden;
+  }
+
+  &__fill {
+    height    : 100%;
+    background: v.$color-amber-primary;
+    border-radius: v.$radius-full;
+  }
+}

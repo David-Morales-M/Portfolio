@@ -1,3 +1,5 @@
+<!-- navbar.component.html — actualizado con theme toggle -->
+
 <nav class="navbar" [class.scrolled]="isScrolled()">
   <div class="navbar__container">
 
@@ -22,15 +24,36 @@
 
     <!-- Acciones desktop -->
     <div class="navbar__actions">
-      <a
-        href="assets/cv/david-morales-cv.pdf"
-        download
-        class="navbar__cv-btn">
+
+      <!-- Theme toggle -->
+      <button
+        class="navbar__theme-btn"
+        (click)="toggleTheme()"
+        [attr.aria-label]="isDark ? 'Switch to light mode' : 'Switch to dark mode'">
+        @if (isDark) {
+          <!-- Sun icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <path stroke-linecap="round"
+                  d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+        } @else {
+          <!-- Moon icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        }
+      </button>
+
+      <a href="assets/cv/david-morales-cv.pdf" download class="navbar__cv-btn">
         Download CV
       </a>
     </div>
 
-    <!-- Menú Móvil Recortado -->
+    <!-- Hamburger mobile -->
     <button
       class="navbar__hamburger"
       [class.open]="isMobileOpen()"
@@ -43,7 +66,7 @@
 
   </div>
 
-  <!-- Menú Móvil Ampliado -->
+  <!-- Mobile menu -->
   <div class="navbar__mobile" [class.open]="isMobileOpen()">
     <ul class="navbar__mobile-links">
       @for (link of navLinks; track link.target) {
@@ -57,11 +80,14 @@
         </li>
       }
     </ul>
-    <a
-      href="assets/cv/david-morales-cv.pdf"
-      download
-      class="navbar__cv-btn navbar__cv-btn--mobile">
-      Download CV
-    </a>
+    <div class="navbar__mobile-actions">
+      <button class="navbar__theme-btn" (click)="toggleTheme()">
+        {{ isDark ? 'Light mode' : 'Dark mode' }}
+      </button>
+      <a href="assets/cv/david-morales-cv.pdf" download
+         class="navbar__cv-btn navbar__cv-btn--mobile">
+        Download CV
+      </a>
+    </div>
   </div>
 </nav>

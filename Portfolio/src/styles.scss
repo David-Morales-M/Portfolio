@@ -1,83 +1,84 @@
-/* You can add global styles to this file, and also import other style files */
-
 @use 'styles/variables' as *;
 
+// ── Google Fonts ──────────────────────────────────────────────
+// (ya están en index.html, esto es solo referencia)
+
+// ── CSS Custom Properties — Dark theme (default) ──────────────
 :root {
-  //* {
-  //  border: 1px solid red;
-  //}
+  --color-bg-primary      : #0A0F1E;
+  --color-bg-secondary    : #111827;
+  --color-bg-tertiary     : #1F2937;
+  --color-bg-elevated     : #1A2235;
+
+  --color-amber-primary   : #F59E0B;
+  --color-amber-secondary : #FCD34D;
+  --color-amber-subtle    : rgba(245, 158, 11, 0.12);
+
+  --color-text-primary    : #F9FAFB;
+  --color-text-secondary  : #9CA3AF;
+  --color-text-tertiary   : #6B7280;
+  --color-text-accent     : #FCD34D;
+
+  --color-border-default  : #1F2937;
+  --color-border-subtle   : #374151;
+  --color-border-accent   : #F59E0B;
+
+  --shadow-sm             : 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md             : 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-amber          : 0 0 20px rgba(245, 158, 11, 0.15);
+
+  --navbar-bg             : rgba(10, 15, 30, 0.92);
 }
 
+// ── Light theme override ──────────────────────────────────────
+[data-theme="light"] {
+  --color-bg-primary      : #FAFAFA;
+  --color-bg-secondary    : #F3F4F6;
+  --color-bg-tertiary     : #E5E7EB;
+  --color-bg-elevated     : #FFFFFF;
 
-/* Modo Claro */
-:root {
-  --bg: #F2F2F2;
-  --bg-card: #FFFFFF;
-  --text: #4A4A4A;
-  --text-secondary: #777777;
-  --title: #1F3A5F;
-  --accent: #C9AD6A;
-  --hover: #5A7684;
-  font-family: 'Open Sans', Arial, sans-serif;
+  --color-amber-primary   : #D97706;
+  --color-amber-secondary : #B45309;
+  --color-amber-subtle    : rgba(217, 119, 6, 0.1);
+
+  --color-text-primary    : #111827;
+  --color-text-secondary  : #4B5563;
+  --color-text-tertiary   : #9CA3AF;
+  --color-text-accent     : #B45309;
+
+  --color-border-default  : #E5E7EB;
+  --color-border-subtle   : #D1D5DB;
+  --color-border-accent   : #D97706;
+
+  --shadow-sm             : 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md             : 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-amber          : 0 0 20px rgba(217, 119, 6, 0.12);
+
+  --navbar-bg             : rgba(250, 250, 250, 0.92);
 }
 
-/* Modo Oscuro */
-.dark-mode {
-  --bg: #121F2F;
-  --bg-card: #1F2E3D;
-  --text: #DADADA;
-  --text-secondary: #A8A8A8;
-  --title: #FFFFFF;
-  --accent: #D3B978;
-  --hover: #3D5A73;
-  font-family: 'Open Sans', Arial, sans-serif;
-}
-
-body {
-  background-color: var(--bg);
-  color: var(--text);
-}
-
-.card {
-  background-color: var(--bg-card);
-  color: var(--text);
-  border: 1px solid var(--hover);
-}
-
-h1, h2, h3 {
-  color: var(--title);
-}
-
-button {
-  background-color: var(--accent);
-  color: #fff;
-}
-
-button:hover {
-  background-color: var(--hover);
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+// ── Reset ─────────────────────────────────────────────────────
 *, *::before, *::after {
   box-sizing: border-box;
   margin    : 0;
   padding   : 0;
 }
 
-html, body {
-  margin    : 0;
-  padding   : 0;
-  min-height: 100%;
-  background: #0A0F1E; // $color-bg-primary
-  color     : #F9FAFB; // $color-text-primary
-  font-family: 'Lato', sans-serif;
-  -webkit-font-smoothing : antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  scroll-behavior: smooth;
 }
 
+html, body {
+  min-height             : 100%;
+  background             : var(--color-bg-primary);
+  color                  : var(--color-text-primary);
+  font-family            : 'Lato', sans-serif;
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition             : background-color 300ms ease, color 300ms ease;
+}
+
+// ── Global section classes ────────────────────────────────────
 .section-tag {
   display       : inline-block;
   font-family   : 'Lato', sans-serif;
@@ -85,7 +86,7 @@ html, body {
   font-weight   : 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color         : #F59E0B;
+  color         : var(--color-amber-primary);
   margin-bottom : 0.75rem;
 }
 
@@ -93,8 +94,9 @@ html, body {
   font-family: 'Sora', sans-serif;
   font-size  : 1.875rem;
   font-weight: 700;
-  color      : #F9FAFB;
+  color      : var(--color-text-primary);
   margin     : 0;
 
-  .accent { color: #F59E0B; }
+  .accent { color: var(--color-amber-primary); }
 }
+

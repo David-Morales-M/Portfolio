@@ -101,6 +101,37 @@
     @media (max-width: v.$bp-lg) { display: none; }
   }
 
+  &__theme-btn {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    width          : 36px;
+    height         : 36px;
+    background     : none;
+    border         : 1px solid var(--color-border-default);
+    border-radius  : 50%;
+    color          : var(--color-text-secondary);
+    cursor         : pointer;
+    transition     : color 150ms ease, border-color 150ms ease, background 150ms ease;
+    flex-shrink    : 0;
+
+    &:hover {
+      color        : var(--color-amber-primary);
+      border-color : var(--color-amber-primary);
+      background   : var(--color-amber-subtle);
+    }
+  }
+
+  &__mobile-actions {
+    display       : flex;
+    flex-direction: column;
+    gap           : 0.75rem;
+    padding       : 1rem 1.5rem 1.5rem;
+  }
+
+
+
+
   &__cv-btn {
     font-family  : v.$font-body;
     font-size    : v.$text-sm;
@@ -196,3 +227,5 @@
     &.active { color: v.$color-amber-secondary; }
   }
 }
+
+

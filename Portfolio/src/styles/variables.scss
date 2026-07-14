@@ -171,41 +171,73 @@ $z-toast    : 500;
 
 // Copiar este bloque a styles.scss:
 //
-// :root {
-//   --color-bg-primary      : #{$color-bg-primary};
-//   --color-bg-secondary    : #{$color-bg-secondary};
-//   --color-bg-tertiary     : #{$color-bg-tertiary};
-//   --color-bg-elevated     : #{$color-bg-elevated};
-//   --color-amber-primary   : #{$color-amber-primary};
-//   --color-amber-secondary : #{$color-amber-secondary};
-//   --color-amber-subtle    : #{$color-amber-subtle};
-//   --color-text-primary    : #{$color-text-primary};
-//   --color-text-secondary  : #{$color-text-secondary};
-//   --color-text-tertiary   : #{$color-text-tertiary};
-//   --color-text-accent     : #{$color-text-accent};
-//   --color-border-default  : #{$color-border-default};
-//   --color-border-subtle   : #{$color-border-subtle};
-//   --color-border-accent   : #{$color-border-accent};
-//   --shadow-sm             : #{$shadow-sm};
-//   --shadow-md             : #{$shadow-md};
-//   --shadow-amber          : #{$shadow-amber};
-//   --font-heading          : #{$font-heading};
-//   --font-body             : #{$font-body};
-// }
-//
-// [data-theme="light"] {
-//   --color-bg-primary      : #{$light-bg-primary};
-//   --color-bg-secondary    : #{$light-bg-secondary};
-//   --color-bg-tertiary     : #{$light-bg-tertiary};
-//   --color-bg-elevated     : #{$light-bg-elevated};
-//   --color-text-primary    : #{$light-text-primary};
-//   --color-text-secondary  : #{$light-text-secondary};
-//   --color-text-tertiary   : #{$light-text-tertiary};
-//   --color-text-accent     : #{$light-text-accent};
-//   --color-border-default  : #{$light-border-default};
-//   --color-border-subtle   : #{$light-border-subtle};
-//   --color-border-accent   : #{$light-border-accent};
-//   --shadow-sm             : #{$light-shadow-sm};
-//   --shadow-md             : #{$light-shadow-md};
-//   --shadow-amber          : #{$light-shadow-amber};
-// }
+// ============================================================
+// THEME CSS CUSTOM PROPERTIES
+// Agregar en src/styles.scss después del reset
+// ============================================================
+
+// ── Dark theme (default) ──────────────────────────────────────
+:root {
+  // Fondos
+  --color-bg-primary      : #0A0F1E;
+  --color-bg-secondary    : #111827;
+  --color-bg-tertiary     : #1F2937;
+  --color-bg-elevated     : #1A2235;
+
+  // Acento Amber
+  --color-amber-primary   : #F59E0B;
+  --color-amber-secondary : #FCD34D;
+  --color-amber-subtle    : rgba(245, 158, 11, 0.12);
+
+  // Texto
+  --color-text-primary    : #F9FAFB;
+  --color-text-secondary  : #9CA3AF;
+  --color-text-tertiary   : #6B7280;
+  --color-text-accent     : #FCD34D;
+
+  // Bordes
+  --color-border-default  : #1F2937;
+  --color-border-subtle   : #374151;
+  --color-border-accent   : #F59E0B;
+
+  // Sombras
+  --shadow-sm             : 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md             : 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-amber          : 0 0 20px rgba(245, 158, 11, 0.15);
+
+  // Navbar blur background
+  --navbar-bg             : rgba(10, 15, 30, 0.92);
+}
+
+// ── Light theme override ──────────────────────────────────────
+[data-theme="light"] {
+  // Fondos
+  --color-bg-primary      : #FAFAFA;
+  --color-bg-secondary    : #F3F4F6;
+  --color-bg-tertiary     : #E5E7EB;
+  --color-bg-elevated     : #FFFFFF;
+
+  // Acento Amber (más oscuro para legibilidad)
+  --color-amber-primary   : #D97706;
+  --color-amber-secondary : #B45309;
+  --color-amber-subtle    : rgba(217, 119, 6, 0.1);
+
+  // Texto
+  --color-text-primary    : #111827;
+  --color-text-secondary  : #4B5563;
+  --color-text-tertiary   : #9CA3AF;
+  --color-text-accent     : #B45309;
+
+  // Bordes
+  --color-border-default  : #E5E7EB;
+  --color-border-subtle   : #D1D5DB;
+  --color-border-accent   : #D97706;
+
+  // Sombras
+  --shadow-sm             : 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md             : 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-amber          : 0 0 20px rgba(217, 119, 6, 0.12);
+
+  // Navbar
+  --navbar-bg             : rgba(250, 250, 250, 0.92);
+}
