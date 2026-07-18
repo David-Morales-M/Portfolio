@@ -1,290 +1,319 @@
-
 @use '../../../styles/variables' as v;
 
 .projects {
-  background: v.$color-bg-primary;
-  padding   : v.$space-24 0;
+  background: var(--color-bg-primary);
+  padding: v.$space-24 0;
 
   &__container {
     max-width: 1200px;
-    margin   : 0 auto;
-    padding  : 0 v.$space-6;
+    margin: 0 auto;
+    padding: 0 v.$space-6;
   }
 
   &__header {
-    text-align   : center;
+    text-align: center;
     margin-bottom: v.$space-16;
   }
 
   &__subtitle {
     font-family: v.$font-body;
-    font-size  : v.$text-lg;
-    color      : v.$color-text-secondary;
-    margin     : v.$space-4 auto 0;
-    max-width  : 520px;
+    font-size: v.$text-lg;
+    color: var(--color-text-secondary);
+    margin: v.$space-4 auto 0;
+    max-width: 520px;
     line-height: v.$leading-relaxed;
   }
 
   // ── Tier 1 — Grid 3 columnas ──────────────────────────────
   &__tier1 {
-    display              : grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap                  : v.$space-6;
-    margin-bottom        : v.$space-10;
+    gap: v.$space-6;
+    margin-bottom: v.$space-10;
 
-    @media (max-width: v.$bp-lg) { grid-template-columns: repeat(2, 1fr); }
-    @media (max-width: v.$bp-md) { grid-template-columns: 1fr; }
+    @media (max-width: v.$bp-lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: v.$bp-md) {
+      grid-template-columns: 1fr;
+    }
   }
 
   // ── Tier 2 — Grid 2 columnas ──────────────────────────────
   &__tier2 {
-    display              : grid;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap                  : v.$space-5;
-    margin-bottom        : v.$space-8;
+    gap: v.$space-5;
+    margin-bottom: v.$space-8;
 
-    @media (max-width: v.$bp-md) { grid-template-columns: 1fr; }
+    @media (max-width: v.$bp-md) {
+      grid-template-columns: 1fr;
+    }
   }
 
   // ── Tier 3 — Grid 3 columnas compactas ───────────────────
   &__tier3 {
-    display              : grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap                  : v.$space-4;
-    margin-top           : v.$space-6;
-    animation            : fadeIn .3s ease;
+    gap: v.$space-4;
+    margin-top: v.$space-6;
+    animation: fadeIn .3s ease;
 
-    @media (max-width: v.$bp-lg) { grid-template-columns: repeat(2, 1fr); }
-    @media (max-width: v.$bp-sm) { grid-template-columns: 1fr; }
+    @media (max-width: v.$bp-lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: v.$bp-sm) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__tier-label {
-    display        : flex;
-    align-items    : center;
-    gap            : v.$space-4;
-    margin-bottom  : v.$space-6;
+    display: flex;
+    align-items: center;
+    gap: v.$space-4;
+    margin-bottom: v.$space-6;
 
     span {
-      font-family   : v.$font-body;
-      font-size     : v.$text-xs;
-      font-weight   : v.$font-bold;
+      font-family: v.$font-body;
+      font-size: v.$text-xs;
+      font-weight: v.$font-bold;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color         : v.$color-text-tertiary;
-      white-space   : nowrap;
+      color: var(--color-text-tertiary);
+      white-space: nowrap;
     }
 
     &::before, &::after {
-      content   : '';
-      flex      : 1;
-      height    : 1px;
-      background: v.$color-border-default;
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--color-border-default);
     }
   }
 
   &__show-more {
-    display        : flex;
+    display: flex;
     justify-content: center;
-    margin-bottom  : v.$space-2;
+    margin-bottom: v.$space-2;
   }
 
   &__toggle-btn {
-    display    : inline-flex;
+    display: inline-flex;
     align-items: center;
-    gap        : v.$space-2;
+    gap: v.$space-2;
     font-family: v.$font-body;
-    font-size  : v.$text-sm;
-    color      : v.$color-text-secondary;
-    background : none;
-    border     : 1px solid v.$color-border-default;
+    font-size: v.$text-sm;
+    color: var(--color-text-secondary);
+    background: none;
+    border: 1px solid var(--color-border-default);
     border-radius: v.$radius-full;
-    padding    : v.$space-2 v.$space-5;
-    cursor     : pointer;
-    transition : color v.$transition-fast, border-color v.$transition-fast;
+    padding: v.$space-2 v.$space-5;
+    cursor: pointer;
+    transition: color v.$transition-fast, border-color v.$transition-fast;
 
     &:hover {
-      color       : v.$color-amber-primary;
-      border-color: v.$color-amber-primary;
+      color: var(--color-amber-primary);
+      border-color: var(--color-amber-primary);
     }
   }
 }
 
 // ── Project Card ──────────────────────────────────────────────
 .project-card {
-  display       : flex;
+  display: flex;
   flex-direction: column;
-  gap           : v.$space-3;
-  padding       : v.$space-6;
-  border-radius : v.$radius-lg;
-  border        : 1px solid v.$color-border-default;
-  background    : v.$color-bg-secondary;
-  transition    : border-color v.$transition-normal, box-shadow v.$transition-normal, transform v.$transition-normal;
+  gap: v.$space-3;
+  padding: v.$space-6;
+  border-radius: v.$radius-lg;
+  border: 1px solid var(--color-border-default);
+  background: var(--color-bg-secondary);
+  transition: border-color v.$transition-normal, box-shadow v.$transition-normal, transform v.$transition-normal;
 
   &:hover {
-    border-color: v.$color-border-accent;
-    box-shadow  : v.$shadow-amber;
-    transform   : translateY(-3px);
+    border-color: var(--color-border-accent);
+    box-shadow: var(--shadow-amber);
+    transform: translateY(-3px);
   }
 
   // Tier 1 — destacada
   &--featured {
-    background: v.$color-bg-elevated;
-    border-color: v.$color-border-subtle;
+    background: var(--color-bg-elevated);
+    border-color: var(--color-border-subtle);
   }
 
   // Tier 2 — secundaria
   &--secondary {
-    background: v.$color-bg-secondary;
+    background: var(--color-bg-secondary);
   }
 
   // Tier 3 — minimal
   &--minimal {
-    background: v.$color-bg-primary;
-    border-color: v.$color-border-default;
+    background: var(--color-bg-primary);
+    border-color: var(--color-border-default);
     padding: v.$space-4 v.$space-5;
   }
 
   &__header {
-    display    : flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    gap        : v.$space-2;
-    flex-wrap  : wrap;
+    gap: v.$space-2;
+    flex-wrap: wrap;
   }
 
   &__client {
-    font-family   : v.$font-body;
-    font-size     : v.$text-xs;
-    font-weight   : v.$font-bold;
+    font-family: v.$font-body;
+    font-size: v.$text-xs;
+    font-weight: v.$font-bold;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color         : v.$color-text-tertiary;
+    color: var(--color-text-tertiary);
   }
 
   &__state {
-    font-size  : v.$text-xs;
+    font-size: v.$text-xs;
     font-weight: v.$font-bold;
-    padding    : 2px v.$space-2;
+    padding: 2px v.$space-2;
     border-radius: v.$radius-full;
 
     &.state--live {
       background: rgba(16, 185, 129, 0.12);
-      color     : #10B981;
+      color: #10B981;
     }
+
     &.state--demo {
-      background: v.$color-amber-subtle;
-      color     : v.$color-amber-secondary;
+      background: var(--color-amber-subtle);
+      color: var(--color-amber-secondary);
     }
+
     &.state--repo {
       background: rgba(148, 163, 184, 0.1);
-      color     : v.$color-text-tertiary;
+      color: var(--color-text-tertiary);
     }
+
     &.state--wip {
       background: rgba(96, 165, 250, 0.12);
-      color     : v.$color-info;
+      color: v.$color-info;
     }
   }
 
   &__paper-badge {
-    display    : inline-flex;
+    display: inline-flex;
     align-items: center;
-    gap        : v.$space-1;
-    font-size  : v.$text-xs;
-    color      : v.$color-amber-primary;
-    background : v.$color-amber-subtle;
-    padding    : 2px v.$space-2;
+    gap: v.$space-1;
+    font-size: v.$text-xs;
+    color: var(--color-amber-primary);
+    background: var(--color-amber-subtle);
+    padding: 2px v.$space-2;
     border-radius: v.$radius-full;
   }
 
   &__title {
     font-family: v.$font-heading;
-    font-size  : v.$text-lg;
+    font-size: v.$text-lg;
     font-weight: v.$font-semibold;
-    color      : v.$color-text-primary;
-    margin     : 0;
+    color: var(--color-text-primary);
+    margin: 0;
     line-height: v.$leading-snug;
   }
 
   &__description {
     font-family: v.$font-body;
-    font-size  : v.$text-sm;
-    color      : v.$color-text-secondary;
+    font-size: v.$text-sm;
+    color: var(--color-text-secondary);
     line-height: v.$leading-normal;
-    margin     : 0;
+    margin: 0;
   }
 
   &__details {
     font-family: v.$font-body;
-    font-size  : v.$text-sm;
-    color      : v.$color-text-tertiary;
+    font-size: v.$text-sm;
+    color: var(--color-text-tertiary);
     line-height: v.$leading-relaxed;
-    margin     : 0;
+    margin: 0;
   }
 
   &__roles {
-    display : flex;
-    gap     : v.$space-2;
+    display: flex;
+    gap: v.$space-2;
     flex-wrap: wrap;
   }
 
   &__role {
-    font-size  : v.$text-xs;
-    color      : v.$color-amber-secondary;
+    font-size: v.$text-xs;
+    color: var(--color-amber-secondary);
     font-family: v.$font-body;
   }
 
   &__tech {
-    display  : flex;
+    display: flex;
     flex-wrap: wrap;
-    gap      : v.$space-2;
+    gap: v.$space-2;
     margin-top: auto;
     padding-top: v.$space-3;
   }
 
   &__tech-badge {
     font-family: v.$font-body;
-    font-size  : v.$text-xs;
-    color      : v.$color-text-secondary;
-    background : v.$color-bg-tertiary;
-    padding    : 3px v.$space-3;
+    font-size: v.$text-xs;
+    color: var(--color-text-secondary);
+    background: var(--color-bg-tertiary);
+    padding: 3px v.$space-3;
     border-radius: v.$radius-full;
-    border     : 1px solid v.$color-border-default;
+    border: 1px solid var(--color-border-default);
   }
 
   &__links {
-    display    : flex;
-    gap        : v.$space-3;
+    display: flex;
+    gap: v.$space-3;
     align-items: center;
     padding-top: v.$space-2;
-    border-top : 1px solid v.$color-border-default;
+    border-top: 1px solid var(--color-border-default);
   }
 
   &__link {
-    display    : inline-flex;
+    display: inline-flex;
     align-items: center;
-    gap        : v.$space-1;
+    gap: v.$space-1;
     font-family: v.$font-body;
-    font-size  : v.$text-xs;
+    font-size: v.$text-xs;
     font-weight: v.$font-bold;
     text-decoration: none;
-    transition : color v.$transition-fast;
+    transition: color v.$transition-fast;
 
     &--primary {
-      color: v.$color-amber-primary;
-      &:hover { color: v.$color-amber-secondary; }
+      color: var(--color-amber-primary);
+
+      &:hover {
+        color: var(--color-amber-secondary);
+      }
     }
+
     &--secondary {
-      color: v.$color-text-tertiary;
-      &:hover { color: v.$color-text-primary; }
+      color: var(--color-text-tertiary);
+
+      &:hover {
+        color: var(--color-text-primary);
+      }
     }
+
     &--paper {
       color: v.$color-info;
-      &:hover { opacity: .8; }
+
+      &:hover {
+        opacity: .8;
+      }
     }
   }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -1,32 +1,31 @@
 @use '../../../styles/variables' as v;
 
 .hero {
-  position  : relative;
+  position: relative;
   min-height: 100vh;
-  display   : flex;
+  display: flex;
   align-items: center;
-  overflow  : hidden;
-  background: v.$color-bg-primary;
+  overflow: hidden;
+  background: var(--color-bg-primary);
 
   // Grid de fondo sutil
   &__bg-grid {
-    position  : absolute;
-    inset     : 0;
-    background-image:
-      linear-gradient(rgba(245, 158, 11, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(245, 158, 11, 0.03) 1px, transparent 1px);
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(245, 158, 11, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 158, 11, 0.03) 1px, transparent 1px);
     background-size: 60px 60px;
     pointer-events: none;
   }
 
   &__container {
     max-width: 1200px;
-    width    : 100%;
-    margin   : 0 auto;
-    padding  : v.$space-24 v.$space-6 v.$space-12;
-    display  : grid;
+    width: 100%;
+    margin: 0 auto;
+    padding: v.$space-24 v.$space-6 v.$space-12;
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap      : v.$space-12;
+    gap: v.$space-12;
     align-items: center;
 
     @media (max-width: v.$bp-lg) {
@@ -39,9 +38,9 @@
 
   // ── Contenido izquierdo ──────────────────────────────────
   &__content {
-    display       : flex;
+    display: flex;
     flex-direction: column;
-    gap           : v.$space-5;
+    gap: v.$space-5;
 
     @media (max-width: v.$bp-lg) {
       align-items: center;
@@ -49,101 +48,118 @@
   }
 
   &__badge {
-    display    : inline-flex;
+    display: inline-flex;
     align-items: center;
-    gap        : v.$space-2;
+    gap: v.$space-2;
     font-family: v.$font-body;
-    font-size  : v.$text-xs;
+    font-size: v.$text-xs;
     font-weight: v.$font-bold;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color      : v.$color-amber-secondary;
-    background : v.$color-amber-subtle;
-    border     : 1px solid rgba(245, 158, 11, 0.25);
-    padding    : v.$space-2 v.$space-4;
+    color: var(--color-amber-secondary);
+    background: var(--color-amber-subtle);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    padding: v.$space-2 v.$space-4;
     border-radius: v.$radius-full;
-    width      : fit-content;
+    width: fit-content;
 
     &::before {
-      content      : '';
-      width        : 6px;
-      height       : 6px;
-      background   : v.$color-amber-primary;
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--color-amber-primary);
       border-radius: v.$radius-full;
-      animation    : pulse 2s infinite;
+      animation: pulse 2s infinite;
     }
   }
 
   &__name {
     font-family: v.$font-heading;
-    font-size  : v.$text-5xl;
+    font-size: v.$text-5xl;
     font-weight: v.$font-bold;
-    color      : v.$color-text-primary;
+    color: var(--color-text-primary);
     line-height: v.$leading-tight;
-    margin     : 0;
+    margin: 0;
 
-    @media (max-width: v.$bp-md) { font-size: v.$text-4xl; }
+    @media (max-width: v.$bp-md) {
+      font-size: v.$text-4xl;
+    }
 
-    &-accent { color: v.$color-amber-primary; }
+    &-accent {
+      color: var(--color-amber-primary);
+    }
   }
 
   &__role {
     font-family: v.$font-body;
-    font-size  : v.$text-xl;
-    color      : v.$color-text-secondary;
-    min-height : 2rem;
-    display    : flex;
+    font-size: v.$text-xl;
+    color: var(--color-text-secondary);
+    min-height: 2rem;
+    display: flex;
     align-items: center;
-    gap        : 2px;
+    gap: 2px;
 
-    @media (max-width: v.$bp-lg) { justify-content: center; }
+    @media (max-width: v.$bp-lg) {
+      justify-content: center;
+    }
   }
 
-  &__role-text { color: v.$color-text-primary; }
+  &__role-text {
+    color: var(--color-text-primary);
+  }
 
   &__cursor {
-    color    : v.$color-amber-primary;
+    color: var(--color-amber-primary);
     animation: blink 1s step-end infinite;
   }
 
   &__description {
     font-family: v.$font-body;
-    font-size  : v.$text-base;
-    color      : v.$color-text-secondary;
+    font-size: v.$text-base;
+    color: var(--color-text-secondary);
     line-height: v.$leading-relaxed;
-    max-width  : 480px;
-    margin     : 0;
+    max-width: 480px;
+    margin: 0;
 
-    strong { color: v.$color-text-primary; font-weight: v.$font-bold; }
+    strong {
+      color: var(--color-text-primary);
+      font-weight: v.$font-bold;
+    }
 
-    @media (max-width: v.$bp-lg) { max-width: 100%; }
+    @media (max-width: v.$bp-lg) {
+      max-width: 100%;
+    }
   }
 
   // ── Stats ────────────────────────────────────────────────
   &__stats {
     display: flex;
-    gap    : v.$space-6;
+    gap: v.$space-6;
 
-    @media (max-width: v.$bp-lg) { justify-content: center; }
-    @media (max-width: v.$bp-sm) { gap: v.$space-4; }
+    @media (max-width: v.$bp-lg) {
+      justify-content: center;
+    }
+    @media (max-width: v.$bp-sm) {
+      gap: v.$space-4;
+    }
   }
 
   &__stat {
-    display       : flex;
+    display: flex;
     flex-direction: column;
-    gap           : v.$space-1;
+    gap: v.$space-1;
 
     &-value {
       font-family: v.$font-heading;
-      font-size  : v.$text-2xl;
+      font-size: v.$text-2xl;
       font-weight: v.$font-bold;
-      color      : v.$color-amber-primary;
+      color: var(--color-amber-primary);
     }
 
     &-label {
       font-family: v.$font-body;
-      font-size  : v.$text-xs;
-      color      : v.$color-text-tertiary;
+      font-size: v.$text-xs;
+      color: var(--color-text-tertiary);
       white-space: nowrap;
     }
   }
@@ -151,204 +167,253 @@
   // ── CTAs ─────────────────────────────────────────────────
   &__actions {
     display: flex;
-    gap    : v.$space-4;
+    gap: v.$space-4;
 
-    @media (max-width: v.$bp-lg) { justify-content: center; }
-    @media (max-width: v.$bp-sm) { flex-direction: column; align-items: stretch; }
+    @media (max-width: v.$bp-lg) {
+      justify-content: center;
+    }
+    @media (max-width: v.$bp-sm) {
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
 
   // ── Social ───────────────────────────────────────────────
   &__social {
     display: flex;
-    gap    : v.$space-3;
+    gap: v.$space-3;
 
-    @media (max-width: v.$bp-lg) { justify-content: center; }
+    @media (max-width: v.$bp-lg) {
+      justify-content: center;
+    }
   }
 
   &__social-link {
-    display    : flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    width      : 40px;
-    height     : 40px;
-    color      : v.$color-text-tertiary;
-    border     : 1px solid v.$color-border-default;
+    width: 40px;
+    height: 40px;
+    color: var(--color-text-tertiary);
+    border: 1px solid var(--color-border-default);
     border-radius: v.$radius-md;
-    transition : color v.$transition-fast, border-color v.$transition-fast, transform v.$transition-fast;
+    transition: color v.$transition-fast, border-color v.$transition-fast, transform v.$transition-fast;
     text-decoration: none;
 
     &:hover {
-      color        : v.$color-amber-primary;
-      border-color : v.$color-amber-primary;
-      transform    : translateY(-2px);
+      color: var(--color-amber-primary);
+      border-color: var(--color-amber-primary);
+      transform: translateY(-2px);
     }
   }
 
   // ── Foto ─────────────────────────────────────────────────
   &__photo-wrapper {
-    position       : relative;
-    display        : flex;
+    position: relative;
+    display: flex;
     justify-content: center;
-    align-items    : center;
+    align-items: center;
 
-    @media (max-width: v.$bp-lg) { order: -1; }
+    @media (max-width: v.$bp-lg) {
+      order: -1;
+    }
   }
 
   &__photo-ring {
-    position     : absolute;
-    width        : 340px;
-    height       : 340px;
+    position: absolute;
+    width: 340px;
+    height: 340px;
     border-radius: v.$radius-full;
-    border       : 1px solid rgba(245, 158, 11, 0.2);
-    animation    : spin 20s linear infinite;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    animation: spin 20s linear infinite;
 
-    @media (max-width: v.$bp-md) { width: 260px; height: 260px; }
+    @media (max-width: v.$bp-md) {
+      width: 260px;
+      height: 260px;
+    }
 
     &::before {
-      content      : '';
-      position     : absolute;
-      top          : -4px;
-      left         : 50%;
-      width        : 8px;
-      height       : 8px;
-      background   : v.$color-amber-primary;
+      content: '';
+      position: absolute;
+      top: -4px;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      background: var(--color-amber-primary);
       border-radius: v.$radius-full;
-      transform    : translateX(-50%);
+      transform: translateX(-50%);
     }
   }
 
   &__photo {
-    width        : 280px;
-    height       : 280px;
+    width: 280px;
+    height: 280px;
     border-radius: v.$radius-full;
-    overflow     : hidden;
-    border       : 3px solid v.$color-border-default;
-    position     : relative;
-    z-index      : v.$z-above;
+    overflow: hidden;
+    border: 3px solid var(--color-border-default);
+    position: relative;
+    z-index: v.$z-above;
 
-    @media (max-width: v.$bp-md) { width: 220px; height: 220px; }
+    @media (max-width: v.$bp-md) {
+      width: 220px;
+      height: 220px;
+    }
 
     img {
-      width     : 100%;
-      height    : 100%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
     }
   }
 
   &__photo-placeholder {
-    display        : none;
-    width          : 100%;
-    height         : 100%;
-    background     : v.$color-bg-tertiary;
-    align-items    : center;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: var(--color-bg-tertiary);
+    align-items: center;
     justify-content: center;
-    font-family    : v.$font-heading;
-    font-size      : v.$text-4xl;
-    font-weight    : v.$font-bold;
-    color          : v.$color-amber-primary;
+    font-family: v.$font-heading;
+    font-size: v.$text-4xl;
+    font-weight: v.$font-bold;
+    color: var(--color-amber-primary);
   }
 
   &__photo-glow {
-    position     : absolute;
-    width        : 200px;
-    height       : 200px;
-    background   : radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
     border-radius: v.$radius-full;
     pointer-events: none;
   }
 
   // ── Scroll indicator ─────────────────────────────────────
   &__scroll {
-    position : absolute;
-    bottom   : v.$space-8;
-    left     : 50%;
+    position: absolute;
+    bottom: v.$space-8;
+    left: 50%;
     transform: translateX(-50%);
-    display  : flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap      : v.$space-2;
-    color    : v.$color-text-tertiary;
+    gap: v.$space-2;
+    color: var(--color-text-tertiary);
     font-family: v.$font-body;
     font-size: v.$text-xs;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     animation: fadeInUp 1s ease 1s both;
 
-    @media (max-width: v.$bp-md) { display: none; }
+    @media (max-width: v.$bp-md) {
+      display: none;
+    }
   }
 
   &__scroll-line {
-    width        : 1px;
-    height       : 40px;
-    background   : linear-gradient(v.$color-amber-primary, transparent);
-    animation    : scrollLine 2s ease-in-out infinite;
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(var(--color-amber-primary), transparent);
+    animation: scrollLine 2s ease-in-out infinite;
   }
 }
 
 // ── Botones globales (también en styles.scss si se usan en otros componentes)
 .btn {
-  display    : inline-flex;
+  display: inline-flex;
   align-items: center;
-  gap        : v.$space-2;
+  gap: v.$space-2;
   font-family: v.$font-body;
-  font-size  : v.$text-sm;
+  font-size: v.$text-sm;
   font-weight: v.$font-bold;
-  padding    : v.$space-3 v.$space-6;
+  padding: v.$space-3 v.$space-6;
   border-radius: v.$radius-md;
-  border     : none;
-  cursor     : pointer;
-  transition : all v.$transition-normal;
+  border: none;
+  cursor: pointer;
+  transition: all v.$transition-normal;
   text-decoration: none;
   white-space: nowrap;
 
   &--primary {
-    background: v.$color-amber-primary;
-    color     : v.$color-bg-primary;
+    background: var(--color-amber-primary);
+    color: var(--color-bg-primary);
 
     &:hover {
-      background: v.$color-amber-secondary;
-      transform : translateY(-2px);
-      box-shadow: v.$shadow-amber;
+      background: var(--color-amber-secondary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-amber);
     }
   }
 
   &--outline {
-    background  : transparent;
-    color       : v.$color-text-primary;
-    border      : 1px solid v.$color-border-subtle;
+    background: transparent;
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border-subtle);
 
     &:hover {
-      border-color: v.$color-amber-primary;
-      color       : v.$color-amber-primary;
-      transform   : translateY(-2px);
+      border-color: var(--color-amber-primary);
+      color: var(--color-amber-primary);
+      transform: translateY(-2px);
     }
   }
 }
 
 // ── Animaciones ───────────────────────────────────────────
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0; }
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1);   }
-  50%       { opacity: 0.6; transform: scale(1.2); }
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
 }
 
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes scrollLine {
-  0%   { transform: scaleY(0); transform-origin: top; }
-  50%  { transform: scaleY(1); transform-origin: top; }
-  51%  { transform: scaleY(1); transform-origin: bottom; }
-  100% { transform: scaleY(0); transform-origin: bottom; }
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  51% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateX(-50%) translateY(10px); }
-  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }

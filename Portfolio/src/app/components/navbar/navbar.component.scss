@@ -13,7 +13,7 @@
     padding   : v.$space-3 0;
     background: rgba(10, 15, 30, 0.92);
     backdrop-filter: blur(12px);
-    box-shadow: 0 1px 0 v.$color-border-default;
+    box-shadow: 0 1px 0 var(--color-border-default);
   }
 
   &__container {
@@ -29,7 +29,7 @@
     font-family: v.$font-heading;
     font-size  : v.$text-xl;
     font-weight: v.$font-semibold;
-    color      : v.$color-text-primary;
+    color      : var(--color-text-primary);
     background : none;
     border     : none;
     cursor     : pointer;
@@ -37,9 +37,9 @@
     transition : color v.$transition-fast;
     flex-shrink: 0;
 
-    &:hover { color: v.$color-amber-primary; }
+    &:hover { color: var(--color-amber-primary); }
 
-    &-dot { color: v.$color-amber-primary; }
+    &-dot { color: var(--color-amber-primary); }
   }
 
   &__links {
@@ -58,7 +58,7 @@
     font-family: v.$font-body;
     font-size  : v.$text-sm;
     font-weight: v.$font-regular;
-    color      : v.$color-text-secondary;
+    color      : var(--color-text-secondary);
     background : none;
     border     : none;
     cursor     : pointer;
@@ -75,18 +75,18 @@
       transform : translateX(-50%);
       width     : 0;
       height    : 2px;
-      background: v.$color-amber-primary;
+      background: var(--color-amber-primary);
       border-radius: v.$radius-full;
       transition: width v.$transition-normal;
     }
 
     &:hover {
-      color     : v.$color-text-primary;
-      background: v.$color-bg-tertiary;
+      color     : var(--color-text-primary);
+      background: var(--color-text-tertiary);
     }
 
     &.active {
-      color: v.$color-amber-secondary;
+      color: var(--color-amber-secondary);
 
       &::after { width: 60%; }
     }
@@ -136,8 +136,8 @@
     font-family  : v.$font-body;
     font-size    : v.$text-sm;
     font-weight  : v.$font-bold;
-    color        : v.$color-amber-primary;
-    border       : 1px solid v.$color-amber-primary;
+    color        : var(--color-amber-primary);
+    border       : 1px solid var(--color-amber-primary);
     border-radius: v.$radius-md;
     padding      : v.$space-2 v.$space-4;
     text-decoration: none;
@@ -145,8 +145,8 @@
     white-space  : nowrap;
 
     &:hover {
-      background: v.$color-amber-primary;
-      color     : v.$color-bg-primary;
+      background: var(--color-amber-primary);
+      color     : var(--color-bg-primary);
     }
 
     &--mobile {
@@ -173,7 +173,7 @@
       display      : block;
       width        : 22px;
       height       : 2px;
-      background   : v.$color-text-secondary;
+      background   : var(--color-text-secondary);
       border-radius: v.$radius-full;
       transition   : transform v.$transition-normal, opacity v.$transition-normal;
     }
@@ -191,7 +191,7 @@
     flex-direction : column;
     background     : rgba(10, 15, 30, 0.97);
     backdrop-filter: blur(12px);
-    border-top     : 1px solid v.$color-border-default;
+    border-top     : 1px solid var(--color-border-default);
     max-height     : 0;
     overflow       : hidden;
     transition     : max-height v.$transition-slow;
@@ -213,18 +213,18 @@
   &__mobile-link {
     font-family: v.$font-body;
     font-size  : v.$text-base;
-    color      : v.$color-text-secondary;
+    color      : var(--color-text-secondary);
     background : none;
     border     : none;
     cursor     : pointer;
     padding    : v.$space-3 0;
     text-align : left;
     width      : 100%;
-    border-bottom: 1px solid v.$color-border-default;
+    border-bottom: 1px solid var(--color-border-default);
     transition : color v.$transition-fast;
 
     &:hover,
-    &.active { color: v.$color-amber-secondary; }
+    &.active { color: var(--color-amber-secondary); }
   }
 }
 

@@ -1,7 +1,7 @@
 @use '../../../styles/variables' as v;
 
 .skills-section {
-  background: v.$color-bg-primary;
+  background: var(--color-bg-primary);
   padding   : v.$space-24 0;
 
   &__container {
@@ -18,7 +18,7 @@
   &__subtitle {
     font-family: v.$font-body;
     font-size  : v.$text-base;
-    color      : v.$color-text-secondary;
+    color      : var(--color-text-secondary);
     margin     : v.$space-4 auto 0;
     max-width  : 480px;
     line-height: v.$leading-relaxed;
@@ -37,8 +37,8 @@
 }
 
 .skill-category {
-  background   : v.$color-bg-secondary;
-  border       : 1px solid v.$color-border-default;
+  background   : var(--color-bg-secondary);
+  border       : 1px solid var(--color-border-default);
   border-radius: v.$radius-lg;
   padding      : v.$space-5 v.$space-6;
 
@@ -46,10 +46,10 @@
     font-family  : v.$font-heading;
     font-size    : v.$text-sm;
     font-weight  : v.$font-semibold;
-    color        : v.$color-amber-primary;
+    color        :var(--color-amber-primary);
     margin       : 0 0 v.$space-5;
     padding-bottom: v.$space-3;
-    border-bottom: 1px solid v.$color-border-default;
+    border-bottom: 1px solid var(--color-border-default);
     text-transform: uppercase;
     letter-spacing: 0.06em;
   }
@@ -75,7 +75,7 @@
   &__name {
     font-family: v.$font-body;
     font-size  : v.$text-sm;
-    color      : v.$color-text-primary;
+    color      : var(--color-text-primary);
     display    : flex;
     align-items: center;
     gap        : v.$space-2;
@@ -84,8 +84,8 @@
   &__learning {
     font-size    : 9px;
     font-weight  : v.$font-bold;
-    color        : v.$color-amber-primary;
-    background   : v.$color-amber-subtle;
+    color        : var(--color-amber-primary);
+    background   : var(--color-amber-subtle);
     padding      : 1px 6px;
     border-radius: v.$radius-full;
     text-transform: uppercase;
@@ -95,12 +95,12 @@
   &__level {
     font-family: v.$font-body;
     font-size  : v.$text-xs;
-    color      : v.$color-text-tertiary;
+    color      : var(--color-text-tertiary);
   }
 
   &__bar {
     height       : 3px;
-    background   : v.$color-bg-tertiary;
+    background   : var(--color-bg-tertiary);
     border-radius: v.$radius-full;
     overflow     : hidden;
   }
@@ -110,9 +110,9 @@
     border-radius: v.$radius-full;
     transition   : width 1s ease;
 
-    &.fill--expert     { background: v.$color-amber-primary; }
-    &.fill--proficient { background: v.$color-amber-secondary; opacity: .7; }
-    &.fill--familiar   { background: v.$color-text-tertiary; }
+    &.fill--expert     { background: var(--color-amber-primary); }
+    &.fill--proficient { background: var(--color-amber-secondary); opacity: .7; }
+    &.fill--familiar   { background: var(--color-text-tertiary); }
   }
 }
 
@@ -148,18 +148,18 @@
   flex-direction: column;
   gap           : v.$space-3;
   padding       : v.$space-5;
-  background    : v.$color-bg-secondary;
-  border        : 1px solid v.$color-border-default;
+  background    : var(--color-bg-secondary);
+  border        : 1px solid var(--color-border-default);
   border-radius : v.$radius-lg;
   transition    : border-color v.$transition-normal, box-shadow v.$transition-normal;
 
   &:hover {
-    border-color: v.$color-border-accent;
-    box-shadow  : v.$shadow-amber;
+    border-color: var(--color-border-accent);
+    box-shadow  : var(--shadow-amber);
   }
 
   &--secondary {
-    background: v.$color-bg-primary;
+    background: var(--color-bg-primary);
     padding   : v.$space-4;
   }
 
@@ -176,9 +176,9 @@
     justify-content: center;
     width          : 36px;
     height         : 36px;
-    background     : v.$color-amber-subtle;
+    background     : var(--color-amber-subtle);
     border-radius  : v.$radius-md;
-    color          : v.$color-amber-primary;
+    color          : var(--color-amber-primary);
     flex-shrink    : 0;
   }
 
@@ -194,7 +194,7 @@
     font-family  : v.$font-body;
     font-size    : v.$text-xs;
     font-weight  : v.$font-bold;
-    color        : v.$color-text-secondary;
+    color        : var(--color-text-secondary);
     white-space  : nowrap;
     overflow     : hidden;
     text-overflow: ellipsis;
@@ -203,14 +203,14 @@
   &__year {
     font-family: v.$font-body;
     font-size  : v.$text-xs;
-    color      : v.$color-text-tertiary;
+    color      : var(--color-text-tertiary);
   }
 
   &__title {
     font-family: v.$font-heading;
     font-size  : v.$text-sm;
     font-weight: v.$font-semibold;
-    color      : v.$color-text-primary;
+    color      : var(--color-text-primary);
     margin     : 0;
     line-height: v.$leading-snug;
   }
@@ -218,7 +218,7 @@
   &__desc {
     font-family: v.$font-body;
     font-size  : v.$text-xs;
-    color      : v.$color-text-tertiary;
+    color      : var(--color-text-tertiary);
     line-height: v.$leading-normal;
     margin     : 0;
     flex       : 1;
@@ -228,7 +228,7 @@
     display    : flex;
     gap        : v.$space-3;
     padding-top: v.$space-2;
-    border-top : 1px solid v.$color-border-default;
+    border-top : 1px solid var(--color-border-default);
     margin-top : auto;
   }
 
@@ -243,12 +243,12 @@
     transition : color v.$transition-fast;
 
     &--verify {
-      color: v.$color-amber-primary;
-      &:hover { color: v.$color-amber-secondary; }
+      color:var(--color-amber-primary);
+      &:hover { color: var(--color-text-secondary); }
     }
     &--pdf {
-      color: v.$color-text-tertiary;
-      &:hover { color: v.$color-text-primary; }
+      color: var(--color-text-tertiary);
+      &:hover { color: var(--color-text-primary); }
     }
   }
 }
@@ -265,17 +265,17 @@
   gap        : v.$space-2;
   font-family: v.$font-body;
   font-size  : v.$text-sm;
-  color      : v.$color-text-secondary;
+  color      : var(--color-text-secondary);
   background : none;
-  border     : 1px solid v.$color-border-default;
+  border     : 1px solid var(--color-border-default);
   border-radius: v.$radius-full;
   padding    : v.$space-2 v.$space-5;
   cursor     : pointer;
   transition : color v.$transition-fast, border-color v.$transition-fast;
 
   &:hover {
-    color       : v.$color-amber-primary;
-    border-color: v.$color-amber-primary;
+    color       : var(--color-amber-primary);
+    border-color: var(--color-amber-primary);
   }
 }
 
@@ -283,7 +283,7 @@
 .conferences {
   margin-top   : v.$space-16;
   padding-top  : v.$space-12;
-  border-top   : 1px solid v.$color-border-default;
+  border-top   : 1px solid var(--color-border-default);
 
   &__header {
     margin-bottom: v.$space-8;
@@ -293,7 +293,7 @@
     font-family: v.$font-heading;
     font-size  : v.$text-xl;
     font-weight: v.$font-semibold;
-    color      : v.$color-text-primary;
+    color      : var(--color-text-primary);
     margin     : v.$space-2 0 0;
   }
 
@@ -310,12 +310,12 @@
   gap         : v.$space-5;
   align-items : center;
   padding     : v.$space-4 v.$space-5;
-  background  : v.$color-bg-secondary;
-  border      : 1px solid v.$color-border-default;
+  background  : var(--color-bg-secondary);
+  border      : 1px solid var(--color-border-default);
   border-radius: v.$radius-md;
   transition  : border-color v.$transition-fast;
 
-  &:hover { border-color: v.$color-border-subtle; }
+  &:hover { border-color: var(--color-border-subtle); }
 
   @media (max-width: v.$bp-md) {
     grid-template-columns: 1fr;
@@ -332,19 +332,19 @@
     font-family: v.$font-heading;
     font-size  : v.$text-sm;
     font-weight: v.$font-semibold;
-    color      : v.$color-amber-primary;
+    color      :var(--color-amber-primary);
   }
 
   &__year {
     font-family: v.$font-body;
     font-size  : v.$text-xs;
-    color      : v.$color-text-tertiary;
+    color      : var(--color-text-tertiary);
   }
 
   &__paper {
     font-family: v.$font-body;
     font-size  : v.$text-sm;
-    color      : v.$color-text-secondary;
+    color      : var(--color-text-secondary);
     line-height: v.$leading-normal;
     margin     : 0;
   }
@@ -353,12 +353,12 @@
     font-family    : v.$font-body;
     font-size      : v.$text-xs;
     font-weight    : v.$font-bold;
-    color          : v.$color-text-tertiary;
+    color          : var(--color-text-tertiary);
     text-decoration: none;
     white-space    : nowrap;
     transition     : color v.$transition-fast;
 
-    &:hover { color: v.$color-amber-primary; }
+    &:hover { color: var(--color-amber-primary); }
   }
 }
 

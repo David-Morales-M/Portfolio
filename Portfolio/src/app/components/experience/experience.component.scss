@@ -1,7 +1,7 @@
 @use '../../../styles/variables' as v;
 
 .exp-edu {
-  background: v.$color-bg-secondary;
+  background: var(--color-bg-secondary);
   padding   : v.$space-24 0;
 
   &__container {
@@ -53,22 +53,22 @@
     width        : 12px;
     height       : 12px;
     border-radius: v.$radius-full;
-    background   : v.$color-bg-tertiary;
-    border       : 2px solid v.$color-border-subtle;
+    background   : var(--color-bg-tertiary);
+    border       : 2px solid var(--color-border-subtle);
     flex-shrink  : 0;
     transition   : border-color v.$transition-normal;
 
     &.dot--current {
-      background  : v.$color-amber-primary;
-      border-color: v.$color-amber-primary;
-      box-shadow  : 0 0 0 3px v.$color-amber-subtle;
+      background  : var(--color-amber-primary);
+      border-color: var(--color-amber-primary);
+      box-shadow  : 0 0 0 3px var(--color-amber-subtle);
     }
   }
 
   &__line {
     width     : 1px;
     flex      : 1;
-    background: v.$color-border-default;
+    background: var(--color-border-default);
     margin-top: v.$space-2;
   }
 
@@ -98,7 +98,7 @@
     font-family: v.$font-heading;
     font-size  : v.$text-base;
     font-weight: v.$font-semibold;
-    color      : v.$color-text-primary;
+    color      : var(--color-text-primary);
     margin     : 0;
   }
 
@@ -109,7 +109,7 @@
     border-radius: v.$radius-full;
 
     &.type--fulltime  { background: rgba(16,185,129,.12); color: #10B981; }
-    &.type--freelance { background: v.$color-amber-subtle; color: v.$color-amber-secondary; }
+    &.type--freelance { background: var(--color-amber-subtle); color: var(--color-amber-secondary); }
     &.type--research  { background: rgba(96,165,250,.12);  color: v.$color-info; }
     &.type--volunteer { background: rgba(167,139,250,.12); color: #A78BFA; }
   }
@@ -117,7 +117,7 @@
   &__dates {
     font-family: v.$font-body;
     font-size  : v.$text-xs;
-    color      : v.$color-text-tertiary;
+    color      : var(--color-text-tertiary);
     white-space: nowrap;
   }
 
@@ -127,7 +127,7 @@
     gap        : v.$space-2;
     font-family: v.$font-body;
     font-size  : v.$text-sm;
-    color      : v.$color-amber-primary;
+    color      : var(--color-amber-primary);
     margin     : 0;
   }
 
@@ -143,7 +143,7 @@
   &__bullet {
     font-family: v.$font-body;
     font-size  : v.$text-sm;
-    color      : v.$color-text-secondary;
+    color      : var(--color-text-secondary);
     line-height: v.$leading-normal;
     padding-left: v.$space-4;
     position   : relative;
@@ -152,14 +152,14 @@
       content   : '—';
       position  : absolute;
       left      : 0;
-      color     : v.$color-text-tertiary;
+      color     : var(--color-text-tertiary);
     }
   }
 
   &__desc {
     font-family: v.$font-body;
     font-size  : v.$text-sm;
-    color      : v.$color-text-secondary;
+    color      : var(--color-text-secondary);
     line-height: v.$leading-relaxed;
     margin     : 0;
   }
@@ -173,8 +173,8 @@
   font-family: v.$font-body;
   font-size  : v.$text-xs;
   font-weight: v.$font-bold;
-  color      : v.$color-amber-secondary;
-  background : v.$color-amber-subtle;
+  color      : var(--color-amber-secondary);
+  background : var(--color-amber-subtle);
   padding    : v.$space-2 v.$space-3;
   border-radius: v.$radius-md;
   width      : fit-content;
@@ -184,13 +184,13 @@
 .languages {
   margin-top : v.$space-10;
   padding-top: v.$space-8;
-  border-top : 1px solid v.$color-border-default;
+  border-top : 1px solid var(--color-border-default);
 
   &__title {
     font-family  : v.$font-heading;
     font-size    : v.$text-sm;
     font-weight  : v.$font-semibold;
-    color        : v.$color-amber-primary;
+    color        : var(--color-amber-primary);
     text-transform: uppercase;
     letter-spacing: 0.06em;
     margin       : 0 0 v.$space-5;
@@ -217,25 +217,25 @@
   &__name {
     font-family: v.$font-body;
     font-size  : v.$text-sm;
-    color      : v.$color-text-primary;
+    color      : var(--color-text-primary);
   }
 
   &__level {
     font-family: v.$font-body;
     font-size  : v.$text-xs;
-    color      : v.$color-text-tertiary;
+    color      : var(--color-text-tertiary);
   }
 
   &__bar {
     height       : 3px;
-    background   : v.$color-bg-tertiary;
+    background   : var(--color-bg-tertiary);
     border-radius: v.$radius-full;
     overflow     : hidden;
   }
 
   &__fill {
     height    : 100%;
-    background: v.$color-amber-primary;
+    background: var(--color-amber-primary);
     border-radius: v.$radius-full;
   }
 }
