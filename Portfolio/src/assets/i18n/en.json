@@ -1,0 +1,140 @@
+{
+  "nav": {
+    "about"     : "About",
+    "projects"  : "Projects",
+    "research"  : "Research",
+    "skills"    : "Skills",
+    "experience": "Experience",
+    "contact"   : "Contact",
+    "downloadCv": "Download CV",
+    "lightMode" : "Light mode",
+    "darkMode"  : "Dark mode"
+  },
+  "hero": {
+    "badge"      : "Available for opportunities",
+    "roles"      : ["Frontend Developer", "UX Researcher", "Serious Games Specialist"],
+    "description": "Frontend developer and UX researcher bridging the gap between <strong>clean engineering</strong> and <strong>meaningful user experience</strong>. Backed by 13 peer-reviewed publications on usability, accessibility and serious games.",
+    "viewProjects": "View Projects",
+    "getInTouch" : "Get in Touch",
+    "stats": {
+      "experience": "Years of Experience",
+      "papers"    : "Published Papers",
+      "projects"  : "Projects Deployed"
+    }
+  },
+  "about": {
+    "tag"  : "About me",
+    "title": "The person behind the",
+    "titleAccent": "code",
+    "lead" : "I build software that genuinely solves problems — technology that feels <strong>natural to use</strong>, regardless of who's using it.",
+    "p1"   : "My path has been anything but conventional. While most developers build portfolios of side projects, I spent three years embedded in academic research — co-authoring <strong>13 peer-reviewed publications</strong> on usability, accessibility, and serious games alongside teams from EPN, UDLA, and PUCE.",
+    "p2"   : "Two projects define what I care about most: <strong>Ludominga</strong>, a serious game platform for people with intellectual disabilities, and <strong>PAR</strong>, a telerehabilitation tool for respiratory therapy patients — both free, open-access, and built to reach the people who need them most.",
+    "p3"   : "I'm detail-oriented by nature and by training. I don't consider something finished until it meets the need it was built for — not just technically, but from the user's perspective.",
+    "highlights": {
+      "distinction": "Best Graduate · 2023",
+      "research"   : "Research Projects",
+      "quartile"   : "Indexed Publications"
+    },
+    "values": {
+      "intro"   : "What drives my work",
+      "quality" : { "title": "Quality-driven",    "desc": "I don't just ship features — I verify they work, make sense, and hold up under real use." },
+      "user"    : { "title": "User-centered",     "desc": "Every decision starts with the person using the product — not the technology behind it." },
+      "research": { "title": "Research-backed",   "desc": "Academic rigor shapes how I approach problems — with evidence, iteration and measurable outcomes." }
+    },
+    "downloadCv": "Download full CV"
+  },
+  "projects": {
+    "tag"     : "Projects",
+    "title"   : "Things I've",
+    "titleAccent": "built",
+    "subtitle": "From production systems to research-backed platforms — each project reflects a real problem worth solving.",
+    "more"    : "More projects",
+    "showMore": "Show {{count}} more projects",
+    "hideMore": "Hide additional projects",
+    "states"  : {
+      "deployed" : "Live",
+      "demo"     : "Demo",
+      "repository": "Repository",
+      "wip"      : "In Progress"
+    },
+    "researchBacked": "Research-backed",
+    "liveDemo": "Live Demo",
+    "github"  : "GitHub",
+    "paper"   : "Paper"
+  },
+  "publications": {
+    "tag"     : "Research",
+    "title"   : "Peer-reviewed",
+    "titleAccent": "publications",
+    "subtitle": "{{count}} indexed publications across usability, serious games, accessibility and digital health.",
+    "filters" : {
+      "all"             : "All",
+      "seriousGames"    : "Serious Games",
+      "uxUi"            : "UX / Usability",
+      "telerehabilitation": "Telerehabilitation",
+      "accessibility"   : "Accessibility",
+      "health"          : "Health"
+    },
+    "showing" : "Showing {{filtered}} of {{total}} publications",
+    "viewDoi" : "View on DOI",
+    "empty"   : "No publications found for this filter."
+  },
+  "skills": {
+    "tag"     : "Skills",
+    "title"   : "Tech",
+    "titleAccent": "stack",
+    "subtitle": "Technologies and methodologies I work with — and what I'm currently learning.",
+    "levels"  : {
+      "expert"    : "Expert",
+      "proficient": "Proficient",
+      "familiar"  : "Learning"
+    },
+    "learning": "learning"
+  },
+  "certifications": {
+    "tag"      : "Certifications",
+    "title"    : "Credentials &",
+    "titleAccent": "training",
+    "verify"   : "Verify",
+    "pdf"      : "PDF",
+    "showMore" : "Show {{count}} more certifications",
+    "hideMore" : "Hide additional certifications",
+    "conferences": {
+      "tag"  : "Conference Presentations",
+      "title": "Papers presented at international conferences",
+      "cert" : "Certificate"
+    }
+  },
+  "experience": {
+    "tag"  : "Experience",
+    "title": "Where I've",
+    "titleAccent": "worked",
+    "types": {
+      "fullTime" : "Full-time",
+      "freelance": "Freelance",
+      "research" : "Research",
+      "volunteer": "Volunteer"
+    },
+    "present": "Present"
+  },
+  "education": {
+    "tag"  : "Education",
+    "title": "Where I",
+    "titleAccent": "studied",
+    "languages": {
+      "title"  : "Languages",
+      "spanish": { "name": "Spanish", "level": "Native" },
+      "english": { "name": "English", "level": "B2 — Upper Intermediate" }
+    }
+  },
+  "contact": {
+    "tag"        : "Contact",
+    "title"      : "Let's",
+    "titleAccent": "connect",
+    "subtitle"   : "Whether you have a project in mind, a research collaboration, or just want to say hi — my inbox is open.",
+    "email"      : "Send an email",
+    "linkedin"   : "Connect on LinkedIn",
+    "github"     : "See my work on GitHub",
+    "downloadCv" : "Download CV"
+  }
+}

@@ -56,8 +56,8 @@
 
   &__link {
     font-family: v.$font-body;
-    font-size  : v.$text-sm;
-    font-weight: v.$font-regular;
+    font-size  : v.$text-base;
+    font-weight: v.$font-medium;
     color      : var(--color-text-secondary);
     background : none;
     border     : none;
@@ -119,6 +119,26 @@
       color        : var(--color-amber-primary);
       border-color : var(--color-amber-primary);
       background   : var(--color-amber-subtle);
+    }
+  }
+
+  &__lang-btn {
+    font-family  : v.$font-body;
+    font-size    : v.$text-xs;
+    font-weight  : v.$font-bold;
+    letter-spacing: 0.08em;
+    color        : var(--color-text-secondary);
+    background   : none;
+    border       : 1px solid var(--color-border-default);
+    border-radius: v.$radius-md;
+    padding      : v.$space-1 v.$space-3;
+    cursor       : pointer;
+    transition   : color v.$transition-fast, border-color v.$transition-fast;
+    min-width    : 36px;
+
+    &:hover {
+      color       : var(--color-amber-primary);
+      border-color: var(--color-amber-primary);
     }
   }
 
@@ -212,7 +232,7 @@
 
   &__mobile-link {
     font-family: v.$font-body;
-    font-size  : v.$text-base;
+    font-size: v.$text-lg;
     color      : var(--color-text-secondary);
     background : none;
     border     : none;

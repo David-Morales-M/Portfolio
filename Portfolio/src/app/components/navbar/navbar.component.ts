@@ -1,33 +1,37 @@
 import { Component, HostListener, OnInit, signal, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ThemeService } from '../../services/theme.service';
+import { CommonModule }    from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
+import { ThemeService }    from '../../services/theme.service';
+import { LanguageService } from '../../services/languaje.service';
 
 interface NavLink {
-  label : string;
-  target: string;
+  labelKey: string;
+  target  : string;
 }
 
 @Component({
   selector   : 'app-navbar',
   standalone : true,
-  imports    : [CommonModule],
+  imports    : [CommonModule, TranslateModule],
   templateUrl: './navbar.component.html',
   styleUrl   : './navbar.component.scss'
 })
 export class NavbarComponent implements OnInit {
 
-  themeService  = inject(ThemeService);
-  isScrolled    = signal(false);
-  isMobileOpen  = signal(false);
-  activeSection = signal('hero');
+  themeService    = inject(ThemeService);
+  languageService = inject(LanguageService);
+
+  isScrolled   = signal(false);
+  isMobileOpen = signal(false);
+  activeSection= signal('hero');
 
   navLinks: NavLink[] = [
-    { label: 'About',      target: 'about'        },
-    { label: 'Projects',   target: 'projects'     },
-    { label: 'Research',   target: 'publications' },
-    { label: 'Skills',     target: 'skills'       },
-    { label: 'Experience', target: 'experience'   },
-    { label: 'Contact',    target: 'contact'      },
+    { labelKey: 'nav.about',      target: 'about'        },
+    { labelKey: 'nav.projects',   target: 'projects'     },
+    { labelKey: 'nav.research',   target: 'publications' },
+    { labelKey: 'nav.skills',     target: 'skills'       },
+    { labelKey: 'nav.experience', target: 'experience'   },
+    { labelKey: 'nav.contact',    target: 'contact'      },
   ];
 
   ngOnInit(): void {
@@ -44,25 +48,18 @@ export class NavbarComponent implements OnInit {
     this.isMobileOpen.set(false);
   }
 
-  toggleMobile(): void {
-    this.isMobileOpen.update(v => !v);
-  }
+  toggleMobile() : void { this.isMobileOpen.update(v => !v); }
+  toggleTheme()  : void { this.themeService.toggle(); }
+  toggleLanguage(): void { this.languageService.toggle(); }
 
-  toggleTheme(): void {
-    this.themeService.toggle();
-  }
-
-  get isDark(): boolean {
-    return this.themeService.theme() === 'dark';
-  }
+  get isDark()   : boolean { return this.themeService.theme() === 'dark'; }
+  get currentLang(): string { return this.languageService.currentLang(); }
 
   private observeSections(): void {
     const ids = ['hero', ...this.navLinks.map(l => l.target)];
     const observer = new IntersectionObserver(
       entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) this.activeSection.set(entry.target.id);
-        });
+        entries.forEach(e => { if (e.isIntersecting) this.activeSection.set(e.target.id); });
       },
       { threshold: 0.3 }
     );
