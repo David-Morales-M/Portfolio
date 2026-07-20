@@ -6,12 +6,13 @@ import {ProjectsComponent} from './components/projects/projects.component';
 import {PublicationsComponent} from './components/publications/publications.component';
 import {CertificatesComponent} from './components/certificates/certificates.component';
 import {ExperienceComponent} from './components/experience/experience.component';
+import {ContactComponent} from './components/contact/contact.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent, HeroComponent, AboutComponent, ProjectsComponent, PublicationsComponent, CertificatesComponent, ExperienceComponent],
+  imports: [NavbarComponent, HeroComponent, AboutComponent, ProjectsComponent, PublicationsComponent, CertificatesComponent, ExperienceComponent, ContactComponent, ContactComponent],
   template: `
     <app-navbar/>
     <main>
@@ -21,6 +22,7 @@ import {ExperienceComponent} from './components/experience/experience.component'
       <app-publications/>
       <app-certificates/>
       <app-experience/>
+      <app-contact/>
     </main>
   `,
   styleUrl: './app.component.scss'

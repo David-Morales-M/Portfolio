@@ -1,5 +1,7 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
+
 
 interface SocialLink {
   label: string;
@@ -10,7 +12,7 @@ interface SocialLink {
 @Component({
   selector   : 'app-hero',
   standalone : true,
-  imports    : [CommonModule],
+  imports    : [CommonModule, TranslateModule],
   templateUrl: './hero.component.html',
   styleUrl   : './hero.component.scss'
 })

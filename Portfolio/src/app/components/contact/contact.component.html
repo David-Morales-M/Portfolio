@@ -1,0 +1,99 @@
+<section id="contact" class="contact">
+  <div class="contact__container">
+
+    <!-- ── CONTACT ─────────────────────────────────────────── -->
+    <div class="contact__header">
+      <span class="section-tag">Contact</span>
+      <h2 class="section-title">
+        Let's <span class="accent">connect</span>
+      </h2>
+      <p class="contact__subtitle">
+        Whether you have a project in mind, a research collaboration,
+        or just want to say hi — my inbox is open.
+      </p>
+    </div>
+
+    <div class="contact__links">
+      @for (link of contactLinks; track link.label) {
+        <a
+          [href]="link.href"
+          [target]="link.external ? '_blank' : '_self'"
+          rel="noopener noreferrer"
+          class="contact__card">
+          <div class="contact__card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" [attr.d]="link.icon"/>
+            </svg>
+          </div>
+          <div class="contact__card-text">
+            <span class="contact__card-label">{{ link.label }}</span>
+            <span class="contact__card-sublabel">{{ link.sublabel }}</span>
+          </div>
+          <svg class="contact__card-arrow" width="16" height="16" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      }
+    </div>
+
+    <!-- CV Download -->
+    <div class="contact__cv">
+      <a href="assets/cv/david-morales-cv.pdf" download class="contact__cv-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+        </svg>
+        Download CV
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── BEYOND THE CODE ──────────────────────────────────────── -->
+<section class="beyond">
+  <div class="beyond__container">
+
+    <div class="beyond__header">
+      <span class="section-tag">Beyond the Code</span>
+      <h3 class="beyond__title">A few things about me outside of work</h3>
+    </div>
+
+    <div class="beyond__hobbies">
+      @for (hobby of hobbies; track hobby.label) {
+        <div class="beyond__hobby">
+          <div class="beyond__hobby-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" [attr.d]="hobby.icon"/>
+            </svg>
+          </div>
+          <span class="beyond__hobby-label">{{ hobby.label }}</span>
+        </div>
+      }
+    </div>
+
+    <p class="beyond__closing">
+      If any of these resonate with you — or you just want to talk tech,
+      research, or trail recommendations — feel free to reach out.
+    </p>
+
+    <!-- Footer -->
+    <div class="beyond__footer">
+      <span class="beyond__footer-text">
+        David Morales · Frontend Developer & UX Researcher · Quito, Ecuador
+      </span>
+      <button class="beyond__back-top" (click)="scrollToTop()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+        </svg>
+        Back to top
+      </button>
+    </div>
+
+  </div>
+</section>
