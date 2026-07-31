@@ -1,4 +1,3 @@
-
 <section id="publications" class="publications">
   <div class="publications__container">
 
@@ -26,23 +25,25 @@
       }
     </div>
 
-    <!-- Contador -->
+    <!-- Contador cuando hay filtro activo -->
     @if (activeFilter() !== 'all') {
       <p class="publications__count">
         Showing {{ filteredCount() }} of {{ totalCount() }} publications
       </p>
     }
 
-    <!-- Lista de publicaciones -->
+    <!-- Lista -->
     <div class="publications__list">
-      @for (pub of filtered(); track pub.id) {
-        <article class="pub-card" [class.expanded]="isExpanded(pub.id)">
+
+      @for (pub of visible(); track pub.id) {
+        <article class="pub-card"
+                 [class.expanded]="isExpanded(pub.id)"
+                 [class.pub-card--featured]="isFeatured(pub.id)">
 
           <!-- Fila principal -->
           <div class="pub-card__main" (click)="toggleExpand(pub.id)">
 
             <div class="pub-card__left">
-              <!-- Año + Quartile -->
               <div class="pub-card__year-wrap">
                 <span class="pub-card__year">{{ pub.year }}</span>
                 @if (pub.quartile) {
@@ -54,11 +55,15 @@
             </div>
 
             <div class="pub-card__center">
-              <h3 class="pub-card__title">{{ pub.title }}</h3>
+              <div class="pub-card__title-row">
+                <h3 class="pub-card__title">{{ pub.title }}</h3>
+                @if (isFeatured(pub.id)) {
+                  <span class="pub-card__featured-badge">Featured</span>
+                }
+              </div>
               @if (pub.journal) {
                 <p class="pub-card__journal">{{ pub.journal }}</p>
               }
-              <!-- Keywords -->
               <div class="pub-card__keywords">
                 @for (kw of pub.keywords.slice(0, 4); track kw) {
                   <span class="pub-card__keyword">{{ kw }}</span>
@@ -67,7 +72,6 @@
             </div>
 
             <div class="pub-card__right">
-              <!-- Expand toggle -->
               <button class="pub-card__toggle" [attr.aria-expanded]="isExpanded(pub.id)">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="2"
@@ -84,11 +88,8 @@
             <div class="pub-card__detail">
               <p class="pub-card__resume">{{ pub.resume }}</p>
               <div class="pub-card__actions">
-                <a
-                  [href]="pub.doi"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="pub-card__doi-link">
+                <a [href]="pub.doi" target="_blank" rel="noopener noreferrer"
+                   class="pub-card__doi-link">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
                        stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -109,6 +110,27 @@
         </p>
       }
     </div>
+
+    <!-- Show more / Show less -->
+    @if (remainingCount() > 0) {
+      <div class="publications__show-more">
+        <button class="publications__show-more-btn" (click)="toggleShowAll()">
+          @if (!showAll()) {
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+            </svg>
+            Show {{ remainingCount() }} more publications
+          } @else {
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+            </svg>
+            Show less
+          }
+        </button>
+      </div>
+    }
 
   </div>
 </section>

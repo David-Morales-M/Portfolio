@@ -51,7 +51,7 @@
     "doi": "https://doi.org/10.3390/app13137748",
     "year": "2023",
     "journal": "Applied Sciences (MDPI)",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "topic": "accessibility"
   },
   {
@@ -62,7 +62,7 @@
     "doi": "https://doi.org/10.3390/app14020840",
     "year": "2024",
     "journal": "Applied Sciences (MDPI)",
-    "quartile": "Q2",
+    "quartile": "Q1",
     "topic": "telerehabilitation"
   },
   {
@@ -141,5 +141,16 @@
     "journal": "Springer LNCS",
     "quartile": "Q1",
     "topic": "serious-games"
+  },
+  {
+    "id": 14,
+    "title": "Rethinking Usability in Serious Games: Designing an Instrument That Evaluates What Really Matters in Learning Contexts",
+    "resume": "Developed SGUEI, a standardized usability evaluation instrument specifically designed for serious games. Created through a systematic literature review and applied to multiple case studies, demonstrating strong diagnostic value for improving user experience in educational game design.",
+    "keywords": ["Serious games", "Usability evaluation", "HCI", "User experience"],
+    "doi": "https://doi.org/10.3390/app151810084",
+    "year": "2026",
+    "journal": "Applied Sciences (MDPI)",
+    "quartile": "Q1",
+    "topic": "ux-ui"
   }
 ]
