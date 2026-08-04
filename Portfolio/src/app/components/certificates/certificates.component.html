@@ -1,4 +1,9 @@
 
+<!-- ============================================================
+     SKILLS & CERTIFICATES COMPONENT — actualizado
+     src/app/components/skills-certificates/skills-certificates.component.html
+     ============================================================ -->
+
 <section id="skills" class="skills-section">
   <div class="skills-section__container">
 
@@ -9,16 +14,31 @@
         Tech <span class="accent">stack</span>
       </h2>
       <p class="skills-section__subtitle">
-        Technologies and methodologies I work with — and what I'm currently learning.
+        Technologies and methodologies I work with 
       </p>
     </div>
 
     <div class="skills-grid">
       @for (category of skills(); track category.id) {
-        <div class="skill-category">
-          <h3 class="skill-category__title">{{ category.label }}</h3>
+        <div
+          class="skill-category"
+          [class.expanded]="isCategoryExpanded(category.id)">
+
+          <div class="skill-category__header" (click)="toggleCategory(category.id)">
+            <h3 class="skill-category__title">{{ category.label }}</h3>
+            @if (getRemainingCount(category) > 0) {
+              <span class="skill-category__count">
+                @if (!isCategoryExpanded(category.id)) {
+                  +{{ getRemainingCount(category) }} more
+                } @else {
+                  Show less
+                }
+              </span>
+            }
+          </div>
+
           <div class="skill-list">
-            @for (skill of category.skills; track skill.name) {
+            @for (skill of getVisibleSkills(category); track skill.name) {
               <div class="skill-item">
                 <div class="skill-item__header">
                   <span class="skill-item__name">
@@ -39,6 +59,27 @@
               </div>
             }
           </div>
+
+          @if (getRemainingCount(category) > 0) {
+            <button
+              class="skill-category__toggle"
+              (click)="toggleCategory(category.id)">
+              @if (!isCategoryExpanded(category.id)) {
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                </svg>
+                {{ getRemainingCount(category) }} more skills
+              } @else {
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+                </svg>
+                Show less
+              }
+            </button>
+          }
+
         </div>
       }
     </div>
@@ -53,7 +94,6 @@
         </h2>
       </div>
 
-      <!-- Tier 1 -->
       <div class="certs-grid">
         @for (cert of tier1Certs(); track cert.id) {
           <div class="cert-card">
@@ -100,7 +140,6 @@
         }
       </div>
 
-      <!-- Toggle Tier 2 -->
       @if (tier2Certs().length > 0) {
         <div class="certs-toggle-wrap">
           <button class="certs-toggle-btn" (click)="toggleTier2()">
@@ -132,9 +171,7 @@
                 <div class="cert-card__links">
                   @if (cert.fileUrl) {
                     <a [href]="cert.fileUrl" target="_blank" rel="noopener noreferrer"
-                       class="cert-card__link cert-card__link--pdf">
-                      PDF
-                    </a>
+                       class="cert-card__link cert-card__link--pdf">PDF</a>
                   }
                 </div>
               </div>
@@ -160,9 +197,7 @@
                 <p class="conf-item__paper">{{ conf.paper }}</p>
                 @if (conf.fileUrl) {
                   <a [href]="conf.fileUrl" target="_blank" rel="noopener noreferrer"
-                     class="conf-item__link">
-                    Certificate
-                  </a>
+                     class="conf-item__link">Certificate</a>
                 }
               </div>
             }
@@ -171,6 +206,5 @@
       }
 
     </div>
-
   </div>
 </section>

@@ -41,17 +41,57 @@
   border       : 1px solid var(--color-border-default);
   border-radius: v.$radius-lg;
   padding      : v.$space-5 v.$space-6;
+  transition   : border-color v.$transition-normal;
+
+  &:hover,
+  &.expanded {
+    border-color: var(--color-border-accent);
+  }
+
+  &__header {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    cursor         : pointer;
+    margin-bottom  : v.$space-5;
+    padding-bottom : v.$space-3;
+    border-bottom  : 1px solid var(--color-border-default);
+  }
 
   &__title {
-    font-family  : v.$font-heading;
-    font-size    : v.$text-sm;
-    font-weight  : v.$font-semibold;
-    color        :var(--color-amber-primary);
-    margin       : 0 0 v.$space-5;
-    padding-bottom: v.$space-3;
-    border-bottom: 1px solid var(--color-border-default);
+    font-family   : v.$font-heading;
+    font-size     : v.$text-sm;
+    font-weight   : v.$font-semibold;
+    color         : var(--color-amber-primary);
+    margin        : 0;
     text-transform: uppercase;
     letter-spacing: 0.06em;
+  }
+
+  &__count {
+    font-family: v.$font-body;
+    font-size  : v.$text-xs;
+    color      : var(--color-text-tertiary);
+    white-space: nowrap;
+  }
+
+  &__toggle {
+    display    : flex;
+    align-items: center;
+    gap        : v.$space-1;
+    font-family: v.$font-body;
+    font-size  : v.$text-xs;
+    color      : var(--color-text-tertiary);
+    background : none;
+    border     : none;
+    cursor     : pointer;
+    padding    : v.$space-2 0 0;
+    margin-top : v.$space-3;
+    border-top : 1px solid var(--color-border-default);
+    width      : 100%;
+    transition : color v.$transition-fast;
+
+    &:hover { color: var(--color-amber-primary); }
   }
 }
 
@@ -134,12 +174,8 @@
   @media (max-width: v.$bp-sm) { grid-template-columns: 1fr; }
 
   &--secondary {
-    grid-template-columns: repeat(3, 1fr);
     margin-top: v.$space-5;
     animation : fadeIn .3s ease;
-
-    @media (max-width: v.$bp-lg) { grid-template-columns: repeat(2, 1fr); }
-    @media (max-width: v.$bp-sm) { grid-template-columns: 1fr; }
   }
 }
 
@@ -233,23 +269,17 @@
   }
 
   &__link {
-    display    : inline-flex;
-    align-items: center;
-    gap        : v.$space-1;
-    font-family: v.$font-body;
-    font-size  : v.$text-xs;
-    font-weight: v.$font-bold;
+    display        : inline-flex;
+    align-items    : center;
+    gap            : v.$space-1;
+    font-family    : v.$font-body;
+    font-size      : v.$text-xs;
+    font-weight    : v.$font-bold;
     text-decoration: none;
-    transition : color v.$transition-fast;
+    transition     : color v.$transition-fast;
 
-    &--verify {
-      color:var(--color-amber-primary);
-      &:hover { color: var(--color-text-secondary); }
-    }
-    &--pdf {
-      color: var(--color-text-tertiary);
-      &:hover { color: var(--color-text-primary); }
-    }
+    &--verify { color: var(--color-amber-primary); &:hover { color: var(--color-amber-secondary); } }
+    &--pdf    { color: var(--color-text-tertiary);  &:hover { color: var(--color-text-primary); } }
   }
 }
 
@@ -260,18 +290,18 @@
 }
 
 .certs-toggle-btn {
-  display    : inline-flex;
-  align-items: center;
-  gap        : v.$space-2;
-  font-family: v.$font-body;
-  font-size  : v.$text-sm;
-  color      : var(--color-text-secondary);
-  background : none;
-  border     : 1px solid var(--color-border-default);
+  display      : inline-flex;
+  align-items  : center;
+  gap          : v.$space-2;
+  font-family  : v.$font-body;
+  font-size    : v.$text-sm;
+  color        : var(--color-text-secondary);
+  background   : none;
+  border       : 1px solid var(--color-border-default);
   border-radius: v.$radius-full;
-  padding    : v.$space-2 v.$space-5;
-  cursor     : pointer;
-  transition : color v.$transition-fast, border-color v.$transition-fast;
+  padding      : v.$space-2 v.$space-5;
+  cursor       : pointer;
+  transition   : color v.$transition-fast, border-color v.$transition-fast;
 
   &:hover {
     color       : var(--color-amber-primary);
@@ -281,13 +311,11 @@
 
 // ── Conference Presentations ──────────────────────────────────
 .conferences {
-  margin-top   : v.$space-16;
-  padding-top  : v.$space-12;
-  border-top   : 1px solid var(--color-border-default);
+  margin-top : v.$space-16;
+  padding-top: v.$space-12;
+  border-top : 1px solid var(--color-border-default);
 
-  &__header {
-    margin-bottom: v.$space-8;
-  }
+  &__header { margin-bottom: v.$space-8; }
 
   &__title {
     font-family: v.$font-heading;
@@ -305,15 +333,15 @@
 }
 
 .conf-item {
-  display     : grid;
+  display      : grid;
   grid-template-columns: 100px 1fr auto;
-  gap         : v.$space-5;
-  align-items : center;
-  padding     : v.$space-4 v.$space-5;
-  background  : var(--color-bg-secondary);
-  border      : 1px solid var(--color-border-default);
+  gap          : v.$space-5;
+  align-items  : center;
+  padding      : v.$space-4 v.$space-5;
+  background   : var(--color-bg-secondary);
+  border       : 1px solid var(--color-border-default);
   border-radius: v.$radius-md;
-  transition  : border-color v.$transition-fast;
+  transition   : border-color v.$transition-fast;
 
   &:hover { border-color: var(--color-border-subtle); }
 
@@ -332,7 +360,7 @@
     font-family: v.$font-heading;
     font-size  : v.$text-sm;
     font-weight: v.$font-semibold;
-    color      :var(--color-amber-primary);
+    color      : var(--color-amber-primary);
   }
 
   &__year {
@@ -366,7 +394,6 @@
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
 
 
 

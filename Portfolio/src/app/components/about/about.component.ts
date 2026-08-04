@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 interface Value {
@@ -15,6 +15,8 @@ interface Value {
   styleUrl   : './about.component.scss'
 })
 export class AboutComponent {
+
+  activeValue = signal<number | null>(null);
 
   values: Value[] = [
     {
@@ -33,4 +35,12 @@ export class AboutComponent {
       desc : 'Academic rigor shapes how I approach problems — with evidence, iteration and measurable outcomes.'
     }
   ];
+
+  toggleValue(index: number): void {
+    this.activeValue.update(current => current === index ? null : index);
+  }
+
+  isActive(index: number): boolean {
+    return this.activeValue() === index;
+  }
 }

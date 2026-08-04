@@ -42,6 +42,43 @@
           not just technically, but from the user's perspective.
         </p>
 
+
+      </div>
+
+      <!-- Columna derecha: valores -->
+      <div class="about__values">
+        <p class="about__values-intro">What drives my work</p>
+
+        @for (value of values; track value.title; let i = $index) {
+          <div
+            class="about__value-card"
+            [class.active]="isActive(i)"
+            (click)="toggleValue(i)">
+
+            <div class="about__value-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" [attr.d]="value.icon"/>
+              </svg>
+            </div>
+
+            <div class="about__value-text">
+              <h4 class="about__value-title">{{ value.title }}</h4>
+              <p class="about__value-desc" [class.visible]="isActive(i)">
+                {{ value.desc }}
+              </p>
+            </div>
+
+            <svg class="about__value-chevron" width="14" height="14"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 [style.transform]="isActive(i) ? 'rotate(180deg)' : 'rotate(0)'">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+            </svg>
+
+          </div>
+        }
+        <!-- CTA secundario -->
+
         <!-- Datos destacados -->
         <div class="about__highlights">
           <div class="about__highlight">
@@ -58,28 +95,6 @@
           </div>
         </div>
 
-      </div>
-
-      <!-- Columna derecha: valores -->
-      <div class="about__values">
-        <p class="about__values-intro">What drives my work</p>
-
-        @for (value of values; track value.title) {
-          <div class="about__value-card">
-            <div class="about__value-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                   stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" [attr.d]="value.icon"/>
-              </svg>
-            </div>
-            <div class="about__value-text">
-              <h4 class="about__value-title">{{ value.title }}</h4>
-              <p class="about__value-desc">{{ value.desc }}</p>
-            </div>
-          </div>
-        }
-
-        <!-- CTA secundario -->
         <a
           href="assets/cv/david-morales-cv.pdf"
           download

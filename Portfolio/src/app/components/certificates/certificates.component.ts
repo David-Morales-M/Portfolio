@@ -1,7 +1,6 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { forkJoin } from 'rxjs';
 import { DataService } from '../../services/data.service';
 import { SkillCategory, Certificate } from '../../shared/models';
 
@@ -14,6 +13,8 @@ interface Conference {
   fileUrl  : string;
 }
 
+const PREVIEW_COUNT = 3; // Skills visibles por defecto por categoría
+
 @Component({
   selector   : 'app-certificates',
   standalone : true,
@@ -21,6 +22,7 @@ interface Conference {
   templateUrl: './certificates.component.html',
   styleUrl   : './certificates.component.scss'
 })
+
 export class CertificatesComponent implements OnInit {
 
   skills      = signal<SkillCategory[]>([]);
@@ -28,6 +30,9 @@ export class CertificatesComponent implements OnInit {
   tier2Certs  = signal<Certificate[]>([]);
   conferences = signal<Conference[]>([]);
   showTier2   = signal(false);
+
+  // Categorías expandidas
+  expandedCategories = signal<Set<string>>(new Set());
 
   constructor(
     private dataService: DataService,
@@ -47,6 +52,27 @@ export class CertificatesComponent implements OnInit {
     this.http.get<Conference[]>('assets/data/conferences.json').subscribe(data => {
       this.conferences.set(data);
     });
+  }
+
+  toggleCategory(categoryId: string): void {
+    this.expandedCategories.update(set => {
+      const next = new Set(set);
+      next.has(categoryId) ? next.delete(categoryId) : next.add(categoryId);
+      return next;
+    });
+  }
+
+  isCategoryExpanded(categoryId: string): boolean {
+    return this.expandedCategories().has(categoryId);
+  }
+
+  getVisibleSkills(category: SkillCategory): any[] {
+    if (this.isCategoryExpanded(category.id)) return category.skills;
+    return category.skills.slice(0, PREVIEW_COUNT);
+  }
+
+  getRemainingCount(category: SkillCategory): number {
+    return Math.max(0, category.skills.length - PREVIEW_COUNT);
   }
 
   toggleTier2(): void {

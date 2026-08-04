@@ -2,25 +2,24 @@
 
 .about {
   background: var(--color-bg-secondary);
-  padding: v.$space-24 0;
+  padding   : v.$space-24 0;
 
   &__container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 v.$space-6;
+    margin   : 0 auto;
+    padding  : 0 v.$space-6;
   }
 
   &__header {
-    text-align: center;
+    text-align   : center;
     margin-bottom: v.$space-16;
   }
 
-  // ── Grid principal ────────────────────────────────────────
   &__grid {
-    display: grid;
+    display              : grid;
     grid-template-columns: 1.2fr 1fr;
-    gap: v.$space-16;
-    align-items: start;
+    gap                  : v.$space-16;
+    align-items          : start;
 
     @media (max-width: v.$bp-lg) {
       grid-template-columns: 1fr;
@@ -30,45 +29,42 @@
 
   // ── Contenido izquierdo ───────────────────────────────────
   &__content {
-    display: flex;
+    display       : flex;
     flex-direction: column;
-    gap: v.$space-5;
+    gap           : v.$space-6;
   }
 
   &__lead {
     font-family: v.$font-heading;
-    font-size: v.$text-xl;
+    font-size  : v.$text-xl;
     font-weight: v.$font-semibold;
-    color: var(--color-text-primary);
+    color      : var(--color-text-primary);
     line-height: v.$leading-snug;
-    margin: 0;
+    margin     : 0;
 
-    strong {
-      color: var(--color-amber-secondary);
-    }
+    strong { color: var(--color-amber-secondary); }
   }
 
   &__body {
     font-family: v.$font-body;
-    font-size: v.$text-base;
-    color: var(--color-text-secondary);
+    font-size  : v.$text-base;
+    color      : var(--color-text-secondary);
     line-height: v.$leading-relaxed;
-    margin: 0;
+    margin     : 0;
 
     strong {
-      color: var(--color-text-primary);
+      color      : var(--color-text-primary);
       font-weight: v.$font-bold;
     }
   }
 
   // ── Highlights ────────────────────────────────────────────
   &__highlights {
-    display: grid;
+    display              : grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: v.$space-4;
-    margin-top: v.$space-4;
-    padding-top: v.$space-6;
-    border-top: 1px solid var(--color-border-default);
+    gap                  : v.$space-4;
+    padding-top          : v.$space-6;
+    border-top           : 1px solid var(--color-border-default);
 
     @media (max-width: v.$bp-sm) {
       grid-template-columns: 1fr 1fr;
@@ -76,143 +72,139 @@
   }
 
   &__highlight {
-    display: flex;
+    display       : flex;
     flex-direction: column;
-    gap: v.$space-1;
+    gap           : v.$space-1;
 
     &-value {
       font-family: v.$font-heading;
-      font-size: v.$text-lg;
+      font-size  : v.$text-lg;
       font-weight: v.$font-bold;
-      color: var(--color-amber-primary);
+      color      : var(--color-amber-primary);
     }
 
     &-label {
       font-family: v.$font-body;
-      font-size: v.$text-xs;
-      color: var(--color-text-tertiary);
+      font-size  : v.$text-xs;
+      color      : var(--color-text-tertiary);
       line-height: v.$leading-normal;
     }
   }
 
-  // ── Valores (columna derecha) ─────────────────────────────
-  &__values {
-    display: flex;
-    flex-direction: column;
-    gap: v.$space-4;
-    position: sticky;
-    top: 100px;
+  &__cv-link {
+    display    : inline-flex;
+    align-items: center;
+    gap        : v.$space-2;
+    font-family: v.$font-body;
+    font-size  : v.$text-sm;
+    font-weight: v.$font-bold;
+    color      : var(--color-amber-primary);
+    text-decoration: none;
+    width      : fit-content;
+    transition : color v.$transition-fast, gap v.$transition-fast;
 
-    @media (max-width: v.$bp-lg) {
-      position: static;
+    &:hover {
+      color: var(--color-amber-secondary);
+      gap  : v.$space-3;
     }
   }
 
+  // ── Values (columna derecha) ──────────────────────────────
+  &__values {
+    display       : flex;
+    flex-direction: column;
+    gap           : v.$space-3;
+    position      : sticky;
+    top           : 100px;
+
+    @media (max-width: v.$bp-lg) { position: static; }
+  }
+
   &__values-intro {
-    font-family: v.$font-body;
-    font-size: v.$text-xs;
-    font-weight: v.$font-bold;
+    font-family   : v.$font-body;
+    font-size     : v.$text-xs;
+    font-weight   : v.$font-bold;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--color-text-tertiary);
-    margin: 0 0 v.$space-2;
+    color         : var(--color-text-tertiary);
+    margin        : 0 0 v.$space-1;
   }
 
   &__value-card {
-    display: flex;
-    gap: v.$space-4;
-    padding: v.$space-5;
-    background: var(--color-bg-elevated);
-    border: 1px solid var(--color-border-default);
+    display    : flex;
+    align-items: center;
+    gap        : v.$space-4;
+    padding    : v.$space-4 v.$space-5;
+    background : var(--color-bg-elevated);
+    border     : 1px solid var(--color-border-default);
     border-radius: v.$radius-lg;
-    transition: border-color v.$transition-normal, box-shadow v.$transition-normal;
+    cursor     : pointer;
+    transition : border-color v.$transition-normal,
+    box-shadow   v.$transition-normal;
 
     &:hover {
       border-color: var(--color-border-accent);
-      box-shadow: var(--shadow-amber);
+      box-shadow  : var(--shadow-amber);
+    }
+
+    &.active {
+      border-color: var(--color-amber-primary);
+      align-items : flex-start;
     }
   }
 
   &__value-icon {
-    display: flex;
-    align-items: center;
+    display        : flex;
+    align-items    : center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    background: var(--color-amber-subtle);
-    border-radius: v.$radius-md;
-    color: var(--color-amber-primary);
+    width          : 38px;
+    height         : 38px;
+    min-width      : 38px;
+    background     : var(--color-amber-subtle);
+    border-radius  : v.$radius-md;
+    color          : var(--color-amber-primary);
+    margin-top     : 2px;
   }
 
   &__value-text {
-    display: flex;
+    display       : flex;
     flex-direction: column;
-    gap: v.$space-1;
+    gap           : 0;
+    flex          : 1;
+    min-width     : 0;
   }
 
   &__value-title {
     font-family: v.$font-heading;
-    font-size: v.$text-sm;
+    font-size  : v.$text-sm;
     font-weight: v.$font-semibold;
-    color: var(--color-text-primary);
-    margin: 0;
+    color      : var(--color-text-primary);
+    margin     : 0;
   }
 
   &__value-desc {
     font-family: v.$font-body;
-    font-size: v.$text-sm;
-    color: var(--color-text-secondary);
+    font-size  : v.$text-sm;
+    color      : var(--color-text-secondary);
     line-height: v.$leading-normal;
-    margin: 0;
-  }
+    margin     : 0;
+    max-height : 0;
+    overflow   : hidden;
+    opacity    : 0;
+    transition : max-height v.$transition-normal,
+    opacity    v.$transition-normal,
+    margin     v.$transition-normal;
 
-  // ── CV link ───────────────────────────────────────────────
-  &__cv-link {
-    display: inline-flex;
-    align-items: center;
-    gap: v.$space-2;
-    font-family: v.$font-body;
-    font-size: v.$text-sm;
-    font-weight: v.$font-bold;
-    color: var(--color-amber-primary);
-    text-decoration: none;
-    padding: v.$space-3 0;
-    margin-top: v.$space-2;
-    border-top: 1px solid var(--color-border-default);
-    transition: color v.$transition-fast, gap v.$transition-fast;
-
-    &:hover {
-      color: var(--color-amber-secondary);
-      gap: v.$space-3;
+    &.visible {
+      max-height: 100px;
+      opacity   : 1;
+      margin-top: v.$space-2;
     }
   }
-}
 
-// ── Estilos globales de sección (mover a styles.scss si se repiten)
-.section-tag {
-  display: inline-block;
-  font-family: v.$font-body;
-  font-size: v.$text-xs;
-  font-weight: v.$font-bold;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-amber-primary);
-  margin-bottom: v.$space-3;
-}
-
-.section-title {
-  font-family: v.$font-heading;
-  font-size: v.$text-3xl;
-  font-weight: v.$font-bold;
-  color: var(--color-text-primary);
-  margin: 0;
-
-  .accent {
-    color: var(--color-amber-primary);
-  }
-
-  @media (max-width: v.$bp-md) {
-    font-size: v.$text-2xl;
+  &__value-chevron {
+    flex-shrink: 0;
+    color      : var(--color-text-tertiary);
+    transition : transform v.$transition-normal;
   }
 }
