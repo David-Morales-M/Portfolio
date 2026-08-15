@@ -129,11 +129,7 @@
   background: var(--color-bg-secondary);
   transition: border-color v.$transition-normal, box-shadow v.$transition-normal, transform v.$transition-normal;
 
-  &:hover {
-    border-color: var(--color-border-accent);
-    box-shadow: var(--shadow-amber);
-    transform: translateY(-3px);
-  }
+
 
   // Tier 1 — destacada
   &--featured {
@@ -272,38 +268,45 @@
   }
 
   &__link {
-    display: inline-flex;
-    align-items: center;
-    gap: v.$space-1;
-    font-family: v.$font-body;
-    font-size: v.$text-xs;
-    font-weight: v.$font-bold;
+    display        : inline-flex;
+    align-items    : center;
+    gap            : v.$space-1;
+    font-family    : v.$font-body;
+    font-size      : v.$text-xs;
+    font-weight    : v.$font-bold;
     text-decoration: none;
-    transition: color v.$transition-fast;
+    transition     : color v.$transition-fast;
+  }
 
-    &--primary {
-      color: var(--color-amber-primary);
+  &__link--demo {
+    background   : var(--color-amber-primary);
+    color        : var(--color-bg-primary);
+    padding      : v.$space-2 v.$space-4;
+    border-radius: v.$radius-md;
+    font-weight  : v.$font-bold;
+    text-decoration: none;
+    display      : inline-flex;
+    align-items  : center;
+    gap          : v.$space-1;
+    font-family  : v.$font-body;
+    font-size    : v.$text-xs;
+    transition   : background v.$transition-fast;
 
-      &:hover {
-        color: var(--color-amber-secondary);
-      }
+    &:hover {
+      background: var(--color-amber-secondary);
+      color     : var(--color-bg-primary);
     }
+  }
 
-    &--secondary {
-      color: var(--color-text-tertiary);
+  &__link--secondary {
+    color: var(--color-text-tertiary);
 
-      &:hover {
-        color: var(--color-text-primary);
-      }
-    }
+    &:hover { color: var(--color-text-primary); }
+  }
 
-    &--paper {
-      color: v.$color-info;
-
-      &:hover {
-        opacity: .8;
-      }
-    }
+  &__link--paper {
+    color: v.$color-info;
+    &:hover { opacity: .8; }
   }
 }
 

@@ -1,7 +1,11 @@
+<!-- ============================================================
+     CONTACT COMPONENT — actualizado
+     src/app/components/contact/contact.component.html
+     ============================================================ -->
+
 <section id="contact" class="contact">
   <div class="contact__container">
 
-    <!-- ── CONTACT ─────────────────────────────────────────── -->
     <div class="contact__header">
       <span class="section-tag">Contact</span>
       <h2 class="section-title">
@@ -30,15 +34,14 @@
             <span class="contact__card-label">{{ link.label }}</span>
             <span class="contact__card-sublabel">{{ link.sublabel }}</span>
           </div>
-          <svg class="contact__card-arrow" width="16" height="16" viewBox="0 0 24 24"
-               fill="none" stroke="currentColor" stroke-width="2">
+          <svg class="contact__card-arrow" width="16" height="16"
+               viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
           </svg>
         </a>
       }
     </div>
 
-    <!-- CV Download -->
     <div class="contact__cv">
       <a href="assets/cv/david-morales-cv.pdf" download class="contact__cv-btn">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -63,15 +66,25 @@
     </div>
 
     <div class="beyond__hobbies">
-      @for (hobby of hobbies; track hobby.label) {
-        <div class="beyond__hobby">
+      @for (hobby of hobbies; track hobby.label; let i = $index) {
+        <div
+          class="beyond__hobby"
+          [class.active]="isHobbyActive(i)"
+          (click)="toggleHobby(i)">
+
           <div class="beyond__hobby-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="1.5">
               <path stroke-linecap="round" stroke-linejoin="round" [attr.d]="hobby.icon"/>
             </svg>
           </div>
+
           <span class="beyond__hobby-label">{{ hobby.label }}</span>
+
+          <p class="beyond__hobby-desc" [class.visible]="isHobbyActive(i)">
+            {{ hobby.desc }}
+          </p>
+
         </div>
       }
     </div>
@@ -81,7 +94,6 @@
       research, or trail recommendations — feel free to reach out.
     </p>
 
-    <!-- Footer -->
     <div class="beyond__footer">
       <span class="beyond__footer-text">
         David Morales · Frontend Developer & UX Researcher · Quito, Ecuador

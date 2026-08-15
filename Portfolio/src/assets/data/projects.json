@@ -1,26 +1,16 @@
 [
   {
     "id": 1,
-    "title": "Service Management System",
+    "title": "Chasqui2 - Service Management System",
     "client": "Chasquis Compu Store",
-    "description": "Full-stack web platform for managing tech repair services, clients and employees.",
-    "technologies": [
-      "React",
-      "JavaScript",
-      "Firebase",
-      "CSS",
-      "HTML"
-    ],
+    "description": "Full-stack web platform that automated repair tracking and client management for a local tech store — reducing manual processing time significantly.",
+    "technologies": ["React", "JavaScript", "Firebase", "CSS", "HTML"],
     "photos": [],
     "link": "https://github.com/tu-usuario/chasquis",
     "demoUrl": "",
     "paperDoi": "",
-    "roles": [
-      "UI Designer",
-      "Frontend Developer",
-      "Firebase Administrator"
-    ],
-    "details": "Designed and developed a complete system to manage repair services, automate manual registration, and reduce processing times. Built with a focus on intuitive UI/UX and efficient real-time data handling via Firebase.",
+    "roles": ["UI Designer", "Frontend Developer", "Firebase Administrator"],
+    "details": "",
     "state": "deployed",
     "tier": 1,
     "featured": true
@@ -29,22 +19,14 @@
     "id": 2,
     "title": "PAR — Respiratory Rehabilitation Platform",
     "client": "UDLA · EPN · PUCE",
-    "description": "Accessible web platform for respiratory therapeutic education and self-rehabilitation for post-COVID patients.",
-    "technologies": [
-      "React",
-      "JavaScript",
-      "CSS",
-      "HTML"
-    ],
+    "description": "Accessible PWA for post-COVID respiratory rehabilitation. Designed with WCAG 2.1 standards and validated through usability testing. Backed by 4 peer-reviewed publications.",
+    "technologies": ["React", "JavaScript", "CSS", "HTML"],
     "photos": [],
-    "link": "https://github.com/tu-usuario/par",
+    "link": "https://puceinvestiga.puce.edu.ec/en/projects/plataforma-digital-para-educaci%C3%B3n-terap%C3%A9utica-accesible-hacia-las/",
     "demoUrl": "",
     "paperDoi": "https://doi.org/10.3390/app14020840",
-    "roles": [
-      "UI Designer",
-      "QA Tester"
-    ],
-    "details": "Collaborated with three universities on a user-centered PWA for respiratory rehabilitation. Designed accessible interfaces following WCAG 2.1, validated through CSUQ usability evaluations. Backed by 4 peer-reviewed publications.",
+    "roles": ["UI Designer", "QA Tester"],
+    "details": "",
     "state": "deployed",
     "tier": 1,
     "featured": true
@@ -53,22 +35,14 @@
     "id": 3,
     "title": "Ludominga — Inclusive Learning Platform",
     "client": "UDLA · EPN · PUCE",
-    "description": "Serious game platform for cognitive and emotional development in people with intellectual disabilities.",
-    "technologies": [
-      "React",
-      "JavaScript",
-      "CSS",
-      "HTML"
-    ],
+    "description": "Serious game platform for cognitive development in people with intellectual disabilities. Free, open-access, and built around real user needs. Published in Applied Sciences Q2.",
+    "technologies": ["React", "JavaScript", "CSS", "HTML"],
     "photos": [],
-    "link": "https://github.com/tu-usuario/ludominga",
-    "demoUrl": "",
+    "link": "",
+    "demoUrl": "https://juegos.ludominga.com/",
     "paperDoi": "https://doi.org/10.3390/app13137748",
-    "roles": [
-      "UI Designer",
-      "QA Tester"
-    ],
-    "details": "Contributed to the design and evaluation of an inclusive learning platform using the iPlus methodology and iterative user-centered design. Validated through usability testing with target users, demonstrating positive outcomes in engagement and learning.",
+    "roles": ["UI Designer", "QA Tester"],
+    "details": "",
     "state": "deployed",
     "tier": 1,
     "featured": true
@@ -77,21 +51,14 @@
     "id": 4,
     "title": "Connect 4 — Multiplayer Game",
     "client": "Personal Project",
-    "description": "Classic Connect 4 game with real-time multiplayer rooms built on a microservices architecture.",
-    "technologies": [
-      "Angular",
-      "JavaScript",
-      "Node.js"
-    ],
+    "description": "Real-time multiplayer Connect 4 with WebSockets and microservices architecture. Built with Angular and Node.js.",
+    "technologies": ["Angular", "JavaScript", "Node.js"],
     "photos": [],
     "link": "https://github.com/tu-usuario/connect4",
     "demoUrl": "",
     "paperDoi": "",
-    "roles": [
-      "Fullstack Developer",
-      "QA Tester"
-    ],
-    "details": "Recreated the classic board game with real-time multiplayer support using WebSockets and a microservices architecture. Demonstrates competency in Angular, Node.js and real-time communication patterns.",
+    "roles": ["Fullstack Developer", "QA Tester"],
+    "details": "",
     "state": "repository",
     "tier": 2,
     "featured": false
@@ -100,20 +67,14 @@
     "id": 5,
     "title": "Body Metrics Estimation with CNN",
     "client": "Personal Project",
-    "description": "Computer vision system that estimates height and weight from images using convolutional neural networks.",
-    "technologies": [
-      "Python",
-      "TensorFlow",
-      "OpenCV"
-    ],
+    "description": "Computer vision model that estimates height and weight from images using convolutional neural networks trained with TensorFlow and OpenCV.",
+    "technologies": ["Python", "TensorFlow", "OpenCV"],
     "photos": [],
     "link": "https://github.com/tu-usuario/cnn-body-metrics",
     "demoUrl": "",
     "paperDoi": "",
-    "roles": [
-      "AI Developer"
-    ],
-    "details": "Trained a CNN model to predict physical attributes from images. Demonstrates applied machine learning skills including model training, image preprocessing with OpenCV, and performance evaluation.",
+    "roles": ["AI Developer"],
+    "details": "",
     "state": "repository",
     "tier": 2,
     "featured": false
@@ -122,18 +83,14 @@
     "id": 6,
     "title": "Intelligent Pool Maintenance Agent",
     "client": "Personal Project",
-    "description": "Autonomous agent for pool temperature monitoring and regulation using heuristic algorithms.",
-    "technologies": [
-      "Java"
-    ],
+    "description": "Autonomous Java agent that monitors and regulates pool temperature using heuristic decision-making algorithms.",
+    "technologies": ["Java"],
     "photos": [],
     "link": "https://github.com/tu-usuario/intelligent-agent",
     "demoUrl": "",
     "paperDoi": "",
-    "roles": [
-      "Developer"
-    ],
-    "details": "Implemented an autonomous agent that monitors and regulates pool temperature using heuristic decision-making algorithms. Explores AI agent design patterns and autonomous system behavior.",
+    "roles": ["Developer"],
+    "details": "",
     "state": "repository",
     "tier": 3,
     "featured": false
@@ -142,22 +99,14 @@
     "id": 7,
     "title": "Car Dealership Management System",
     "client": "Personal Project",
-    "description": "Fullstack CRUD platform for managing vehicle inventory, listings and dealership operations.",
-    "technologies": [
-      "Angular",
-      "JavaScript",
-      "CSS",
-      "HTML"
-    ],
+    "description": "Full CRUD platform for managing vehicle inventory and dealership operations. Built to practice Angular architecture and REST API consumption.",
+    "technologies": ["Angular", "JavaScript", "CSS", "HTML"],
     "photos": [],
     "link": "https://github.com/tu-usuario/dealership",
     "demoUrl": "",
     "paperDoi": "",
-    "roles": [
-      "Fullstack Developer",
-      "QA Tester"
-    ],
-    "details": "Built a complete CRUD application with search filters, inventory management and REST API integration. Developed to practice Angular architecture and API consumption patterns.",
+    "roles": ["Fullstack Developer", "QA Tester"],
+    "details": "",
     "state": "repository",
     "tier": 3,
     "featured": false
@@ -166,19 +115,14 @@
     "id": 8,
     "title": "Vexillology Serious Game",
     "client": "Personal Project",
-    "description": "Educational Unity game for learning world flags through interactive challenges.",
-    "technologies": [
-      "C#",
-      "Unity"
-    ],
+    "description": "Educational Unity game for learning world flags through interactive challenges. Evaluated with usability testing — rated between good and excellent. Backed by a peer-reviewed publication.",
+    "technologies": ["C#", "Unity"],
     "photos": [],
     "link": "https://github.com/tu-usuario/vexillology-game",
     "demoUrl": "",
     "paperDoi": "https://doi.org/10.1109/ici2st57350.2022.00028",
-    "roles": [
-      "Game Developer"
-    ],
-    "details": "Designed and developed an educational serious game for flag recognition using the iPlus methodology. Evaluated through usability testing with results rated between good and excellent. Backed by a peer-reviewed publication.",
+    "roles": ["Game Developer"],
+    "details": "",
     "state": "repository",
     "tier": 3,
     "featured": false

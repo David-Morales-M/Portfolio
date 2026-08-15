@@ -10,9 +10,8 @@
     "type": "freelance",
     "description": [
       "Designed and developed a full service management system, automating manual registration and reducing processing times.",
-      "Built responsive user interfaces with React and Bootstrap, improving user experience and reducing interaction errors.",
-      "Implemented automated testing with Selenium, increasing QA coverage and ensuring production stability.",
-      "Managed Firebase NoSQL database, handling client data, employee records and repair workflows."
+      "Built responsive interfaces with React and Bootstrap, improving user experience and reducing interaction errors.",
+      "Managed Firebase NoSQL database handling client data, employee records and repair workflows."
     ]
   },
   {
@@ -25,10 +24,9 @@
     "current": true,
     "type": "research",
     "description": [
-      "Designed and evaluated accessible, user-centered web applications including serious games and telerehabilitation platforms.",
-      "Conducted usability evaluations using SUS and CSUQ frameworks, delivering actionable UX improvement recommendations.",
-      "Co-authored 13 peer-reviewed publications in indexed journals (Q1–Q3) on serious games, usability, and inclusive technologies.",
-      "Collaborated with multidisciplinary teams across UDLA, EPN, and PUCE on CEDIA-funded research projects."
+      "Designed and evaluated accessible web applications including serious games and telerehabilitation platforms for real user groups.",
+      "Conducted usability evaluations using SUS and CSUQ frameworks, delivering measurable UX improvement recommendations.",
+      "Co-authored 13 peer-reviewed publications in indexed journals (Q1–Q3) on usability, accessibility and serious games."
     ]
   },
   {
@@ -41,9 +39,9 @@
     "current": true,
     "type": "volunteer",
     "description": [
-      "Led a multidisciplinary team in planning and digital outreach for the Digital Inclusion and Future Programmers initiatives.",
+      "Led planning and digital outreach for the Digital Inclusion and Future Programmers initiatives.",
       "Established strategic partnerships with high-impact organizations, improving program visibility and sustainability.",
-      "Planned and executed educational activities that strengthened digital competencies across beneficiary communities."
+      "Executed educational activities that strengthened digital competencies across beneficiary communities."
     ]
   }
 ]
