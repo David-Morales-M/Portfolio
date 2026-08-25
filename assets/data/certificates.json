@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "title": "Google Cloud Associate Engineer",
+    "issuer": "Google Cloud",
+    "year": "2024",
+    "description": "Cloud application deployment and infrastructure management on Google Cloud Platform.",
+    "verifyUrl": "https://www.credential.net/abc123",
+    "fileUrl": "assets/certificates/google-cloud-certificate.pdf",
+    "tier": 1,
+    "category": "cloud"
+  },
+  {
+    "id": 2,
+    "title": "Legacy Responsive Web Design",
+    "issuer": "freeCodeCamp",
+    "year": "2024",
+    "description": "Responsive web design principles, CSS flexbox, grid and accessibility fundamentals.",
+    "verifyUrl": "https://freecodecamp.org/certification/david-morales-m/responsive-web-design",
+    "fileUrl": "assets/certificates/responsive-certificate.pdf",
+    "tier": 1,
+    "category": "frontend"
+  },
+  {
+    "id": 3,
+    "title": "Python Basics",
+    "issuer": "University of Michigan — Coursera",
+    "year": "2020",
+    "description": "Python fundamentals and object-oriented programming principles.",
+    "verifyUrl": "https://www.coursera.org/verify/MAJVSVRYMJXZ",
+    "fileUrl": "assets/certificates/python-basics-certificate.pdf",
+    "tier": 1,
+    "category": "python"
+  },
+  {
+    "id": 4,
+    "title": "Python Functions, Files and Dictionaries",
+    "issuer": "University of Michigan — Coursera",
+    "year": "2020",
+    "description": "Advanced Python patterns including functions, file I/O and dictionary structures.",
+    "verifyUrl": "https://www.coursera.org/verify/P4WZ6ZWUW8DZ",
+    "fileUrl": "assets/certificates/python-functions-certificate.pdf",
+    "tier": 1,
+    "category": "python"
+  },
+  {
+    "id": 5,
+    "title": "Data Collection and Processing with Python",
+    "issuer": "University of Michigan — Coursera",
+    "year": "2021",
+    "description": "Data processing, storage and API consumption using Python.",
+    "verifyUrl": "https://www.coursera.org/verify/VLA2L85VJGME",
+    "fileUrl": "assets/certificates/python-processing-certificate.pdf",
+    "tier": 1,
+    "category": "python"
+  },
+  {
+    "id": 6,
+    "title": "Unity & C# Game Development",
+    "issuer": "Udemy",
+    "year": "2021",
+    "description": "Game development fundamentals with Unity engine and C# programming.",
+    "verifyUrl": "https://www.udemy.com/certificate/UC-XYZ789/",
+    "fileUrl": "assets/certificates/unity-certificate.pdf",
+    "tier": 1,
+    "category": "other"
+  },
+  {
+    "id": 7,
+    "title": "Capacitador en Simulador de Cooperativa Politécnica",
+    "issuer": "Ludolab",
+    "year": "2025",
+    "description": "Certified trainer for the Credit Union Simulator platform for new users.",
+    "verifyUrl": "",
+    "fileUrl": "assets/certificates/coacp-certificate.pdf",
+    "tier": 2,
+    "category": "other"
+  },
+  {
+    "id": 8,
+    "title": "Desarrollo de Apps Móviles",
+    "issuer": "Google Activate",
+    "year": "2021",
+    "description": "Mobile application development fundamentals through Google Activate program.",
+    "verifyUrl": "",
+    "fileUrl": "assets/certificates/google-mobile-certificate.pdf",
+    "tier": 2,
+    "category": "other"
+  },
+  {
+    "id": 9,
+    "title": "Data Science with Python",
+    "issuer": "Simplilearn",
+    "year": "2022",
+    "description": "Data science workflows, analysis and visualization using Python.",
+    "verifyUrl": "",
+    "fileUrl": "assets/certificates/python-data-certificate.pdf",
+    "tier": 2,
+    "category": "python"
+  }
+]

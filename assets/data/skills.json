@@ -1,0 +1,163 @@
+[
+  {
+    "id": "frontend",
+    "label": "Frontend",
+    "skills": [
+      {
+        "name": "JavaScript",
+        "level": "expert",
+        "learning": false
+      },
+      {
+        "name": "React",
+        "level": "expert",
+        "learning": false
+      },
+      {
+        "name": "Angular",
+        "level": "proficient",
+        "learning": false
+      },
+      {
+        "name": "HTML5",
+        "level": "expert",
+        "learning": false
+      },
+      {
+        "name": "CSS3 / SCSS",
+        "level": "expert",
+        "learning": false
+      },
+      {
+        "name": "Bootstrap",
+        "level": "proficient",
+        "learning": false
+      }
+    ]
+  },
+  {
+    "id": "backend",
+    "label": "Backend & Database",
+    "skills": [
+      {
+        "name": "Node.js",
+        "level": "proficient",
+        "learning": false
+      },
+      {
+        "name": "Python",
+        "level": "proficient",
+        "learning": true
+      },
+      {
+        "name": "Java",
+        "level": "proficient",
+        "learning": false
+      },
+      {
+        "name": "Firebase",
+        "level": "expert",
+        "learning": false
+      },
+      {
+        "name": "SQL",
+        "level": "proficient",
+        "learning": true
+      },
+      {
+        "name": "NoSQL",
+        "level": "proficient",
+        "learning": false
+      }
+    ]
+  },
+  {
+    "id": "cloud",
+    "label": "Cloud & DevOps",
+    "skills": [
+      {
+        "name": "Google Cloud",
+        "level": "familiar",
+        "learning": true
+      },
+      {
+        "name": "AWS",
+        "level": "familiar",
+        "learning": true
+      },
+      {
+        "name": "Git / GitHub",
+        "level": "expert",
+        "learning": false
+      }
+    ]
+  },
+  {
+    "id": "ux",
+    "label": "UX / Research",
+    "skills": [
+      {
+        "name": "User-Centered Design",
+        "level": "expert",
+        "learning": false
+      },
+      {
+        "name": "Usability Evaluation",
+        "level": "expert",
+        "learning": false
+      },
+      {
+        "name": "SUS / CSUQ",
+        "level": "expert",
+        "learning": false
+      },
+      {
+        "name": "Accessibility (WCAG)",
+        "level": "proficient",
+        "learning": false
+      },
+      {
+        "name": "iPlus Methodology",
+        "level": "expert",
+        "learning": false
+      }
+    ]
+  },
+  {
+    "id": "methodologies",
+    "label": "Methodologies",
+    "skills": [
+      {
+        "name": "Scrum / Agile",
+        "level": "expert",
+        "learning": false
+      },
+      {
+        "name": "TDD / BDD",
+        "level": "proficient",
+        "learning": false
+      },
+      {
+        "name": "Selenium QA",
+        "level": "proficient",
+        "learning": false
+      }
+    ]
+  },
+  {
+    "id": "other",
+    "label": "Other",
+    "skills": [
+      {
+        "name": "Unity / C#",
+        "level": "familiar",
+        "learning": false
+      },
+      {
+        "name": "Python ML (TensorFlow / OpenCV)",
+        "level": "familiar",
+        "learning": false
+      }
+    ]
+  }
+]

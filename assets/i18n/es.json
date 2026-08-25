@@ -1,0 +1,140 @@
+{
+  "nav": {
+    "about"     : "Sobre mí",
+    "projects"  : "Proyectos",
+    "research"  : "Investigación",
+    "skills"    : "Habilidades",
+    "experience": "Experiencia",
+    "contact"   : "Contacto",
+    "downloadCv": "Descargar CV",
+    "lightMode" : "Modo claro",
+    "darkMode"  : "Modo oscuro"
+  },
+  "hero": {
+    "badge"      : "Disponible para oportunidades",
+    "roles"      : ["Desarrollador Frontend", "Investigador UX", "Especialista en Juegos Serios"],
+    "description": "Desarrollador frontend e investigador UX que conecta la <strong>ingeniería de calidad</strong> con una <strong>experiencia de usuario significativa</strong>. Respaldado por 13 publicaciones científicas indexadas en usabilidad, accesibilidad y juegos serios.",
+    "viewProjects": "Ver Proyectos",
+    "getInTouch" : "Contactar",
+    "stats": {
+      "experience": "Años de Experiencia",
+      "papers"    : "Publicaciones Científicas",
+      "projects"  : "Proyectos Desplegados"
+    }
+  },
+  "about": {
+    "tag"  : "Sobre mí",
+    "title": "La persona detrás del",
+    "titleAccent": "código",
+    "lead" : "Desarrollo software que resuelve problemas reales — tecnología que se siente <strong>natural de usar</strong>, sin importar quién la utilice.",
+    "p1"   : "Mi trayectoria ha sido poco convencional. Mientras la mayoría de desarrolladores construyen portafolios de proyectos propios, yo pasé tres años inmerso en investigación académica — co-autorizando <strong>13 publicaciones científicas indexadas</strong> sobre usabilidad, accesibilidad y juegos serios junto a equipos de la EPN, UDLA y PUCE.",
+    "p2"   : "Dos proyectos definen lo que más me importa: <strong>Ludominga</strong>, una plataforma de juegos serios para personas con discapacidad intelectual, y <strong>PAR</strong>, una herramienta de telerrehabilitación para pacientes con terapia respiratoria — ambas de acceso libre, diseñadas para llegar a quienes más las necesitan.",
+    "p3"   : "Soy detallista por naturaleza y por formación. No considero algo terminado hasta que cumple con la necesidad para la que fue creado — no solo técnicamente, sino desde la perspectiva del usuario.",
+    "highlights": {
+      "distinction": "Mejor Graduado · 2023",
+      "research"   : "Proyectos de Investigación",
+      "quartile"   : "Publicaciones Indexadas"
+    },
+    "values": {
+      "intro"   : "Lo que guía mi trabajo",
+      "quality" : { "title": "Orientado a la calidad",  "desc": "No solo entrego funcionalidades — verifico que funcionen, tengan sentido y resistan el uso real." },
+      "user"    : { "title": "Centrado en el usuario",  "desc": "Cada decisión parte de la persona que usa el producto — no de la tecnología detrás." },
+      "research": { "title": "Respaldado en investigación", "desc": "El rigor académico define cómo abordo los problemas — con evidencia, iteración y resultados medibles." }
+    },
+    "downloadCv": "Descargar CV completo"
+  },
+  "projects": {
+    "tag"        : "Proyectos",
+    "title"      : "Cosas que he",
+    "titleAccent": "construido",
+    "subtitle"   : "Desde sistemas en producción hasta plataformas respaldadas por investigación — cada proyecto refleja un problema real que vale la pena resolver.",
+    "more"       : "Más proyectos",
+    "showMore"   : "Ver {{count}} proyectos más",
+    "hideMore"   : "Ocultar proyectos adicionales",
+    "states": {
+      "deployed" : "En uso",
+      "demo"     : "Demo",
+      "repository": "Repositorio",
+      "wip"      : "En progreso"
+    },
+    "researchBacked": "Respaldado por investigación",
+    "liveDemo": "Ver Demo",
+    "github"  : "GitHub",
+    "paper"   : "Publicación"
+  },
+  "publications": {
+    "tag"        : "Investigación",
+    "title"      : "Publicaciones",
+    "titleAccent": "científicas",
+    "subtitle"   : "{{count}} publicaciones indexadas en usabilidad, juegos serios, accesibilidad y salud digital.",
+    "filters": {
+      "all"               : "Todas",
+      "seriousGames"      : "Juegos Serios",
+      "uxUi"              : "UX / Usabilidad",
+      "telerehabilitation": "Telerrehabilitación",
+      "accessibility"     : "Accesibilidad",
+      "health"            : "Salud"
+    },
+    "showing" : "Mostrando {{filtered}} de {{total}} publicaciones",
+    "viewDoi" : "Ver en DOI",
+    "empty"   : "No se encontraron publicaciones para este filtro."
+  },
+  "skills": {
+    "tag"        : "Habilidades",
+    "title"      : "Stack",
+    "titleAccent": "tecnológico",
+    "subtitle"   : "Tecnologías y metodologías con las que trabajo — y lo que estoy aprendiendo actualmente.",
+    "levels": {
+      "expert"    : "Experto",
+      "proficient": "Competente",
+      "familiar"  : "Aprendiendo"
+    },
+    "learning": "aprendiendo"
+  },
+  "certifications": {
+    "tag"        : "Certificaciones",
+    "title"      : "Credenciales y",
+    "titleAccent": "formación",
+    "verify"     : "Verificar",
+    "pdf"        : "PDF",
+    "showMore"   : "Ver {{count}} certificaciones más",
+    "hideMore"   : "Ocultar certificaciones adicionales",
+    "conferences": {
+      "tag"  : "Presentaciones en Conferencias",
+      "title": "Artículos presentados en conferencias internacionales",
+      "cert" : "Certificado"
+    }
+  },
+  "experience": {
+    "tag"        : "Experiencia",
+    "title"      : "Dónde he",
+    "titleAccent": "trabajado",
+    "types": {
+      "fullTime" : "Tiempo completo",
+      "freelance": "Freelance",
+      "research" : "Investigación",
+      "volunteer": "Voluntariado"
+    },
+    "present": "Presente"
+  },
+  "education": {
+    "tag"        : "Educación",
+    "title"      : "Dónde",
+    "titleAccent": "estudié",
+    "languages": {
+      "title"  : "Idiomas",
+      "spanish": { "name": "Español", "level": "Nativo" },
+      "english": { "name": "Inglés",  "level": "B2 — Intermedio Alto" }
+    }
+  },
+  "contact": {
+    "tag"        : "Contacto",
+    "title"      : "Hablemos",
+    "titleAccent": "",
+    "subtitle"   : "Si tienes un proyecto en mente, una colaboración de investigación, o simplemente quieres saludar — mi bandeja de entrada está abierta.",
+    "email"      : "Enviar un correo",
+    "linkedin"   : "Conectar en LinkedIn",
+    "github"     : "Ver mi trabajo en GitHub",
+    "downloadCv" : "Descargar CV"
+  }
+}
