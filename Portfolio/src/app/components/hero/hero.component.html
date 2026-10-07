@@ -8,7 +8,7 @@
     <div class="hero__content">
 
       <span class="hero__badge">
-        Available for opportunities
+        {{ 'hero.badge' | translate }}
       </span>
 
       <h1 class="hero__name">
@@ -20,18 +20,16 @@
         <span class="hero__cursor" aria-hidden="true">|</span>
       </div>
 
-      <p class="hero__description">
-        Frontend developer and UX researcher bridging the gap between
-        <strong>clean engineering</strong> and <strong>meaningful user experience</strong>.
-        Focused on software development, usability, and accessible digital experiences.
+      <p class="hero__description"
+         [innerHTML]="'hero.description' | translate">
       </p>
 
       <!-- Estadísticas -->
       <div class="hero__stats">
-        @for (stat of stats; track stat.label) {
+        @for (stat of stats; track stat.labelKey) {
           <div class="hero__stat">
             <span class="hero__stat-value">{{ stat.value }}</span>
-            <span class="hero__stat-label">{{ stat.label }}</span>
+            <span class="hero__stat-label">{{ stat.labelKey | translate }}</span>
           </div>
         }
       </div>
@@ -39,13 +37,13 @@
       <!-- Call to action -->
       <div class="hero__actions">
         <button class="btn btn--primary" (click)="scrollToProjects()">
-          View Projects
+          {{ 'hero.viewProjects' | translate }}
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>
         </button>
         <button class="btn btn--outline" (click)="scrollToContact()">
-          Get in Touch
+          {{ 'hero.getInTouch' | translate }}
         </button>
       </div>
 

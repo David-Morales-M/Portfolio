@@ -1,6 +1,6 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 interface SocialLink {
@@ -18,7 +18,7 @@ interface SocialLink {
 })
 
 export class HeroComponent implements OnInit {
-
+  constructor(private translate: TranslateService) {}
   displayedRole = signal('');
   private roles = [
     'Frontend Developer',
@@ -29,10 +29,29 @@ export class HeroComponent implements OnInit {
   private charIndex  = 0;
   private isDeleting = false;
 
+  ngOnInit(): void {
+    // Carga los roles traducidos y arranca el typewriter
+    this.translate.get('hero.roles').subscribe((roles: string[]) => {
+      this.roles = roles;
+      this.typeWriter();
+    });
+
+    // Cuando cambia el idioma reinicia el typewriter
+    this.translate.onLangChange.subscribe(() => {
+      this.translate.get('hero.roles').subscribe((roles: string[]) => {
+        this.roles = roles;
+        this.roleIndex  = 0;
+        this.charIndex  = 0;
+        this.isDeleting = false;
+        this.displayedRole.set('');
+      });
+    });
+  }
+
   stats = [
-    { value: '3+',  label: 'Years of Experience' },
-    { value: '13',  label: 'Published Papers'    },
-    { value: '5+',  label: 'Projects Deployed'   },
+    { value: '3+', labelKey: 'hero.stats.experience' },
+    { value: '18', labelKey: 'hero.stats.papers'     },
+    { value: '5+', labelKey: 'hero.stats.projects'   },
   ];
 
   socialLinks: SocialLink[] = [
@@ -52,10 +71,6 @@ export class HeroComponent implements OnInit {
       icon : 'M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'
     }
   ];
-
-  ngOnInit(): void {
-    this.typeWriter();
-  }
 
   scrollToProjects(): void {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
