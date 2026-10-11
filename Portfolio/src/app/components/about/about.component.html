@@ -3,9 +3,9 @@
 
     <!-- Encabezado de sección -->
     <div class="about__header">
-      <span class="section-tag">About me</span>
+      <span class="section-tag">{{ 'about.tag' | translate }}</span>
       <h2 class="section-title">
-        The person behind <span class="accent">the code</span>
+        {{ 'about.title' | translate }} <span class="accent">{{ 'about.titleAccent' | translate }}</span>
       </h2>
     </div>
 
@@ -14,46 +14,25 @@
       <!-- Columna izquierda: texto -->
       <div class="about__content">
 
-        <p class="about__lead">
-          I build software that genuinely solves problems,
-          technology that feels <strong>natural to use</strong>,
-          regardless of who's using it.
-        </p>
+        <p class="about__lead" [innerHTML]="'about.lead' | translate"></p>
 
-        <p class="about__body">
-          My journey has been far from conventional. While most developers
-          build portfolios of side projects, I began my career in academic
-          research, co-authoring <strong>13 peer-reviewed publications</strong>
-          on usability, accessibility, and serious games.
-        </p>
+        <p class="about__body" [innerHTML]="'about.p1' | translate"></p>
 
-        <p class="about__body">
-          Two projects define what I care about most:
-          <strong>Ludominga</strong>, a serious game platform for people with
-          intellectual disabilities, and <strong>PAR</strong>, a telerehabilitation
-          tool for respiratory therapy patients, both free, open-access, and
-          built to reach the people who need them most.
-          That's the kind of work I want to keep doing.
-        </p>
+        <p class="about__body" [innerHTML]="'about.p2' | translate"></p>
 
-        <p class="about__body">
-          I'm detail-oriented by nature and by training. I don't consider
-          something finished until it meets the need it was built for,
-          not just technically, but from the user's perspective.
-        </p>
+        <p class="about__body">{{ 'about.p3' | translate }}</p>
 
 
       </div>
 
       <!-- Columna derecha: valores -->
       <div class="about__values">
-        <p class="about__values-intro">What drives my work</p>
+        <p class="about__values-intro">{{ 'about.values.intro' | translate }}</p>
 
-        @for (value of values; track value.title; let i = $index) {
-          <div
-            class="about__value-card"
-            [class.active]="isActive(i)"
-            (click)="toggleValue(i)">
+        @for (value of values; track value.titleKey; let i = $index) {
+          <div class="about__value-card"
+               [class.active]="isActive(i)"
+               (click)="toggleValue(i)">
 
             <div class="about__value-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -63,9 +42,9 @@
             </div>
 
             <div class="about__value-text">
-              <h4 class="about__value-title">{{ value.title }}</h4>
+              <h4 class="about__value-title">{{ value.titleKey | translate }}</h4>
               <p class="about__value-desc" [class.visible]="isActive(i)">
-                {{ value.desc }}
+                {{ value.descKey | translate }}
               </p>
             </div>
 
@@ -77,21 +56,22 @@
 
           </div>
         }
+        
         <!-- CTA secundario -->
 
         <!-- Datos destacados -->
         <div class="about__highlights">
           <div class="about__highlight">
             <span class="about__highlight-value">EPN</span>
-            <span class="about__highlight-label">Best Graduate · 2023</span>
+            <span class="about__highlight-label">{{ 'about.highlights.distinction' | translate }}</span>
           </div>
           <div class="about__highlight">
-            <span class="about__highlight-value">CEDIA</span>
-            <span class="about__highlight-label">Research Projects</span>
+            <span class="about__highlight-value">18</span>
+            <span class="about__highlight-label">{{ 'about.highlights.research' | translate }}</span>
           </div>
           <div class="about__highlight">
             <span class="about__highlight-value">Q1–Q3</span>
-            <span class="about__highlight-label">Indexed Publications</span>
+            <span class="about__highlight-label">{{ 'about.highlights.quartile' | translate }}</span>
           </div>
         </div>
 
@@ -104,7 +84,7 @@
             <path stroke-linecap="round" stroke-linejoin="round"
                   d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
           </svg>
-          Download full CV
+          {{ 'about.downloadCv' | translate }}
         </a>
 
       </div>
